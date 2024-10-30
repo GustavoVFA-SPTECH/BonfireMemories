@@ -1,1 +1,76 @@
 @import url(components.css);
+
+body {
+    background-image: url('../../Assets/backgroundHome.jpg');
+}
+
+.post {
+    /* border: white 1px solid; */
+    width: 70%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.700);
+    border-radius: 50px;
+
+}
+
+.postBar{
+    background-color: var(--darkGreen);
+    width: 100%;
+    height: 20%;
+    border-radius: 50px 50px 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.postBox{
+    /* border: red 1px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    border-radius: 50px;
+}
+
+.postContent{
+    width: 90%;
+    /* border: red 1px solid; */
+    height: 80%;
+    border-radius: 50px;
+    background-color: var(--darkGreen);
+}
+
+.profilePost{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.profilePost span{
+    color: var(--blue);
+}
+
+.profileImage{
+    width: 50px;
+    height: 50px;
+    /* border: red 1px solid; */
+    border-radius: 50%;
+    background-image: url('../../Assets/icons/icon-user.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.postLikes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.likeIcon{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

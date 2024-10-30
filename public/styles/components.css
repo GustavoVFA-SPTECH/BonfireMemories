@@ -16,14 +16,14 @@ button{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-left: 40px;
+    padding-left: 65px;
     padding-right: 40px;
 }
 
 .sideBar{
     /* border: blue 1px solid; */
     height: calc(100vh - 85px);
-    width: 200px;
+    width: 250px;
     /* position: fixed; */
     bottom: 0;
     background-color: var(--darkGreen);
@@ -31,14 +31,15 @@ button{
 }
 
 .main{
-    border: green 1px solid;
     height: calc(100vh - 85px);
     width: calc(100vw - 200px);
     bottom: 0;
     overflow: auto;
-    background-image: url('../../Assets/backgroundHome.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container{
@@ -51,7 +52,7 @@ button{
 }
 
 .searchBar{
-    width: 30%;
+    width: 35%;
     height: 40px;
     border: 3px solid var(--lightOrange);
     border-radius: 60px;
@@ -61,15 +62,16 @@ button{
 }
 
 .enterButton{
-    width: 100px;
+    width: 120px;
     height: 40px;
+    font-size: 15px;
 }
 
 
 .profButton{
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-image: url('../../Assets/icons/icon-user.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -83,6 +85,8 @@ button:hover{
     width: 18%;
     justify-content: space-between;
     display: flex;
+    align-items: center;
+
 }
 
 .divLogo{
@@ -103,5 +107,6 @@ button:hover{
 
 .sideButton{
     height: 45px;
-    width: 170px;
+    width: 200px;
+    font-size: 15px;
 }
