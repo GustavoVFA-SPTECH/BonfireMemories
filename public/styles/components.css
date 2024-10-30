@@ -1,8 +1,14 @@
 @import url(root.css);
 
+button{
+    border-radius: 50px;
+    background-color: var(--darkGreen);
+    border: 4px var(--lightOrange) solid;
+}
+
 .navBar{
     /* border: red 1px solid; */
-    height: 80px;
+    height: 85px;
     /* position: fixed; */
     width: 100vw;
     background-color: var(--darkGreen);
@@ -16,19 +22,23 @@
 
 .sideBar{
     /* border: blue 1px solid; */
-    height: calc(100vh - 80px);
+    height: calc(100vh - 85px);
     width: 200px;
     /* position: fixed; */
     bottom: 0;
     background-color: var(--darkGreen);
+    padding-top: 60px;
 }
 
 .main{
     border: green 1px solid;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 85px);
     width: calc(100vw - 200px);
     bottom: 0;
     overflow: auto;
+    background-image: url('../../Assets/backgroundHome.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .container{
@@ -36,13 +46,13 @@
 }
 
 .divLogo .logo{
-    width: 60px;
+    width: 80px;
     height: 60px;
 }
 
 .searchBar{
-    width: 25%;
-    height: 30px;
+    width: 30%;
+    height: 40px;
     border: 3px solid var(--lightOrange);
     border-radius: 60px;
     background-color: var(--ice);
@@ -53,21 +63,19 @@
 .enterButton{
     width: 100px;
     height: 40px;
-    border-radius: 50px;
-    background-color: var(--darkGreen);
-    border: 4px var(--lightOrange) solid;
-
 }
+
 
 .profButton{
+    border-radius: 50%;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    background-color: var(--black);
-    border: var(--lightOrange) 3px solid;
+    background-image: url('../../Assets/icons/icon-user.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
-.buttonHover:hover{
+button:hover{
     background-color: var(--lightOrange);
 }
 
@@ -82,4 +90,18 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+.sideButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    /* border: red 1px solid; */
+}
+
+.sideButton{
+    height: 45px;
+    width: 170px;
 }
