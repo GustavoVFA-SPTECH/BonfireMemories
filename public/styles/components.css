@@ -1,0 +1,85 @@
+@import url(root.css);
+
+.navBar{
+    /* border: red 1px solid; */
+    height: 80px;
+    /* position: fixed; */
+    width: 100vw;
+    background-color: var(--darkGreen);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.sideBar{
+    /* border: blue 1px solid; */
+    height: calc(100vh - 80px);
+    width: 200px;
+    /* position: fixed; */
+    bottom: 0;
+    background-color: var(--darkGreen);
+}
+
+.main{
+    border: green 1px solid;
+    height: calc(100vh - 80px);
+    width: calc(100vw - 200px);
+    bottom: 0;
+    overflow: auto;
+}
+
+.container{
+    display: flex;
+}
+
+.divLogo .logo{
+    width: 60px;
+    height: 60px;
+}
+
+.searchBar{
+    width: 25%;
+    height: 30px;
+    border: 3px solid var(--lightOrange);
+    border-radius: 60px;
+    background-color: var(--ice);
+    padding-left: 10px;
+    color: var(--black);
+}
+
+.enterButton{
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: var(--darkGreen);
+    border: 4px var(--lightOrange) solid;
+
+}
+
+.profButton{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--black);
+    border: var(--lightOrange) 3px solid;
+}
+
+.buttonHover:hover{
+    background-color: var(--lightOrange);
+}
+
+.navButtons{
+    width: 18%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.divLogo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

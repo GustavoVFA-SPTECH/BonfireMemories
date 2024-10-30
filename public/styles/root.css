@@ -1,0 +1,18 @@
+:root{
+    --darkGreen: #141D1D;
+    --ice:#95B1AF;
+    --lightOrange: #A25327;
+    --blue:#406C94;
+    --gold:#4A4833;
+    --darkGray:#151515;
+    --darkOrange:#8C3C08;
+    --black:#111111;
+    --textColor: #FAFAFA;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--textColor);
+}
