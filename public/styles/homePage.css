@@ -53,6 +53,10 @@ body {
     height: 80%;
     border-radius: 50px;
     background-color: var(--darkGreen);
+    border: white 1px solid;
+    display: flex;
+    align-items: center;
+    
 }
 
 .profilePost{
@@ -60,7 +64,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: red 1px solid;
+    /* border: red 1px solid; */
 }
 
 .profilePost span{
@@ -81,7 +85,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: red 1px solid;
+    /* border: red 1px solid; */
     font-size: 20px;
 }
 
