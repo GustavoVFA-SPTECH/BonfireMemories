@@ -64,6 +64,10 @@ button{
     color: var(--black);
 }
 
+.searchBar:focus{
+    outline: none;
+}
+
 .enterButton{
     width: 120px;
     height: 40px;
@@ -114,6 +118,8 @@ button:hover{
     font-size: 15px;
 }
 
+/* Login */
+
 .modalLogin{
     position: absolute;
     background-color: var(--blackTransparent);
@@ -141,12 +147,46 @@ button:hover{
     height: 90%;
     width: 40%;
     background-color: var(--darkGray);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .loginLogo{
-
+    width: 300px;
+    height: 250px;
+    background-image: url('/Assets/logo.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .loginLogoText{
-    
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+.inputsLogin{
+    display: flex;
+    flex-direction: column;
+    border: red 1px solid;
+    width: 90%;
+}
+
+.inputLogin{
+    border: 0px transparent;
+}
+.inputLogin{
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid var(--gold);
+    background-color: transparent;
+    font-size: 30px;
+}
+
+.inputLogin:focus{
+    outline: none;
 }
