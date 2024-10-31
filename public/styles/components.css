@@ -4,6 +4,7 @@ button{
     border-radius: 50px;
     background-color: var(--darkGreen);
     border: 4px var(--lightOrange) solid;
+    cursor: pointer;
 }
 
 .navBar{
@@ -151,6 +152,8 @@ button:hover{
     align-items: center;
     display: flex;
     flex-direction: column;
+    gap: 30px;
+
 }
 
 .loginLogo{
@@ -169,7 +172,6 @@ button:hover{
 .inputsLogin{
     display: flex;
     flex-direction: column;
-    border: red 1px solid;
     width: 90%;
 }
 
@@ -189,4 +191,24 @@ button:hover{
 
 .inputLogin:focus{
     outline: none;
+}
+
+.buttonsLogin{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+}
+
+.buttonLogin{
+    height: 50px;
+    width: 180px;
+    font-size: 25px;
+}
+
+.loginText{
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 30%;
 }
