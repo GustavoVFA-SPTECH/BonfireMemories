@@ -10,11 +10,27 @@
     --textColor: #FAFAFA;
 }
 
+@font-face {
+  font-family: 'OptimusPrinceps';
+  src: url('../../Assets/fonts/Dark-Soul/OptimusPrinceps.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OptimusPrincepsBold';
+  src: url('../../Assets/fonts/Dark-Soul/OptimusPrincepsSemiBold.ttf') format('truetype');
+  font-weight: 600; /* ou 'bold', se preferir */
+  font-style: normal;
+}
+
+
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   color: var(--textColor);
+  font-family: 'OptimusPrinceps, sans-serif';
 }
 
 body{

@@ -4,13 +4,24 @@ body {
     background-image: url('../../Assets/backgroundHome.jpg');
 }
 
-.post {
-    /* border: white 1px solid; */
+.main{
+    padding-top: 30px;
+    gap: 30px;
+}
+
+/* .post {
     width: 70%;
     height: 90%;
     background-color: rgba(0, 0, 0, 0.700);
     border-radius: 50px;
+} */
 
+.post {
+    width: 70%; /* Largura relativa da div .post */
+    min-height: 90%; /* Máxima altura, evita distorção */
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50px;
+    overflow: hidden; /* Impede que o conteúdo interno estoure o tamanho */
 }
 
 .postBar{
@@ -71,10 +82,17 @@ body {
     flex-direction: row;
     align-items: center;
     border: red 1px solid;
+    font-size: 20px;
 }
 
 .likeIcon{
-    background-image: url();
+    background-image: url('../../Assets/icons/icon-estus.gif');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    width: 40px;
+    height: 40px;
+}
+
+.postTitle{
+    font-size: 30px;
 }
