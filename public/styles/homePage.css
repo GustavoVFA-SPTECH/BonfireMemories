@@ -17,11 +17,11 @@ body {
 } */
 
 .post {
-    width: 70%; /* Largura relativa da div .post */
-    min-height: 90%; /* Máxima altura, evita distorção */
+    width: 70%; 
+    min-height: 90%; 
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 50px;
-    overflow: hidden; /* Impede que o conteúdo interno estoure o tamanho */
+    overflow: hidden; 
 }
 
 .postBar{
@@ -95,4 +95,5 @@ body {
 
 .postTitle{
     font-size: 30px;
+    color: var(--ice);
 }
