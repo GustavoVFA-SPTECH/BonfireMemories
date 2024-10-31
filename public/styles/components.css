@@ -217,5 +217,93 @@ button:hover{
 /* Register */
 
 .registerModal{
+    position: absolute;
+    background-color: var(--blackTransparent);
+    /* border: white 2px solid; */
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.registerMain{
+    border: var(--gold) 4px solid;
+    background-color: var(--black);
+    width: 65%;
+    height: 80%;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+}
+
+.registerText{
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 10%;
+}
+
+.inputsRegister{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.inputRegister{
+    border: 0px transparent;
+}
+.inputRegister{
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid var(--gold);
+    background-color: transparent;
+    font-size: 30px;
+}
+
+.inputRegister:focus{
+    outline: none;
+}
+
+.buttonsRegister{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+}
+
+.buttonRegister{
+    height: 50px;
+    width: 180px;
+    font-size: 25px;
+}
+
+.registerContent{
+    border: var(--gold) 4px solid;
+    height: 90%;
+    width: 40%;
+    background-color: var(--darkGray);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+.registerLogo{
+    width: 300px;
+    height: 250px;
+    background-image: url('/Assets/logo.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.registerLogoText{
+    font-size: 50px;
+    text-decoration: underline;
 }
