@@ -51,9 +51,9 @@ body {
     width: 90%;
     /* border: red 1px solid; */
     height: 90%;
-    border-radius: 50px;
+    border-radius: 30px;
     background-color: var(--darkGreen);
-    border: white 1px solid;
+    /* border: white 1px solid; */
     display: flex;
     align-items: center;
     gap: 10px;
@@ -124,4 +124,5 @@ body {
     background-color: var(--black);
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 30px;
 }
