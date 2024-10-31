@@ -50,13 +50,13 @@ body {
 .postContent{
     width: 90%;
     /* border: red 1px solid; */
-    height: 80%;
+    height: 90%;
     border-radius: 50px;
     background-color: var(--darkGreen);
     border: white 1px solid;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     justify-content: center;
 
 }
@@ -105,18 +105,23 @@ body {
 }
 
 .postText{
-    border: white 1px solid;
-    width: 45%;
-    min-height: 20%;
-    max-height: fit-content;
-    /* overflow: hidden; */
     padding: 2px;
     font-size: 18px;
+    min-width: 45%;
+    min-height: 20%;
+    max-height: fit-content;
     max-width: 45%;
+    /* border: white 1px solid; */
+    /* overflow: hidden; */
 }
 
 .postImage{
-    border: red 1px solid;
+    border: var(--gold) 3px solid;
     width: 50%;
     height: 80%;
+    background-image: url('/Assets/imageTest.jpg');
+    background-size: contain;
+    background-color: var(--black);
+    background-position: center;
+    background-repeat: no-repeat;
 }
