@@ -56,7 +56,9 @@ body {
     border: white 1px solid;
     display: flex;
     align-items: center;
-    
+    gap: 15px;
+    justify-content: center;
+
 }
 
 .profilePost{
@@ -100,4 +102,21 @@ body {
 .postTitle{
     font-size: 30px;
     color: var(--ice);
+}
+
+.postText{
+    border: white 1px solid;
+    width: 45%;
+    min-height: 20%;
+    max-height: fit-content;
+    /* overflow: hidden; */
+    padding: 2px;
+    font-size: 18px;
+    max-width: 45%;
+}
+
+.postImage{
+    border: red 1px solid;
+    width: 50%;
+    height: 80%;
 }
