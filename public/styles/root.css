@@ -20,7 +20,7 @@
 @font-face {
   font-family: 'OptimusPrincepsBold';
   src: url('../../Assets/fonts/Dark-Soul/OptimusPrincepsSemiBold.ttf') format('truetype');
-  font-weight: 600; /* ou 'bold', se preferir */
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -36,4 +36,21 @@
 body{
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--lightOrange);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--darkOrange);
 }
