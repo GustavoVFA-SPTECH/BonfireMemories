@@ -13,7 +13,7 @@ body {
 .buildStatsContent{
     border: var(--gold) 4px solid;
     width: 80%;
-    height: 95%;
+    min-height: 96%;
     justify-content: center;
     align-items: center;
     background-color: var(--black);
@@ -182,8 +182,8 @@ body {
 .weaponDmgColumn{
     border: var(--gold) 4px solid;
     background-color: var(--darkGray);
-    height: 45%;
-    gap: 10px;
+    height: 41%;
+    gap: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,7 +193,7 @@ body {
 .defenseColumn{
     border: var(--gold) 4px solid;
     background-color: var(--darkGray);
-    height: 57%;
+    height: 62%;
     gap: 10px;
     display: flex;
     align-items: center;
@@ -210,4 +210,172 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+
+.weaponSelectColumn{
+    border: var(--gold) 4px solid;
+    background-color: var(--darkGray);
+    height: 55%;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ringsSelectColumn{
+    border: var(--gold) 4px solid;
+    background-color: var(--darkGray);
+    height: 45%;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.titleSelects{
+    font-size: 30px;
+    text-align: center;
+}
+
+.selectEquips{
+    border: var(--gold) 3px solid;
+    background-color: transparent;
+    width: 60%;
+    height: 60%;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.selectEquips:focus{
+    outline: none;
+}
+
+.detailWeaponColumn{
+    border: var(--gold) 4px solid;
+    background-color: var(--darkGray);
+    height: 100%;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.detailText{
+    font-size: 20px;
+}
+
+.armorSelectColumn{
+    border: var(--gold) 4px solid;
+    background-color: var(--darkGray);
+    height: 50%;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.detailWeaponColumn .stat{
+    display: none;
+}
+
+.buttonsColumn{
+    border: var(--gold) 4px solid;
+    background-color: var(--darkGray);
+    height: 50%;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.buildButton{
+    width: 70%;
+    height: 20%;
+    font-size: 30px;
+    background-color: transparent;
+}
+
+.buildSelectsContent{
+    border: var(--gold) 4px solid;
+    width: 80%;
+    min-height: 120%;
+    justify-content: center;
+    align-items: center;
+    /* border: blue 1px solid; */
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+
+.verticalColumn{
+    display: flex;
+    /* border: blue 1px solid; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    min-width: 100%;
+    min-height: 70%;
+}
+
+.horizontalColumn{
+    /* border: blue 1px solid; */
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.horizontalColumn .statsColumn{
+    width: 97%;
+    border: var(--gold) 4px solid;
+    flex-wrap: wrap;
+}
+
+.spells{
+    display: flex;
+    flex-wrap: wrap;
+    /* border: green 1px solid; */
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.spell{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    /* border: purple 1px solid; */
+    align-items: center;
+    height: 40px;
+}
+
+.spellSelect{
+    border: var(--gold) 3px solid;
+    background-color: transparent;
+    width: 100%;
+    height: 80%;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.spellSelect:focus{
+    outline: none;
 }
