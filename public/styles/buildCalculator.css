@@ -2,5 +2,69 @@
 
 
 body {
-    background-image: url('../../Assets/backgroundHome.jpg');
+    background-image: url('../../Assets/backgroundBuildCalculator.jpg');
 }
+
+.main{
+    padding-top: 30px;
+    gap: 10px;
+}
+
+.buildStatsContent{
+    border: var(--gold) 4px solid;
+    width: 80%;
+    height: 95%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+    display: flex;
+    gap: 10px;
+}
+
+.statsColumn{
+    /* border: red 1px solid; */
+    /* background-color: var(--darkGray); */
+    width: 32%;
+    height: 98%;
+}
+
+.stats{
+    border: var(--gold) 4px solid;
+    height: 100%;
+    background-color: var(--darkGray);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px; */
+    align-items: center;
+    gap: 10px;
+}
+
+.characterName{
+    font-size: 35px;
+    border-bottom: var(--gold) 3px solid;
+    height: fit-content;
+    width: 92%;
+    text-align: center;
+}
+
+.stat{
+    height: 40px;
+    width: 92%;
+    align-items: center;
+    display: flex;
+    /* border: red 1px solid; */
+    border-bottom: var(--gold) 3px solid;
+
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+}
+
+.statName{
+    font-size: 22px;
+    padding-left: 10px;
+}
+
