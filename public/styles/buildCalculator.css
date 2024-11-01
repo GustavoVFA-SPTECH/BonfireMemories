@@ -26,6 +26,9 @@ body {
     /* background-color: var(--darkGray); */
     width: 32%;
     height: 98%;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .stats{
@@ -55,7 +58,6 @@ body {
     display: flex;
     /* border: red 1px solid; */
     border-bottom: var(--gold) 3px solid;
-
 }
 
 .icon{
@@ -66,5 +68,146 @@ body {
 .statName{
     font-size: 22px;
     padding-left: 10px;
+    /* border: green 1px solid; */
+    width: 40%;
 }
 
+.statLevels{
+    /* border: red 1px solid; */
+    width: 100px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+
+.statLevel{
+    height: 30px;
+    width: 30px;
+    /* border: blue 1px solid; */
+    background-color: rgb(238, 238, 238);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.statButtons{
+    /* border: red 1px solid; */
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.statButtonUp{
+    height: 30px;
+    width: 30px;
+    border-radius: 0;
+    background-image: url('/Assets/icons/icon-arrow-level.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 0;
+    rotate: 270deg;
+}
+
+
+.statButtonDown{
+    height: 30px;
+    width: 30px;
+    border-radius: 0;
+    background-image: url('/Assets/icons/icon-arrow-level.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 0;
+    rotate: 90deg;
+}
+
+.statButtonUp:hover, .statButtonDown:hover{
+    background-color: transparent;
+}
+
+.hfsColumn{
+    border: var(--gold) 4px solid;
+    background-color: var(--darkGray);
+    height: 25%;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.statValues{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.statArrow{
+    font-size: 20px;
+    width: 10px;
+    text-align: center;
+}
+
+.currentValueStat{
+    font-size: 25px;
+    width: 50px;
+    text-align: center;
+}
+
+.futureValueStat{
+    font-size: 25px;
+    width: 50px;
+    text-align: center;
+}
+
+.eapiColumn{
+    border: var(--gold) 4px solid;
+    background-color: var(--darkGray);
+    height: 30%;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.weaponDmgColumn{
+    border: var(--gold) 4px solid;
+    background-color: var(--darkGray);
+    height: 45%;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.defenseColumn{
+    border: var(--gold) 4px solid;
+    background-color: var(--darkGray);
+    height: 57%;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.effectsColumn{
+    border: var(--gold) 4px solid;
+    background-color: var(--darkGray);
+    height: 45%;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
