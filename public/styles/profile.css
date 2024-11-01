@@ -1,0 +1,64 @@
+@import url(components.css);
+
+.main{
+    background-image: url('/Assets/backgroundHome.jpg');
+    justify-content: center;
+}
+
+.profileContent{
+    width: 80%;
+    height: 80%;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 35px;
+}
+
+.profileColumn{
+    width: 45%;
+    height: 90%;
+    border: white 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.profilePicture{
+    width: 200px;
+    height: 200px;
+    border: 3px solid var(--gold);
+    border-radius: 50%;
+}
+
+.profileButtons{
+    /* border: red 1px solid; */
+    height: 10%;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.profileButton{
+    width: 45%;
+    cursor: pointer;
+    height: 75%;
+    background-color: var(--black);
+    font-size: 20px;
+}
+
+.userNameLabel{
+    border: var(--gold) solid 3px ;
+    width: 70%;
+    background-color: var(--darkGreen);
+    height: 6%;
+    font-size: 25px;
+    text-align: center;
+    align-content: center;
+}
+
