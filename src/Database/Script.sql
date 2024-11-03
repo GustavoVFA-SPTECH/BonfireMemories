@@ -3,9 +3,9 @@ USE BonfireMemories;
 
 CREATE TABLE User(
 	idUser INT PRIMARY KEY AUTO_INCREMENT,
-    userName VARCHAR(45) NOT NULL,
-    email VARCHAR(60),
-    password VARCHAR(30)
+  userName VARCHAR(45) NOT NULL,
+  email VARCHAR(60) NOT NULL,
+  password VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE AcessLog(
