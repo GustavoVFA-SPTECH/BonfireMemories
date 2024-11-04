@@ -13,8 +13,8 @@
         <div class="loginContent">
           <span class="loginText">Login</span>
           <div class="inputsLogin">
-            <input class="inputLogin" type="text" placeholder="Username/Email"/>
-            <input class="inputLogin" type="text" placeholder="Password" />
+            <input class="inputLogin" type="text" placeholder="Username/Email" id="login"/>
+            <input class="inputLogin" type="text" placeholder="Password" id="loginPassword"/>
           </div>
           <div class="buttonsLogin">
             <button class="buttonLogin">Back</button>

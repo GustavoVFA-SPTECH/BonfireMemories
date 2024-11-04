@@ -13,10 +13,10 @@
           <div class="registerContent">
             <span class="registerText">Register</span>
             <div class="inputsRegister">
-              <input class="inputRegister" type="text" placeholder="Username"/>
-              <input class="inputRegister" type="text" placeholder="Email" />
-              <input class="inputRegister" type="text" placeholder="Password" />
-              <input class="inputRegister" type="text" placeholder="Confirm password"/>
+              <input class="inputRegister" type="text" placeholder="Username" id="registerUserName"/>
+              <input class="inputRegister" type="text" placeholder="Email" id="registerEmail"/>
+              <input class="inputRegister" type="text" placeholder="Password" id="registerPassword"/>
+              <input class="inputRegister" type="text" placeholder="Confirm password" id="registerConfirmPassword"/>
             </div>
             <div class="buttonsRegister">
               <button class="buttonRegister">Back</button>
