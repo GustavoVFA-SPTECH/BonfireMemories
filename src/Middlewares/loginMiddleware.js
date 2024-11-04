@@ -4,7 +4,7 @@ const {appError} = require("./error")
 
 const auth_middleware = async (req, res, next) => {
     try {
-        if(){
+        if(!auth){
             throw appError('sessão não encontrada', 401)
         }
 
