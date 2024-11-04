@@ -7,6 +7,7 @@ const userRouter = Router();
 
 userRouter.post("/register", userController.createUser);
 userRouter.post("/login", authController.login);
+userRouter.delete("/deleteUser")
 
 
 module.exports = userRouter;
