@@ -26,10 +26,6 @@ app.use(cors());
 // Routes
 app.use(userRoutes);
 
-app.get("/", (req, res) =>{
-    res.send("Hello World!");
-});
-
 
 
 app.use(errorHandler);

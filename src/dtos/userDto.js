@@ -25,7 +25,7 @@ const createDto = ({userName, email, password}) => {
             errors.push('The name must contain a maximum of 45 characters');
         };
         
-        if (!password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,30}$/)) { // 1 minus 1 maius 1 num 1 esp min 8 max 30
+        if (!password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$!%*?&])[A-Za-z\d@$#!%*?&]{8,30}$/)) { // 1 minus 1 maius 1 num 1 esp min 8 max 30
             errors.push('The password format is invalid');
         };
     };

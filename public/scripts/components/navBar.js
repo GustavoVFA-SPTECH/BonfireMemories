@@ -6,7 +6,7 @@ function navBar() {
     scriptParent.insertAdjacentHTML("beforeend", `
         <div class="navBar">
         <div class="divLogo">
-            <img src="../../Assets/logo.png" alt="" class="logo">
+            <img src="/Assets/logo.png" alt="" class="logo">
             <span>Bonfire Memories</span>
         </div>
         <input type="text" class="searchBar" maxlength="50">

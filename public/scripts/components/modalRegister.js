@@ -1,9 +1,10 @@
 function modalRegister() {
-    const scriptParent = document.currentScript.parentElement;
-    const page = document.currentScript.getAttribute("data-page");
+  const scriptParent = document.currentScript.parentElement;
+  const page = document.currentScript.getAttribute("data-page");
 
-
-    scriptParent.insertAdjacentHTML("beforeend", `
+  scriptParent.insertAdjacentHTML(
+    "beforeend",
+    `
     <div class="registerModal">
         <div class="registerMain">
           <div class="registerContent">
@@ -25,55 +26,61 @@ function modalRegister() {
           </div>
         </div>
       </div>
-       `);
-};
+       `
+  );
+}
 
 modalRegister();
 
-function register(){
-  const UserName = document.getElementById("registerUserName");
-  const email = document.getElementById("registerEmail");
-  const password = document.getElementById("registerPassword");
-  const Confpassword = document.getElementById("registerConfirmPassword");
+function register() {
+  const userName = document.getElementById("registerUserName").value;
+  const email = document.getElementById("registerEmail").value;
+  const password = document.getElementById("registerPassword").value;
+  const Confpassword = document.getElementById("registerConfirmPassword").value;
 
-  if(!userName){
+  console.log({
+    userName: userName,
+    email: email,
+    password: password,
+    Confpassword: Confpassword,
+  });
+
+  if (!userName) {
     alert("Username is required");
     return;
   }
-  if(!email){
+  if (!email) {
     alert("Email is required");
     return;
   }
-  if(!password){
+  if (!password) {
     alert("Password is required");
     return;
   }
-  if(!Confpassword){
+  if (!Confpassword) {
     alert("Confirm password is required");
     return;
   }
-  if(password!== Confpassword){
+  if(password != Confpassword){
     alert("Passwords do not match");
     return;
   }
-  
 
   const data = {
-    userName: UserName.value,
-    email: email.value,
-    password: password.value
-  }
+    userName: userName,
+    email: email,
+    password: password,
+  };
 
-  fetch( "/register", {
-    method: 'POST',
+  console.log(data)
+
+  fetch("/register", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(data)
-  })
-
+    body: JSON.stringify(data),
+  });
 }
 
-register().addEventListener('click', registerButton)
-
-
+registerButton.addEventListener("click", register);
