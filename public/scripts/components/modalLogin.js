@@ -1,4 +1,4 @@
-(function navBar() {
+function modalLogin() {
     const scriptParent = document.currentScript.parentElement;
     const page = document.currentScript.getAttribute("data-page");
 
@@ -24,4 +24,36 @@
       </div>
     </div>
        `);
-})();
+};
+modalLogin();
+
+function login(){
+  const login = document.getElementById("login");
+  const password = document.getElementById("loginPassword");
+
+  if(!login){
+    alert("Please enter your UserName");
+    return;
+  }
+  if(!password){
+    alert("Please enter your password");
+    return;
+  }
+
+  sessionStorage.UserName = login;
+  sessionStorage.Password = password;
+
+  const data = {
+    login: login.value,
+    password: password.value
+  }
+
+  fetch("/login",{
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+}
+

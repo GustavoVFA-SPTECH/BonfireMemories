@@ -1,3 +1,4 @@
+-- DROP DATABASE BonfireMemories;
 CREATE DATABASE BonfireMemories;
 USE BonfireMemories;
 
@@ -5,7 +6,7 @@ CREATE TABLE User(
 	idUser INT PRIMARY KEY AUTO_INCREMENT,
   userName VARCHAR(45) NOT NULL,
   email VARCHAR(60) NOT NULL,
-  password VARCHAR(30) NOT NULL
+  password TEXT NOT NULL
 );
 
 CREATE TABLE AcessLog(
@@ -107,3 +108,6 @@ CREATE TABLE Likes(
 	CONSTRAINT PRIMARY KEY (idLike, fkPost, postOwner)
 );
 
+
+
+-- SELECT * FROM User;

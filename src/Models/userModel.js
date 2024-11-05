@@ -1,12 +1,32 @@
 const bcrypt  = require("bcrypt");
 const database = require("../Database/config");
+const crypto = require("crypto-js");
+const { stringify } = require("nodemon/lib/utils");
 
-async function authenticate(login, password){
-    const [dbResult] = await database.executar(`SELECT idUser, userName, email FROM User WHERE (email = ? OR userName = ?);`,
+async function authenticate(login, loginPassword){
+    const [dbResult] = await database.executar(`SELECT idUser, userName, email, password FROM User WHERE (email = ? OR userName = ?);`,
         [login, login])
-    
-    const password = await bcrypt.compare(password, dbResult.password)
+
+    const password = await bcrypt.compare(loginPassword, dbResult.password)
+
+    if(!password){
+        throw new Error("Senha incorreta");
+    }else{
+        const token = crypto.AES.encrypt(JSON.stringify({
+            idUser: dbResult.idUser,
+            userName: dbResult.userName,
+            email: dbResult.email
+        }), process.env.SECRET_KEY).toString();
+
+        return {
+            userName: dbResult.userName,
+            email: dbResult.email,
+            token
+        };
+    }
+
 };
+
 
 async function register(userName, email, password){
     const hashedPassword = await bcrypt.hash(password, 10);

@@ -1,6 +1,6 @@
-(function navBar() {
+function navBar() {
     const scriptParent = document.currentScript.parentElement;
-    const page = document.currentScript.getAttribute("data-page");
+    // const page = document.currentScript.getAttribute("data-page");
 
 
     scriptParent.insertAdjacentHTML("beforeend", `
@@ -15,4 +15,6 @@
             <button class="profButton"></button>
         </div>
     </div>`);
-})();
+};
+
+navBar()

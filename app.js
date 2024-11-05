@@ -8,29 +8,31 @@ var caminho_env = ambiente_processo === 'producao' ? '.env' : '.env.dev';
 require("dotenv").config({ path: caminho_env });
 
 var express = require("express");
-var {appError} = require("./src/Middlewares/error.js")
+var {errorHandler} = require("./src/Middlewares/error.js")
 var cors = require("cors");
 var path = require("path");
 var PORTA_APP = process.env.APP_PORT;
 var HOST_APP = process.env.APP_HOST;
+const userRoutes = require("./src/Routes/userRoutes.js");
 
 var app = express();
 
-app.get("/", async(req, res, next)=>{
-    try {
-        throw appError('erro', 404) 
-    } catch (error) {
-        next(error)
-    }
-});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(cors());
+// Routes
+app.use(userRoutes);
 
-app.use(handler);
+app.get("/", (req, res) =>{
+    res.send("Hello World!");
+});
+
+
+
+app.use(errorHandler);
 
 app.listen(PORTA_APP, function () {
     console.log(`
