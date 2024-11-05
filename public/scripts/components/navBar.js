@@ -11,10 +11,13 @@ function navBar() {
         </div>
         <input type="text" class="searchBar" maxlength="50">
         <div class="navButtons">
-            <button class="enterButton">Enter</button>
-            <button class="profButton"></button>
+            <button class="profButton" onclick="buttonLogin()"></button>
         </div>
     </div>`);
 };
+
+function buttonLogin(){
+    document.querySelector(".modalLogin").style.display = "flex";
+}
 
 navBar()

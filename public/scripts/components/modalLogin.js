@@ -17,8 +17,8 @@ function modalLogin() {
             <input class="inputLogin" type="text" placeholder="Password" id="loginPassword"/>
           </div>
           <div class="buttonsLogin">
-            <button class="buttonLogin">Back</button>
-            <button class="buttonLogin">Login</button>
+            <button class="buttonLogin"  onclick="buttonBack()">Back</button>
+            <button class="buttonLogin" id="loginButton">Login</button>
           </div>
         </div>
       </div>
@@ -28,8 +28,8 @@ function modalLogin() {
 modalLogin();
 
 function login(){
-  const login = document.getElementById("login");
-  const password = document.getElementById("loginPassword");
+  const login = document.getElementById("login").value;
+  const password = document.getElementById("loginPassword").value;
 
   if(!login){
     alert("Please enter your UserName");
@@ -44,9 +44,11 @@ function login(){
   sessionStorage.Password = password;
 
   const data = {
-    login: login.value,
-    password: password.value
+    login: login,
+    password: password
   }
+
+  console.log(data)
 
   fetch("/login",{
     method: 'POST',
@@ -55,5 +57,11 @@ function login(){
     },
     body: JSON.stringify(data)
   })
+}
+
+loginButton.addEventListener('click', login)
+
+function buttonBack(){
+  document.querySelector(".modalLogin").style.display = "none";
 }
 

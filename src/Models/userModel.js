@@ -8,9 +8,9 @@ async function authenticate(login, loginPassword){
         [login, login])
 
     const password = await bcrypt.compare(loginPassword, dbResult.password)
-
+        console.log(login, loginPassword)
     if(!password){
-        throw new Error("Senha incorreta");
+        return false;
     }else{
         const token = crypto.AES.encrypt(JSON.stringify({
             idUser: dbResult.idUser,

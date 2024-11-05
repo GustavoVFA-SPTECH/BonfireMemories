@@ -4,8 +4,8 @@ USE BonfireMemories;
 
 CREATE TABLE User(
 	idUser INT PRIMARY KEY AUTO_INCREMENT,
-  userName VARCHAR(45) NOT NULL,
-  email VARCHAR(60) NOT NULL,
+  userName VARCHAR(45) UNIQUE NOT NULL,
+  email VARCHAR(60) UNIQUE NOT NULL,
   password TEXT NOT NULL
 );
 
