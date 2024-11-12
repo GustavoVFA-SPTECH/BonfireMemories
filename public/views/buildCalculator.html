@@ -22,7 +22,7 @@
                         <div class="stat">
                             <img src="../Assets/icons/icon-" alt="" class="icon"><span class="statName">Class:</span>
                             <div class="class">
-                                <select name="" id="" class="classSelect">
+                                <select name="" id="class" class="classSelect">
                                     <option value="Knight">Knight</option>
                                     <option value="Mercenary">Mercenary</option>
                                     <option value="Warrior">Warrior</option>
@@ -267,65 +267,65 @@
                         <div class="stat">
                             <img src="../Assets/icons/icon-physical-def.png" alt="" class="icon"><span class="statName">Phisical Def</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialPhysicalDef">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalPhysicalDef">100</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="../Assets/icons/icon-strike-def.png" alt="" class="icon"><span class="statName">Strike </span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialStikeDef">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalStrikeDef">100</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="../Assets/icons/icon-slash-def.png" alt="" class="icon"><span class="statName">Slash </span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialSlashDef">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalSlashDef">100</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="../Assets/icons/icon-thrust-def.png" alt="" class="icon"><span class="statName">Thrust </span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialThrustDef">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalThrustDef">100</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="../Assets/icons/icon-magic-def.png" alt="" class="icon"><span class="statName">Magic Def</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialMagicDef">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalMagicDef">100</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="../Assets/icons/icon-fire-def.png" alt="" class="icon"><span class="statName">Fire Def</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialFireDef">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalFireDef">100</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="../Assets/icons/icon-lightning-def.png" alt="" class="icon"><span class="statName">Lightning Def</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialLightningDef">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalLightningDef">100</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="../Assets/icons/icon-dark-def.png" alt="" class="icon"><span class="statName">Dark Def</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialDarkDef">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalDarkDef">100</div>
                             </div>
                         </div>
                     </div>
@@ -333,25 +333,25 @@
                         <div class="stat">
                             <img src="../Assets/icons/icon-bleed.png" alt="" class="icon"><span class="statName">Bleed Res</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialBlood">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalBlood">100</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="../Assets/icons/icon-poison.png" alt="" class="icon"><span class="statName">Poison Res</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialPoison">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalPoison">100</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="../Assets/icons/icon-frost.png" alt="" class="icon"><span class="statName">Frost Res</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialFrost">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalFrost">100</div>
                             </div>
                         </div>
                         <div class="stat">
@@ -371,37 +371,67 @@
                         <div class="weaponSelectColumn">
                             <span class="titleSelects">Weapons</span>
                             <div class="stat">
-                                <span class="statName">Right Hand 1</span> <select class="selectEquips" name="" id=""></select>
+                                <span class="statName">Right Hand 1</span>
+                                <select class="selectEquips" name="" id="R1Select">
+
+                                </select>
                             </div>
                             <div class="stat">
-                                <span class="statName">Right Hand 2</span> <select class="selectEquips" name="" id=""></select>
+                                <span class="statName">Right Hand 2</span>
+                                <select class="selectEquips" name="" id="R2Select">
+
+                                </select>
                             </div>
                             <div class="stat">
-                                <span class="statName">Right Hand 3</span> <select class="selectEquips" name="" id=""></select>
+                                <span class="statName">Right Hand 3</span>
+                                <select class="selectEquips" name="" id="R3Select">
+
+                                </select>
                             </div>
                             <div class="stat">
-                                <span class="statName">Left Hand 1</span> <select class="selectEquips" name="" id=""></select>
+                                <span class="statName">Left Hand 1</span>
+                                <select class="selectEquips" name="" id="L1Select">
+
+                                </select>
                             </div>
                             <div class="stat">
-                                <span class="statName">Right Hand 2</span> <select class="selectEquips" name="" id=""></select>
+                                <span class="statName">Left Hand 2</span>
+                                <select class="selectEquips" name="" id="L2Select">
+
+                                </select>
                             </div>
                             <div class="stat">
-                                <span class="statName">Right Hand 3</span> <select class="selectEquips" name="" id=""></select>
+                                <span class="statName">Left Hand 3</span>
+                                <select class="selectEquips" name="" id="L3Select">
+
+                                </select>
                             </div>
                         </div>
                         <div class="ringsSelectColumn">
                             <span class="titleSelects">Rings</span>
                             <div class="stat">
-                                <span class="statName">Ring 1</span> <select class="selectEquips" name="" id=""></select>
+                                <span class="statName">Ring 1</span>
+                                <select class="selectEquips" name="" id="Ring1Select">
+
+                                </select>
                             </div>
                             <div class="stat">
-                                <span class="statName">Ring 2</span> <select class="selectEquips" name="" id=""></select>
+                                <span class="statName">Ring 2</span> 
+                                <select class="selectEquips" name="" id="Ring2Select">
+
+                                </select>
                             </div>
                             <div class="stat">
-                                <span class="statName">Ring 3</span> <select class="selectEquips" name="" id=""></select>
+                                <span class="statName">Ring 3</span> 
+                                <select class="selectEquips" name="" id="Ring3Select">
+
+                                </select>
                             </div>
                             <div class="stat">
-                                <span class="statName">Ring 4</span> <select class="selectEquips" name="" id=""></select>
+                                <span class="statName">Ring 4</span>
+                                <select class="selectEquips" name="" id="Ring4Select">
+
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -411,65 +441,65 @@
                             <div class="stat">
                                 <img src="/Assets/icons/icon-physical-dmg.png" alt="" class="icon"><span class="statName">Physical</span>
                                 <div class="statValues">
-                                    <div class="currentValueStat">0</div>
+                                    <div class="currentValueStat" id="initialPhysicalDmg">0</div>
                                     <span class="statArrow">+</span>
-                                    <div class="futureValueStat">100</div>
+                                    <div class="futureValueStat" id="finalPhysicalDmg">100</div>
                                 </div>
                             </div>
                             <div class="stat">
                                 <img src="/Assets/icons/icon-magic-dmg.png" alt="" class="icon"><span class="statName">Magic</span>
                                 <div class="statValues">
-                                    <div class="currentValueStat">0</div>
+                                    <div class="currentValueStat" id="initialMagicDmg">0</div>
                                     <span class="statArrow">+</span>
-                                    <div class="futureValueStat">100</div>
+                                    <div class="futureValueStat" id="finalMagicDmg">100</div>
                                 </div>
                             </div>
                             <div class="stat">
                                 <img src="/Assets/icons/icon-fire-dmg.png" alt="" class="icon"><span class="statName">Fire</span>
                                 <div class="statValues">
-                                    <div class="currentValueStat">0</div>
+                                    <div class="currentValueStat" id="initialFireDmg">0</div>
                                     <span class="statArrow">+</span>
-                                    <div class="futureValueStat">100</div>
+                                    <div class="futureValueStat" id="finalFireDmg">100</div>
                                 </div>
                             </div>
                             <div class="stat">
                                 <img src="/Assets/icons/icon-lightning-dmg.png" alt="" class="icon"><span class="statName">Lightning</span>
                                 <div class="statValues">
-                                    <div class="currentValueStat">0</div>
+                                    <div class="currentValueStat" id="initialLighningDmg">0</div>
                                     <span class="statArrow">+</span>
-                                    <div class="futureValueStat">100</div>
+                                    <div class="futureValueStat" id="finalLightningDmg">100</div>
                                 </div>
                             </div>
                             <div class="stat">
                                 <img src="/Assets/icons/icon-dark-dmg.png" alt="" class="icon"><span class="statName">Dark</span>
                                 <div class="statValues">
-                                    <div class="currentValueStat">0</div>
+                                    <div class="currentValueStat" id="initialDarkDmg">0</div>
                                     <span class="statArrow">+</span>
-                                    <div class="futureValueStat">100</div>
+                                    <div class="futureValueStat" id="finalDarkDmg">100</div>
                                 </div>
                             </div>
                             <div class="stat">
                                 <img src="/Assets/icons/icon-bleed.png" alt="" class="icon"><span class="statName">Bleed</span>
                                 <div class="statValues">
-                                    <div class="currentValueStat">0</div>
+                                    <div class="currentValueStat" id="iniitalBleedEffect">0</div>
                                     <span class="statArrow">+</span>
-                                    <div class="futureValueStat">100</div>
+                                    <div class="futureValueStat" id="finalBleedEffect">100</div>
                                 </div>
                             </div>
                             <div class="stat">
                                 <img src="/Assets/icons/icon-poison.png" alt="" class="icon"><span class="statName">Poison</span>
                                 <div class="statValues">
-                                    <div class="currentValueStat">0</div>
+                                    <div class="currentValueStat" id="initialPoisonEffect">0</div>
                                     <span class="statArrow">+</span>
-                                    <div class="futureValueStat">100</div>
+                                    <div class="futureValueStat" id="finalPoisonEffect">100</div>
                                 </div>
                             </div>
                             <div class="stat">
                                 <img src="/Assets/icons/icon-frost.png" alt="" class="icon"><span class="statName">Frost</span>
                                 <div class="statValues">
-                                    <div class="currentValueStat">0</div>
+                                    <div class="currentValueStat" id="initialFrostEffect">0</div>
                                     <span class="statArrow">+</span>
-                                    <div class="futureValueStat">100</div>
+                                    <div class="futureValueStat" id="finalFrostEffect">100</div>
                                 </div>
                             </div>
                             <span class="detailText">Hover over the weapon to view</span>
@@ -479,21 +509,33 @@
                         <div class="armorSelectColumn">
                             <span class="titleSelects">Armor</span>
                             <div class="stat">
-                                <span class="statName">Head</span> <select class="selectEquips" name="" id=""></select>
+                                <span class="statName">Head</span>
+                                <select class="selectEquips" name="" id="headSelect">
+
+                                </select>
                             </div>
                             <div class="stat">
-                                <span class="statName">Chest</span> <select class="selectEquips" name="" id=""></select>
+                                <span class="statName">Chest</span>
+                                <select class="selectEquips" name="" id="chestSelect">
+
+                                </select>
                             </div>
                             <div class="stat">
-                                <span class="statName">Hands</span> <select class="selectEquips" name="" id=""></select>
+                                <span class="statName">Hands</span>
+                                <select class="selectEquips" name="" id="handsSelect">
+
+                                </select>
                             </div>
                             <div class="stat">
-                                <span class="statName">Legs</span> <select class="selectEquips" name="" id=""></select>
+                                <span class="statName">Legs</span>
+                                <select class="selectEquips" name="" id="legsSelect">
+
+                                </select>
                             </div>
                         </div>
                         <div class="buttonsColumn">
-                            <button class="buildButton">Load</button>
-                            <button class="buildButton">Save</button>
+                            <button class="buildButton" id="loadButton">Load</button>
+                            <button class="buildButton" id="Savebutton">Save</button>
                         </div>
                     </div>
                 </div>
@@ -502,40 +544,40 @@
                         <span class="titleSelects">Spells</span>
                         <div class="spells">
                             <div class="spell">
-                                <select class="spellSelect" name="" id=""></select>
+                                <select class="spellSelect" name="" id="1Spell"></select>
                             </div>
                             <div class="spell">
-                                <select class="spellSelect" name="" id=""></select>
+                                <select class="spellSelect" name="" id="2Spell"></select>
                             </div>
                             <div class="spell">
-                                <select class="spellSelect" name="" id=""></select>
+                                <select class="spellSelect" name="" id="3Spell"></select>
                             </div>
                             <div class="spell">
-                                <select class="spellSelect" name="" id=""></select>
+                                <select class="spellSelect" name="" id="4Spell"></select>
                             </div>
                             <div class="spell">
-                                <select class="spellSelect" name="" id=""></select>
+                                <select class="spellSelect" name="" id="5Spell"></select>
                             </div>
                             <div class="spell">
-                                <select class="spellSelect" name="" id=""></select>
+                                <select class="spellSelect" name="" id="6Spell"></select>
                             </div>
                             <div class="spell">
-                                <select class="spellSelect" name="" id=""></select>
+                                <select class="spellSelect" name="" id="7Spell"></select>
                             </div>
                             <div class="spell">
-                                <select class="spellSelect" name="" id=""></select>
+                                <select class="spellSelect" name="" id="8Spell"></select>
                             </div>
                             <div class="spell">
-                                <select class="spellSelect" name="" id=""></select>
+                                <select class="spellSelect" name="" id="9Spell"></select>
                             </div>
                             <div class="spell">
-                                <select class="spellSelect" name="" id=""></select>
+                                <select class="spellSelect" name="" id="10Spell"></select>
                             </div>
                             <div class="spell">
-                                <select class="spellSelect" name="" id=""></select>
+                                <select class="spellSelect" name="" id="11Spell"></select>
                             </div>
                             <div class="spell">
-                                <select class="spellSelect" name="" id=""></select>
+                                <select class="spellSelect" name="" id="12Spell"></select>
                             </div>
                         </div>                    
                     </div>
