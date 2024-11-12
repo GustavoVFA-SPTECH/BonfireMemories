@@ -3,7 +3,13 @@ const classes = {
     "Knight": { level: 9, vigor: 12, attunement: 10, endurance: 11, vitality: 15, strength: 13, dexterity: 12, intelligence: 9, faith: 9, luck: 7 },
     "Mercenary": { level: 8, vigor: 11, attunement: 12, endurance: 10, vitality: 10, strength: 10, dexterity: 16, intelligence: 10, faith: 8, luck: 9 },
     "Warrior": { level: 7, vigor: 14, attunement: 6, endurance: 12, vitality: 11, strength: 16, dexterity: 9, intelligence: 8, faith: 9, luck: 11 },
-    "Herald": { level: 9, vigor: 12, attunement: 10, endurance: 9, vitality: 12, strength: 12, dexterity: 11, intelligence: 8, faith: 13, luck: 11 }
+    "Herald": { level: 9, vigor: 12, attunement: 10, endurance: 9, vitality: 12, strength: 12, dexterity: 11, intelligence: 8, faith: 13, luck: 11 },
+    "Thief": { level: 6, vigor: 10, attunement: 10, endurance: 9, vitality: 9, strength: 6, dexterity: 15, intelligence: 12, faith: 9, luck: 15 },
+    "Assassin": { level: 5, vigor: 9, attunement: 11, endurance: 10, vitality: 8, strength: 9, dexterity: 15, intelligence: 12, faith: 9, luck: 12 },
+    "Pyromancer": { level: 8, vigor: 9, attunement: 14, endurance: 9, vitality: 9, strength: 8, dexterity: 10, intelligence: 16, faith: 8, luck: 7 },
+    "Cleric": { level: 8, vigor: 11, attunement: 13, endurance: 9, vitality: 9, strength: 9, dexterity: 8, intelligence: 9, faith: 16, luck: 7 },
+    "Sorcerer": { level: 6, vigor: 8, attunement: 16, endurance: 7, vitality: 8, strength: 6, dexterity: 8, intelligence: 16, faith: 7, luck: 7 },
+    "Deprived": { level: 6, vigor: 10, attunement: 8, endurance: 11, vitality: 10, strength: 8, dexterity: 8, intelligence: 8, faith: 8, luck: 8 }
 };
 
 // Função para configurar os atributos iniciais ao selecionar uma classe
@@ -86,11 +92,12 @@ function calcularStatus() {
     const fp = calcularFP(attunement);
     const stamina = calcularStamina(endurance);
 
+
     // Verifica a existência dos elementos antes de atribuir valores
     const setStatusValue = (id, value) => {
         const element = document.getElementById(id);
         if (element) {
-            element.value = value;
+            element.innerHTML = value;
         } else {
             console.warn(`Elemento com ID ${id} não encontrado no HTML.`);
         }
@@ -127,7 +134,7 @@ function adjustAttribute(attribute, change) {
     if (element) {
         const currentValue = parseInt(element.value) || 0;
         element.value = Math.max(1, currentValue + change); // Evita valores abaixo de 1
-        calcularStatus();
+        calcularStatus(); // Recalcula os status
         calcularFinalLevel();  // Atualiza o nível final após o ajuste
     } else {
         console.warn(`Elemento com ID ${attribute} não encontrado no HTML.`);
