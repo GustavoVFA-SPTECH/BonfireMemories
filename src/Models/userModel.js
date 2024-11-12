@@ -1,12 +1,10 @@
 const bcrypt  = require("bcrypt");
 const database = require("../Database/config");
 const crypto = require("crypto-js");
-const { stringify } = require("nodemon/lib/utils");
 
 async function authenticate(login, loginPassword){
     const [dbResult] = await database.executar(`SELECT idUser, userName, email, password FROM User WHERE (email = ? OR userName = ?);`,
         [login, login])
-        // console.log(dbResult)
     if(!dbResult){
         return false;
     }

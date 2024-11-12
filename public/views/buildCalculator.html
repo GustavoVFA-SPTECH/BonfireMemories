@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bonfire Memories</title>
     <link rel="stylesheet" href="../styles/buildCalculator.css">
+    <script src="../scripts/buildCalculator.js"></script>
 </head>
 
 <body>
@@ -24,15 +25,15 @@
                         <div class="stat">
                             <img src="../Assets/icons/icon-level.png" alt="" class="icon"><span class="statName">Level:</span>
                             <div class="statLevels">
-                                <div class="statLevel">1</div>
-                                <div class="statLevel">1</div>
+                                <div class="statLevel" id="initialLevel">1</div>
+                                <div class="statLevel" id="finalLevel">1</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="../Assets/icons/icon-vigor.png" alt="" class="icon"><span class="statName">Vigor:</span>
                             <div class="statLevels">
-                                <div class="statLevel">1</div>
-                                <div class="statLevel">1</div>
+                                <div class="statLevel" id="initialVigor">1</div>
+                                <div class="statLevel" id="finalVigor">1</div>
                             </div>
                             <div class="statButtons">
                                 <button class="statButtonUp"></button>
@@ -42,8 +43,8 @@
                         <div class="stat">
                             <img src="../Assets/icons/icon-attunement.png" alt="" class="icon"><span class="statName">Attunement:</span>
                             <div class="statLevels">
-                                <div class="statLevel">1</div>
-                                <div class="statLevel">1</div>
+                                <div class="statLevel" id="initalAttunement">1</div>
+                                <div class="statLevel" id="finalAttunement">1</div>
                             </div>
                             <div class="statButtons">
                                 <button class="statButtonUp"></button>
@@ -53,8 +54,8 @@
                         <div class="stat">
                             <img src="../Assets/icons/icon-endurance.png" alt="" class="icon"><span class="statName">Endurence:</span>
                             <div class="statLevels">
-                                <div class="statLevel">1</div>
-                                <div class="statLevel">1</div>
+                                <div class="statLevel" id="initialEndurance">1</div>
+                                <div class="statLevel" id="finalEndurance">1</div>
                             </div>
                             <div class="statButtons">
                                 <button class="statButtonUp"></button>
@@ -64,8 +65,8 @@
                         <div class="stat">
                             <img src="../Assets/icons/icon-vitality.png" alt="" class="icon"><span class="statName">Vitality:</span>
                             <div class="statLevels">
-                                <div class="statLevel">1</div>
-                                <div class="statLevel">1</div>
+                                <div class="statLevel" id="initialVitality">1</div>
+                                <div class="statLevel" id="finalVitality">1</div>
                             </div>
                             <div class="statButtons">
                                 <button class="statButtonUp"></button>
@@ -75,8 +76,8 @@
                         <div class="stat">
                             <img src="../Assets/icons/icon-strength.png" alt="" class="icon"><span class="statName">Strength:</span>
                             <div class="statLevels">
-                                <div class="statLevel">1</div>
-                                <div class="statLevel">1</div>
+                                <div class="statLevel" id="initialStrength">1</div>
+                                <div class="statLevel" id="finalStrength">1</div>
                             </div>
                             <div class="statButtons">
                                 <button class="statButtonUp"></button>
@@ -86,8 +87,8 @@
                         <div class="stat">
                             <img src="../Assets/icons/icon-dexterity.png" alt="" class="icon"><span class="statName">Dexterity:</span>
                             <div class="statLevels">
-                                <div class="statLevel">1</div>
-                                <div class="statLevel">1</div>
+                                <div class="statLevel" id="initialDexterity">1</div>
+                                <div class="statLevel" id="finalDexterity">1</div>
                             </div>
                             <div class="statButtons">
                                 <button class="statButtonUp"></button>
@@ -97,8 +98,8 @@
                         <div class="stat">
                             <img src="../Assets/icons/icon-intelligence.png" alt="" class="icon"><span class="statName">Inteligence:</span>
                             <div class="statLevels">
-                                <div class="statLevel">1</div>
-                                <div class="statLevel">1</div>
+                                <div class="statLevel" id="initialIntelligence">1</div>
+                                <div class="statLevel" id="finalIntelligence">1</div>
                             </div>
                             <div class="statButtons">
                                 <button class="statButtonUp"></button>
@@ -108,8 +109,8 @@
                         <div class="stat">
                             <img src="../Assets/icons/icon-faith.png" alt="" class="icon"><span class="statName">Faith:</span>
                             <div class="statLevels">
-                                <div class="statLevel">1</div>
-                                <div class="statLevel">1</div>
+                                <div class="statLevel" id="initialFaith">1</div>
+                                <div class="statLevel" id="finalFaith">1</div>
                             </div>
                             <div class="statButtons">
                                 <button class="statButtonUp"></button>
@@ -119,8 +120,8 @@
                         <div class="stat">
                             <img src="../Assets/icons/icon-luck.png" alt="" class="icon"><span class="statName">Luck:</span>
                             <div class="statLevels">
-                                <div class="statLevel">1</div>
-                                <div class="statLevel">1</div>
+                                <div class="statLevel" id="initialLuck">1</div>
+                                <div class="statLevel" id="finalLuck">1</div>
                             </div>
                             <div class="statButtons">
                                 <button class="statButtonUp"></button>
@@ -130,12 +131,7 @@
                         <div class="stat">
                             <img src="../Assets/icons/icon-souls-cost.png" alt="" class="icon"><span class="statName">Soul Cost:</span>
                             <div class="statLevels">
-                                <div class="statLevel">1</div>
-                                <div class="statLevel">1</div>
-                            </div>
-                            <div class="statButtons">
-                                <button class="statButtonUp"></button>
-                                <button class="statButtonDown"></button>
+                                <div class="statLevel" id="soulsCost">1</div>
                             </div>
                         </div>
                     </div>
@@ -145,25 +141,25 @@
                         <div class="stat">
                             <img src="/Assets/icons/icon_hp.png" alt="" class="icon"><span class="statName">HP</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialHP">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="FinalHP">100</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="/Assets/icons/icon-fp.png" alt="" class="icon"><span class="statName">FP</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialFP">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="initialFP">100</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="/Assets/icons/icon-stamina.png" alt="" class="icon"><span class="statName">Stamina</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialStamina">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="initialStamina">100</div>
                             </div>
                         </div>
                     </div>
@@ -171,33 +167,33 @@
                         <div class="stat">
                             <img src="../Assets/icons/icon_equip_load.png" alt="" class="icon"><span class="statName">Equip. Load</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialEquipLoad">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalEquipLoad">100</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="../Assets/icons/icon-attunement-slots.png" alt="" class="icon"><span class="statName">Att. slots</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialAttunementSlots">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalEquipLoad">100</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="../Assets/icons/icon-poise.png" alt="" class="icon"><span class="statName">Poise</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialPoise">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalPoise">100</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="../Assets/icons/icon-item-discovery.png" alt="" class="icon"><span class="statName">Item Disc.</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialItemDiscovery">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalItemDiscovery">100</div>
                             </div>
                         </div>
                     </div>
@@ -205,49 +201,49 @@
                         <div class="stat">
                             <img src="../Assets/icons/r-weapon.png" alt="" class="icon"><span class="statName">R. Weapon 1</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialR1Weapon">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalR1Weapon">100</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="../Assets/icons/r-weapon.png" alt="" class="icon"><span class="statName">R. Weapon 2</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialR2Weapon">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalR2Weapon">100</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="../Assets/icons/r-weapon.png" alt="" class="icon"><span class="statName">R. Weapon 3</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialR3Weapon">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalR3Weapon">100</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="../Assets/icons/l-weapon.png" alt="" class="icon"><span class="statName">L. Weapon 1</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialL1Weapon">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalL1Weapon">100</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="../Assets/icons/l-weapon.png" alt="" class="icon"><span class="statName">L. Weapon 2</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialL2Weapon">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalL2Weapon">100</div>
                             </div>
                         </div>
                         <div class="stat">
                             <img src="../Assets/icons/l-weapon.png" alt="" class="icon"><span class="statName">L. Weapon 3</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialL3Weapon">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalL3Weapon">100</div>
                             </div>
                         </div>
                     </div>
@@ -347,9 +343,9 @@
                         <div class="stat">
                             <img src="../Assets/icons/icon-curse.png" alt="" class="icon"><span class="statName">Curse Res</span>
                             <div class="statValues">
-                                <div class="currentValueStat">0</div>
+                                <div class="currentValueStat" id="initialCurse">0</div>
                                 <span class="statArrow">></span>
-                                <div class="futureValueStat">100</div>
+                                <div class="futureValueStat" id="finalCurse">100</div>
                             </div>
                         </div>
                     </div>
