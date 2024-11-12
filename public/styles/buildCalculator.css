@@ -379,3 +379,23 @@ body {
 .spellSelect:focus{
     outline: none;
 }
+
+.class{
+    width: 90%;
+}
+
+.classSelect {
+    width: 100%;
+    border: var(--gold) 3px solid;
+    background-color: var(--darkGray);
+    font-size: 20px;
+    text-align: center;
+}
+
+.classSelect:focus{
+    outline: none;
+}
+
+.soulCost{
+    width: 100px;
+}
