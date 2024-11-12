@@ -1,4 +1,4 @@
-// Define atributos iniciais das classes
+
 const classes = {
     "Knight": { level: 9, vigor: 12, attunement: 10, endurance: 11, vitality: 15, strength: 13, dexterity: 12, intelligence: 9, faith: 9, luck: 7 },
     "Mercenary": { level: 8, vigor: 11, attunement: 12, endurance: 10, vitality: 10, strength: 10, dexterity: 16, intelligence: 10, faith: 8, luck: 9 },
@@ -12,16 +12,16 @@ const classes = {
     "Deprived": { level: 6, vigor: 10, attunement: 8, endurance: 11, vitality: 10, strength: 8, dexterity: 8, intelligence: 8, faith: 8, luck: 8 }
 };
 
-// Função para configurar os atributos iniciais ao selecionar uma classe
+
 function setInitialAttributes() {
     const selectedClass = document.getElementById("class").value;
     const classStats = classes[selectedClass];
 
-    // Definindo valores iniciais apenas se os elementos existem no HTML
+    
     const setAttributeValue = (id, value) => {
         const element = document.getElementById(id);
         if (element) {
-            element.value = value;
+            element.value = value; 
         } else {
             console.warn(`Elemento com ID ${id} não encontrado no HTML.`);
         }
@@ -38,7 +38,7 @@ function setInitialAttributes() {
     setAttributeValue("initialFaith", classStats.faith);
     setAttributeValue("initialLuck", classStats.luck);
 
-    // Define os valores finais como iguais aos iniciais ao escolher a classe
+    
     setAttributeValue("finalVigor", classStats.vigor);
     setAttributeValue("finalAttunement", classStats.attunement);
     setAttributeValue("finalEndurance", classStats.endurance);
@@ -49,18 +49,18 @@ function setInitialAttributes() {
     setAttributeValue("finalFaith", classStats.faith);
     setAttributeValue("finalLuck", classStats.luck);
 
-    // Calcula os status iniciais
+    
     calcularStatus();
-    calcularFinalLevel();  // Atualiza o nível final
+    calcularFinalLevel();  
 }
 
-// Função para calcular o nível final, considerando o nível inicial e os aumentos nos atributos
+
 function calcularFinalLevel() {
     const initialLevel = parseInt(document.getElementById("initialLevel").value) || 0;
     
     let totalIncrease = 0;
 
-    // Calcula o aumento de nível com base nos atributos
+    
     totalIncrease += calculateLevelIncrease("Vigor");
     totalIncrease += calculateLevelIncrease("Attunement");
     totalIncrease += calculateLevelIncrease("Endurance");
@@ -75,25 +75,36 @@ function calcularFinalLevel() {
     document.getElementById("finalLevel").value = finalLevel;
 }
 
-// Função para calcular o aumento no nível para um atributo específico
+
 function calculateLevelIncrease(attribute) {
     const initialValue = parseInt(document.getElementById(`initial${attribute}`).value) || 0;
     const finalValue = parseInt(document.getElementById(`final${attribute}`).value) || 0;
     return finalValue - initialValue;
 }
 
-// Função para calcular os status de acordo com os atributos
+
 function calcularStatus() {
     const vigor = parseInt(document.getElementById("finalVigor").value) || 0;
     const attunement = parseInt(document.getElementById("finalAttunement").value) || 0;
     const endurance = parseInt(document.getElementById("finalEndurance").value) || 0;
+    const vitality = parseInt(document.getElementById("finalVitality").value) || 0;
+    const strength = parseInt(document.getElementById("finalStrength").value) || 0;
+    const dexterity = parseInt(document.getElementById("finalDexterity").value) || 0;
+    const intelligence = parseInt(document.getElementById("finalIntelligence").value) || 0;
+    const faith = parseInt(document.getElementById("finalFaith").value) || 0;
+    const luck = parseInt(document.getElementById("finalLuck").value) || 0;
 
     const hp = calcularHP(vigor);
     const fp = calcularFP(attunement);
     const stamina = calcularStamina(endurance);
+    const poise = calcularPoise(endurance);
+    const equipLoad = calcularEquipLoad(endurance, vitality);
+    const attunementSlots = calcularAttunementSlots(attunement);
+    const itemDiscovery = calcularItemDiscovery(luck);
+    const resistancePhysical = calcularResistenciaFisica(vitality);
+    const resistancePoison = calcularResistenciaVeneno(endurance);
 
-
-    // Verifica a existência dos elementos antes de atribuir valores
+    
     const setStatusValue = (id, value) => {
         const element = document.getElementById(id);
         if (element) {
@@ -106,20 +117,26 @@ function calcularStatus() {
     setStatusValue("finalHP", hp);
     setStatusValue("finalFP", fp);
     setStatusValue("finalStamina", stamina);
+    setStatusValue("finalPoise", poise);
+    setStatusValue("finalEquipLoad", equipLoad);
+    setStatusValue("finalAttunementSlots", attunementSlots);
+    setStatusValue("finalItemDiscovery", itemDiscovery);
+    setStatusValue("finalPhysicalDef", resistancePhysical);
+    setStatusValue("finalPoison", resistancePoison);
 }
 
-// Fórmulas para calcular HP, FP e Stamina
+
 function calcularHP(vigor) {
     if (vigor <= 10) return 300 + vigor * 30;
     if (vigor <= 20) return 600 + (vigor - 10) * 20;
-    if (vigor <= 30) return 800 + (vigor - 20) * 15;
-    return 950 + (vigor - 30) * 5;
+    if (vigor <= 40) return 800 + (vigor - 20) * 10;
+    return 1000 + (vigor - 40) * 5;
 }
 
 function calcularFP(attunement) {
-    if (attunement <= 10) return 70 + attunement * 3;
-    if (attunement <= 20) return 100 + (attunement - 10) * 2.5;
-    return 125 + (attunement - 20) * 2;
+    if (attunement <= 10) return 100 + attunement * 5;
+    if (attunement <= 20) return 150 + (attunement - 10) * 4;
+    return 190 + (attunement - 20) * 3;
 }
 
 function calcularStamina(endurance) {
@@ -128,46 +145,77 @@ function calcularStamina(endurance) {
     return 115 + (endurance - 20) * 1;
 }
 
-// Função para ajustar atributos e recalcular status
+
+
+function calcularPoise(endurance) {
+    if (endurance <= 10) return 10 + endurance * 2;
+    if (endurance <= 20) return 30 + (endurance - 10) * 3;
+    return 60 + (endurance - 20) * 5;
+}
+
+function calcularEquipLoad(endurance, vitality) {
+    return 50 + endurance * 2 + vitality * 1.5;
+}
+
+function calcularAttunementSlots(attunement) {
+    if (attunement <= 10) return 1;
+    if (attunement <= 20) return 2;
+    if (attunement <= 30) return 3;
+    return 4;
+}
+
+function calcularItemDiscovery(luck) {
+    return 100 + luck * 5;
+}
+
+function calcularResistenciaFisica(vitality) {
+    return 10 + vitality * 2;
+}
+
+function calcularResistenciaVeneno(endurance) {
+    return 10 + endurance * 1.5;
+}
+
+
 function adjustAttribute(attribute, change) {
     const element = document.getElementById(attribute);
     if (element) {
         const currentValue = parseInt(element.value) || 0;
-        element.value = Math.max(1, currentValue + change); // Evita valores abaixo de 1
-        calcularStatus(); // Recalcula os status
-        calcularFinalLevel();  // Atualiza o nível final após o ajuste
+        element.value = Math.max(1, currentValue + change); 
+        calcularStatus(); 
+        calcularFinalLevel();  
     } else {
         console.warn(`Elemento com ID ${attribute} não encontrado no HTML.`);
     }
 }
 
-// Inicializa a seleção da classe e os eventos dos botões ao carregar a página
-window.onload = function () {
-    // Adiciona listener para alterar a classe
-    document.getElementById("class").addEventListener("change", setInitialAttributes);
 
-    // Atributos que terão ajuste de valores
-    const attributes = [
-        "Vigor", "Attunement", "Endurance", "Vitality", 
-        "Strength", "Dexterity", "Intelligence", "Faith", "Luck"
-    ];
-    
-    // Adiciona listeners para os botões de ajuste de atributos
-    attributes.forEach(attr => {
-        const upButton = document.getElementById(`up${attr}`);
-        const downButton = document.getElementById(`down${attr}`);
-        const finalAttribute = document.getElementById(`final${attr}`);
+document.getElementById("class").addEventListener("change", setInitialAttributes);
 
-        if (upButton && downButton && finalAttribute) {
-            upButton.addEventListener("click", () => adjustAttribute(`final${attr}`, 1));
-            downButton.addEventListener("click", () => adjustAttribute(`final${attr}`, -1));
-        } else {
-            console.warn(`Botões ou campos para ${attr} não foram encontrados.`);
-        }
-    });
 
-    // Calcula o nível final com base na classe selecionada
-    calcularFinalLevel();
-    // Configura os atributos iniciais com a classe padrão ao carregar
-    setInitialAttributes();
-};
+document.getElementById("upVigor").addEventListener("click", () => adjustAttribute("finalVigor", 1));
+document.getElementById("downVigor").addEventListener("click", () => adjustAttribute("finalVigor", -1));
+
+document.getElementById("upAttunement").addEventListener("click", () => adjustAttribute("finalAttunement", 1));
+document.getElementById("downAttunement").addEventListener("click", () => adjustAttribute("finalAttunement", -1));
+
+document.getElementById("upEndurance").addEventListener("click", () => adjustAttribute("finalEndurance", 1));
+document.getElementById("downEndurance").addEventListener("click", () => adjustAttribute("finalEndurance", -1));
+
+document.getElementById("upVitality").addEventListener("click", () => adjustAttribute("finalVitality", 1));
+document.getElementById("downVitality").addEventListener("click", () => adjustAttribute("finalVitality", -1));
+
+document.getElementById("upStrength").addEventListener("click", () => adjustAttribute("finalStrength", 1));
+document.getElementById("downStrength").addEventListener("click", () => adjustAttribute("finalStrength", -1));
+
+document.getElementById("upDexterity").addEventListener("click", () => adjustAttribute("finalDexterity", 1));
+document.getElementById("downDexterity").addEventListener("click", () => adjustAttribute("finalDexterity", -1));
+
+document.getElementById("upIntelligence").addEventListener("click", () => adjustAttribute("finalIntelligence", 1));
+document.getElementById("downIntelligence").addEventListener("click", () => adjustAttribute("finalIntelligence", -1));
+
+document.getElementById("upFaith").addEventListener("click", () => adjustAttribute("finalFaith", 1));
+document.getElementById("downFaith").addEventListener("click", () => adjustAttribute("finalFaith", -1));
+
+document.getElementById("upLuck").addEventListener("click", () => adjustAttribute("finalLuck", 1));
+document.getElementById("downLuck").addEventListener("click", () => adjustAttribute("finalLuck", -1));
