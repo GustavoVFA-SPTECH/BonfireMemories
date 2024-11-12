@@ -94,17 +94,23 @@ function calcularStatus() {
     const faith = parseInt(document.getElementById("finalFaith").value) || 0;
     const luck = parseInt(document.getElementById("finalLuck").value) || 0;
 
-    const hp = calcularHP(vigor);
-    const fp = calcularFP(attunement);
-    const stamina = calcularStamina(endurance);
-    const poise = calcularPoise(endurance);
-    const equipLoad = calcularEquipLoad(endurance, vitality);
-    const attunementSlots = calcularAttunementSlots(attunement);
-    const itemDiscovery = calcularItemDiscovery(luck);
-    const resistancePhysical = calcularResistenciaFisica(vitality);
-    const resistancePoison = calcularResistenciaVeneno(endurance);
+    const hp = calcularHP(vigor).toFixed(0);
+    const fp = calcularFP(attunement).toFixed(0);
+    const stamina = calcularStamina(endurance).toFixed(0);
+    const poise = calcularPoise(endurance).toFixed(1);
+    const equipLoad = calcularEquipLoad(endurance, vitality).toFixed(2);
+    const attunementSlots = calcularAttunementSlots(attunement).toFixed(0);
+    const itemDiscovery = calcularItemDiscovery(luck).toFixed(0);
+    const resistancePoison = calcularResistenciaVeneno(endurance).toFixed(2);
+    const resistanceBleed = calcularResistenciaBleed(vitality).toFixed(2);
+    const resistanceFrost = calcularResistenciaFrost(endurance).toFixed(2);
+    const resistanceCurse = calcularResistenciaCurse(luck).toFixed(2);
+    const resistancePhysical = calcularResistenciaFisica(vitality).toFixed(2);
+    const defesaMagica = calcularDefesaMagica(intelligence).toFixed(2);
+    const defesaFogo = calcularDefesaFogo(faith).toFixed(2);
+    const defesaLightning = calcularDefesaLightning(faith).toFixed(2);
+    const defesaDark = calcularDefesaDark(intelligence).toFixed(2);
 
-    
     const setStatusValue = (id, value) => {
         const element = document.getElementById(id);
         if (element) {
@@ -123,8 +129,14 @@ function calcularStatus() {
     setStatusValue("finalItemDiscovery", itemDiscovery);
     setStatusValue("finalPhysicalDef", resistancePhysical);
     setStatusValue("finalPoison", resistancePoison);
+    setStatusValue("finalBlood", resistanceBleed);
+    setStatusValue("finalFrost", resistanceFrost);
+    setStatusValue("finalCurse", resistanceCurse);
+    setStatusValue("finalMagicDef", defesaMagica);
+    setStatusValue("finalFireDef", defesaFogo);
+    setStatusValue("finalLightningDef", defesaLightning);
+    setStatusValue("finalDarkDef", defesaDark);
 }
-
 
 function calcularHP(vigor) {
     if (vigor <= 10) return 300 + vigor * 30;
@@ -175,6 +187,35 @@ function calcularResistenciaFisica(vitality) {
 function calcularResistenciaVeneno(endurance) {
     return 10 + endurance * 1.5;
 }
+
+function calcularResistenciaBleed(vitality) {
+    return 10 + vitality * 2; // Exemplo de fórmula para resistência de Bleed
+}
+
+function calcularResistenciaFrost(endurance) {
+    return 10 + endurance * 1.5; // Exemplo de fórmula para resistência de Frost
+}
+
+function calcularResistenciaCurse(luck) {
+    return 10 + luck * 1.2; // Exemplo de fórmula para resistência de Curse
+}
+
+function calcularDefesaMagica(intelligence) {
+    return 10 + intelligence * 2; // Exemplo de fórmula para defesa mágica
+}
+
+function calcularDefesaFogo(faith) {
+    return 10 + faith * 1.8; // Exemplo de fórmula para defesa contra fogo
+}
+
+function calcularDefesaLightning(faith) {
+    return 10 + faith * 1.5; // Exemplo de fórmula para defesa contra raios
+}
+
+function calcularDefesaDark(intelligence) {
+    return 10 + intelligence * 1.7; // Exemplo de fórmula para defesa contra trevas
+}
+
 
 
 function adjustAttribute(attribute, change) {
