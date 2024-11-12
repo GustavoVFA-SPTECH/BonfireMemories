@@ -1,7 +1,7 @@
 @import url(components.css);
 
 body {
-    background-image: url('../../Assets/backgroundHome.jpg');
+    background-image: url('../Assets/backgroundHome.jpg');
 }
 
 .main{
@@ -72,7 +72,7 @@ body {
     height: 50px;
     /* border: red 1px solid; */
     border-radius: 50%;
-    background-image: url('../../Assets/icons/icon-user.png');
+    background-image: url('../Assets/icons/icon-user.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -86,7 +86,7 @@ body {
 }
 
 .likeIcon{
-    background-image: url('../../Assets/icons/icon-estus.gif');
+    background-image: url('../Assets/icons/icon-estus.gif');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 40px;
@@ -113,7 +113,7 @@ body {
     border: var(--gold) 3px solid;
     width: 50%;
     height: 80%;
-    background-image: url('/Assets/imageTest.jpg');
+    background-image: url('../Assets/imageTest.jpg');
     background-size: contain;
     background-color: var(--black);
     background-position: center;

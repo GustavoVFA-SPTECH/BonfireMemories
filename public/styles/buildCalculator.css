@@ -2,7 +2,7 @@
 
 
 body {
-    background-image: url('../../Assets/backgroundBuildCalculator.jpg');
+    background-image: url('../Assets/backgroundBuildCalculator.jpg');
 }
 
 .main{
@@ -107,7 +107,7 @@ body {
     height: 30px;
     width: 30px;
     border-radius: 0;
-    background-image: url('/Assets/icons/icon-arrow-level.png');
+    background-image: url('../Assets/icons/icon-arrow-level.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -120,7 +120,7 @@ body {
     height: 30px;
     width: 30px;
     border-radius: 0;
-    background-image: url('/Assets/icons/icon-arrow-level.png');
+    background-image: url('../Assets/icons/icon-arrow-level.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-color: transparent;

@@ -13,14 +13,14 @@
 
 @font-face {
   font-family: 'OptimusPrinceps';
-  src: url('../../Assets/fonts/Dark-Soul/OptimusPrinceps.ttf') format('truetype');
+  src: url('/Assets/fonts/Dark-Soul/OptimusPrinceps.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'OptimusPrincepsBold';
-  src: url('../../Assets/fonts/Dark-Soul/OptimusPrincepsSemiBold.ttf') format('truetype');
+  src: url('/Assets/fonts/Dark-Soul/OptimusPrincepsSemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }

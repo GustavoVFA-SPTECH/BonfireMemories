@@ -6,7 +6,10 @@ const { stringify } = require("nodemon/lib/utils");
 async function authenticate(login, loginPassword){
     const [dbResult] = await database.executar(`SELECT idUser, userName, email, password FROM User WHERE (email = ? OR userName = ?);`,
         [login, login])
-
+        // console.log(dbResult)
+    if(!dbResult){
+        return false;
+    }
     const password = await bcrypt.compare(loginPassword, dbResult.password)
         console.log(login, loginPassword)
     if(!password){
@@ -24,7 +27,6 @@ async function authenticate(login, loginPassword){
             token
         };
     }
-
 };
 
 

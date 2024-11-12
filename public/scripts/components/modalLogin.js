@@ -16,6 +16,7 @@ function modalLogin() {
             <input class="inputLogin" type="text" placeholder="Username/Email" id="login"/>
             <input class="inputLogin" type="text" placeholder="Password" id="loginPassword"/>
           </div>
+          <span class="errorMessageLogin">User or password incorrect</span>
           <div class="buttonsLogin">
             <button class="buttonLogin"  onclick="buttonBack()">Back</button>
             <button class="buttonLogin" id="loginButton">Login</button>
@@ -48,15 +49,13 @@ function login(){
     password: password
   }
 
-  console.log(data)
-
   fetch("/login",{
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(data)
-  })
+  }).then( document.querySelector(".modalLogin").style.display = "none").catch(document.querySelector(".errorMessageLogin").style.display = "flex")
 }
 
 loginButton.addEventListener('click', login)
