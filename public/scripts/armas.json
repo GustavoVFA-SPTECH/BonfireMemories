@@ -1,0 +1,49 @@
+[{
+    "Daggers":{
+        "Dagger":{
+            "Weigth":"",
+            "Simple":{
+                "Scales":{
+                    "Str":"",
+                    "Dex":"",
+                    "Int":"",
+                    "Fth":""
+                },
+                "Req":{
+                    "Str":"",
+                    "Dex":"",
+                    "Int":"",
+                    "Fth":""
+                },
+                "Atk":{
+                    "Physical":"",
+                    "Magic":"",
+                    "Fire":"",
+                    "Lightning":""
+                }
+            },
+            "Refined":{},
+            "Heavy":{},
+            "Sharp":{},
+            "Lightning":{},
+            "Blessed":{}
+        }
+    }
+}]
+    // "Katanas":{},
+    // "Fists":{},
+    // "Straight Swords":{},
+    // "Great Swords":{},
+    // "Ultra GreatSwords":{},
+    // "Axes":{},
+    // "Great Axes":{},
+    // "Spears":{},
+    // "Halberds":{},
+    // "Bows":{},
+    // "Crossbows":{},
+    // "Claws":{},
+    // "Staffs":{},
+    // "Chimes":{},
+    // "Talismans":{},
+    // "Curved Swords":{},
+    // "Curved GreatSwords":{}
