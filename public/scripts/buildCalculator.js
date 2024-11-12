@@ -1,85 +1,166 @@
-// Variáveis para os atributos principais
-let vigor = 1;
-let attunement = 1;
-let endurance = 1;
-let vitality = 1;
-let strength = 1;
-let dexterity = 1;
-let intelligence = 1;
-let faith = 1;
-let luck = 1;
+// Define atributos iniciais das classes
+const classes = {
+    "Knight": { level: 9, vigor: 12, attunement: 10, endurance: 11, vitality: 15, strength: 13, dexterity: 12, intelligence: 9, faith: 9, luck: 7 },
+    "Mercenary": { level: 8, vigor: 11, attunement: 12, endurance: 10, vitality: 10, strength: 10, dexterity: 16, intelligence: 10, faith: 8, luck: 9 },
+    "Warrior": { level: 7, vigor: 14, attunement: 6, endurance: 12, vitality: 11, strength: 16, dexterity: 9, intelligence: 8, faith: 9, luck: 11 },
+    "Herald": { level: 9, vigor: 12, attunement: 10, endurance: 9, vitality: 12, strength: 12, dexterity: 11, intelligence: 8, faith: 13, luck: 11 }
+};
 
-// Variáveis para as estatísticas derivadas
-let hp = calculateHP(vigor);
-let fp = calculateFP(attunement);
-let stamina = calculateStamina(endurance);
-let equipLoad = calculateEquipLoad(vitality);
-let itemDiscovery = calculateItemDiscovery(luck);
+// Função para configurar os atributos iniciais ao selecionar uma classe
+function setInitialAttributes() {
+    const selectedClass = document.getElementById("class").value;
+    const classStats = classes[selectedClass];
 
-// Funções de cálculo para cada estatística derivada
-function calculateHP(vigor) {
-    return 300 + vigor * 10; // Exemplo: base de 300 HP, 10 por ponto de Vigor
+    // Definindo valores iniciais apenas se os elementos existem no HTML
+    const setAttributeValue = (id, value) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.value = value;
+        } else {
+            console.warn(`Elemento com ID ${id} não encontrado no HTML.`);
+        }
+    };
+
+    setAttributeValue("initialLevel", classStats.level);
+    setAttributeValue("initialVigor", classStats.vigor);
+    setAttributeValue("initialAttunement", classStats.attunement);
+    setAttributeValue("initialEndurance", classStats.endurance);
+    setAttributeValue("initialVitality", classStats.vitality);
+    setAttributeValue("initialStrength", classStats.strength);
+    setAttributeValue("initialDexterity", classStats.dexterity);
+    setAttributeValue("initialIntelligence", classStats.intelligence);
+    setAttributeValue("initialFaith", classStats.faith);
+    setAttributeValue("initialLuck", classStats.luck);
+
+    // Define os valores finais como iguais aos iniciais ao escolher a classe
+    setAttributeValue("finalVigor", classStats.vigor);
+    setAttributeValue("finalAttunement", classStats.attunement);
+    setAttributeValue("finalEndurance", classStats.endurance);
+    setAttributeValue("finalVitality", classStats.vitality);
+    setAttributeValue("finalStrength", classStats.strength);
+    setAttributeValue("finalDexterity", classStats.dexterity);
+    setAttributeValue("finalIntelligence", classStats.intelligence);
+    setAttributeValue("finalFaith", classStats.faith);
+    setAttributeValue("finalLuck", classStats.luck);
+
+    // Calcula os status iniciais
+    calcularStatus();
+    calcularFinalLevel();  // Atualiza o nível final
 }
 
-function calculateFP(attunement) {
-    return 50 + attunement * 5; // Base de 50 FP, 5 por ponto de Attunement
+// Função para calcular o nível final, considerando o nível inicial e os aumentos nos atributos
+function calcularFinalLevel() {
+    const initialLevel = parseInt(document.getElementById("initialLevel").value) || 0;
+    
+    let totalIncrease = 0;
+
+    // Calcula o aumento de nível com base nos atributos
+    totalIncrease += calculateLevelIncrease("Vigor");
+    totalIncrease += calculateLevelIncrease("Attunement");
+    totalIncrease += calculateLevelIncrease("Endurance");
+    totalIncrease += calculateLevelIncrease("Vitality");
+    totalIncrease += calculateLevelIncrease("Strength");
+    totalIncrease += calculateLevelIncrease("Dexterity");
+    totalIncrease += calculateLevelIncrease("Intelligence");
+    totalIncrease += calculateLevelIncrease("Faith");
+    totalIncrease += calculateLevelIncrease("Luck");
+
+    const finalLevel = initialLevel + totalIncrease;
+    document.getElementById("finalLevel").value = finalLevel;
 }
 
-function calculateStamina(endurance) {
-    return 90 + endurance * 5; // Base de 90 de Stamina, 5 por ponto de Endurance
+// Função para calcular o aumento no nível para um atributo específico
+function calculateLevelIncrease(attribute) {
+    const initialValue = parseInt(document.getElementById(`initial${attribute}`).value) || 0;
+    const finalValue = parseInt(document.getElementById(`final${attribute}`).value) || 0;
+    return finalValue - initialValue;
 }
 
-function calculateEquipLoad(vitality) {
-    return 40 + vitality * 2; // Base de 40 de Equip Load, 2 por ponto de Vitality
+// Função para calcular os status de acordo com os atributos
+function calcularStatus() {
+    const vigor = parseInt(document.getElementById("finalVigor").value) || 0;
+    const attunement = parseInt(document.getElementById("finalAttunement").value) || 0;
+    const endurance = parseInt(document.getElementById("finalEndurance").value) || 0;
+
+    const hp = calcularHP(vigor);
+    const fp = calcularFP(attunement);
+    const stamina = calcularStamina(endurance);
+
+    // Verifica a existência dos elementos antes de atribuir valores
+    const setStatusValue = (id, value) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.value = value;
+        } else {
+            console.warn(`Elemento com ID ${id} não encontrado no HTML.`);
+        }
+    };
+
+    setStatusValue("finalHP", hp);
+    setStatusValue("finalFP", fp);
+    setStatusValue("finalStamina", stamina);
 }
 
-function calculateItemDiscovery(luck) {
-    return 100 + luck * 2; // Base de 100 de Item Discovery, 2 por ponto de Luck
+// Fórmulas para calcular HP, FP e Stamina
+function calcularHP(vigor) {
+    if (vigor <= 10) return 300 + vigor * 30;
+    if (vigor <= 20) return 600 + (vigor - 10) * 20;
+    if (vigor <= 30) return 800 + (vigor - 20) * 15;
+    return 950 + (vigor - 30) * 5;
 }
 
-// Função para atualizar todas as estatísticas na interface
-function updateStats() {
-    document.querySelector('.statHP .futureValueStat').innerHTML = calculateHP(vigor);
-    document.querySelector('.statFP .futureValueStat').innerHTML = calculateFP(attunement);
-    document.querySelector('.statStamina .futureValueStat').innerHTML = calculateStamina(endurance);
-    document.querySelector('.statEquipLoad .futureValueStat').innerHTML = calculateEquipLoad(vitality);
-    document.querySelector('.statItemDiscovery .futureValueStat').innerHTML = calculateItemDiscovery(luck);
+function calcularFP(attunement) {
+    if (attunement <= 10) return 70 + attunement * 3;
+    if (attunement <= 20) return 100 + (attunement - 10) * 2.5;
+    return 125 + (attunement - 20) * 2;
 }
 
-// Event listeners para os botões de aumento e diminuição
-document.querySelectorAll('.statButtonUp').forEach(button => {
-    button.addEventListener('click', (event) => {
-        const statName = event.target.closest('.stat').querySelector('.statName').innerHTML;
-        if (statName === 'Vigor') vigor++;
-        else if (statName === 'Attunement') attunement++;
-        else if (statName === 'Endurance') endurance++;
-        else if (statName === 'Vitality') vitality++;
-        else if (statName === 'Strength') strength++;
-        else if (statName === 'Dexterity') dexterity++;
-        else if (statName === 'Intelligence') intelligence++;
-        else if (statName === 'Faith') faith++;
-        else if (statName === 'Luck') luck++;
-        
-        updateStats();
+function calcularStamina(endurance) {
+    if (endurance <= 10) return 80 + endurance * 2;
+    if (endurance <= 20) return 100 + (endurance - 10) * 1.5;
+    return 115 + (endurance - 20) * 1;
+}
+
+// Função para ajustar atributos e recalcular status
+function adjustAttribute(attribute, change) {
+    const element = document.getElementById(attribute);
+    if (element) {
+        const currentValue = parseInt(element.value) || 0;
+        element.value = Math.max(1, currentValue + change); // Evita valores abaixo de 1
+        calcularStatus();
+        calcularFinalLevel();  // Atualiza o nível final após o ajuste
+    } else {
+        console.warn(`Elemento com ID ${attribute} não encontrado no HTML.`);
+    }
+}
+
+// Inicializa a seleção da classe e os eventos dos botões ao carregar a página
+window.onload = function () {
+    // Adiciona listener para alterar a classe
+    document.getElementById("class").addEventListener("change", setInitialAttributes);
+
+    // Atributos que terão ajuste de valores
+    const attributes = [
+        "Vigor", "Attunement", "Endurance", "Vitality", 
+        "Strength", "Dexterity", "Intelligence", "Faith", "Luck"
+    ];
+    
+    // Adiciona listeners para os botões de ajuste de atributos
+    attributes.forEach(attr => {
+        const upButton = document.getElementById(`up${attr}`);
+        const downButton = document.getElementById(`down${attr}`);
+        const finalAttribute = document.getElementById(`final${attr}`);
+
+        if (upButton && downButton && finalAttribute) {
+            upButton.addEventListener("click", () => adjustAttribute(`final${attr}`, 1));
+            downButton.addEventListener("click", () => adjustAttribute(`final${attr}`, -1));
+        } else {
+            console.warn(`Botões ou campos para ${attr} não foram encontrados.`);
+        }
     });
-});
 
-document.querySelectorAll('.statButtonDown').forEach(button => {
-    button.addEventListener('click', (event) => {
-        const statName = event.target.closest('.stat').querySelector('.statName').innerHTML;
-        if (statName === 'Vigor' && vigor > 1) vigor--;
-        else if (statName === 'Attunement' && attunement > 1) attunement--;
-        else if (statName === 'Endurance' && endurance > 1) endurance--;
-        else if (statName === 'Vitality' && vitality > 1) vitality--;
-        else if (statName === 'Strength' && strength > 1) strength--;
-        else if (statName === 'Dexterity' && dexterity > 1) dexterity--;
-        else if (statName === 'Intelligence' && intelligence > 1) intelligence--;
-        else if (statName === 'Faith' && faith > 1) faith--;
-        else if (statName === 'Luck' && luck > 1) luck--;
-        
-        updateStats();
-    });
-});
-
-// Inicializar valores
-updateStats();
+    // Calcula o nível final com base na classe selecionada
+    calcularFinalLevel();
+    // Configura os atributos iniciais com a classe padrão ao carregar
+    setInitialAttributes();
+};
