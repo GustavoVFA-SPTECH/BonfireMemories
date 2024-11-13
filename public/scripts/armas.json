@@ -1397,1530 +1397,1530 @@
   },
   "Curved Swords": {
     "Crescent Moon Sword": {
-        "Weight": "5.5",
-        "Scales": {
-            "Str": "D",
-            "Dex": "C",
-            "Int": "D",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "10",
-            "Dex": "18",
-            "Int": "15",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "80",
-            "Magic": "80",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "5.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "D",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "10",
+        "Dex": "18",
+        "Int": "15",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "80",
+        "Magic": "80",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Carthus Curved Sword": {
-        "Weight": "5.5",
-        "Scales": {
-            "Str": "D",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "15",
-            "Dex": "18",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "117",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "5.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "15",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "117",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Carthus Shotel": {
-        "Weight": "5.5",
-        "Scales": {
-            "Str": "D",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "16",
-            "Dex": "19",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "112",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "5.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "16",
+        "Dex": "19",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "112",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Follower Sabre": {
-        "Weight": "5.5",
-        "Scales": {
-            "Str": "D",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "11",
-            "Dex": "18",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "122",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "5.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "11",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "122",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Storm Curved Sword": {
-        "Weight": "5.0",
-        "Scales": {
-            "Str": "D",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "14",
-            "Dex": "20",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "130",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "5.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "14",
+        "Dex": "20",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "130",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Painting Guardian's Curved Sword": {
-        "Weight": "2.5",
-        "Scales": {
-            "Str": "E",
-            "Dex": "B",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "7",
-            "Dex": "17",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "102",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "2.5",
+      "Scales": {
+        "Str": "E",
+        "Dex": "B",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "7",
+        "Dex": "17",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "102",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Pontiff Knight Curved Sword": {
-        "Weight": "4.0",
-        "Scales": {
-            "Str": "D",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "12",
-            "Dex": "14",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "111",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "4.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "111",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Shotel": {
-        "Weight": "3.0",
-        "Scales": {
-            "Str": "D",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "9",
-            "Dex": "20",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "104",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "9",
+        "Dex": "20",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "104",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Falchion": {
-        "Weight": "4.5",
-        "Scales": {
-            "Str": "D",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "9",
-            "Dex": "20",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "122",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "4.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "9",
+        "Dex": "20",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "122",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Scimitar": {
-        "Weight": "3.0",
-        "Scales": {
-            "Str": "D",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "7",
-            "Dex": "14",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "99",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "7",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "99",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Sellsword Twinblades": {
-        "Weight": "6.0",
-        "Scales": {
-            "Str": "D",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "10",
-            "Dex": "16",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "126",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "6.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "10",
+        "Dex": "16",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "126",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Warden Twinblades": {
-        "Weight": "7.5",
-        "Scales": {
-            "Str": "D",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "13",
-            "Dex": "18",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "122",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "7.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "13",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "122",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Dancer's Enchanted Swords": {
-        "Weight": "10.0",
-        "Scales": {
-            "Str": "D",
-            "Dex": "D",
-            "Int": "D",
-            "Fth": "D"
-        },
-        "Req": {
-            "Str": "10",
-            "Dex": "20",
-            "Int": "10",
-            "Fth": "10"
-        },
-        "Atk": {
-            "Physical": "53",
-            "Magic": "35",
-            "Fire": "35",
-            "Lightning": "0"
-        }
+      "Weight": "10.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "D",
+        "Fth": "D"
+      },
+      "Req": {
+        "Str": "10",
+        "Dex": "20",
+        "Int": "10",
+        "Fth": "10"
+      },
+      "Atk": {
+        "Physical": "53",
+        "Magic": "35",
+        "Fire": "35",
+        "Lightning": "0"
+      }
     },
     "Rotten Ghru Curved Sword": {
-        "Weight": "3.5",
-        "Scales": {
-            "Str": "D",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "10",
-            "Dex": "13",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "99",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "3.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "10",
+        "Dex": "13",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "99",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Demon's Scar": {
-        "Weight": "1.5",
-        "Scales": {
-            "Str": "E",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "B"
-        },
-        "Req": {
-            "Str": "9",
-            "Dex": "16",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "60",
-            "Magic": "0",
-            "Fire": "60",
-            "Lightning": "0"
-        }
+      "Weight": "1.5",
+      "Scales": {
+        "Str": "E",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "B"
+      },
+      "Req": {
+        "Str": "9",
+        "Dex": "16",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "60",
+        "Magic": "0",
+        "Fire": "60",
+        "Lightning": "0"
+      }
     }
   },
   "Curved Greatswords": {
     "Exile Greatsword": {
-        "Weight": "16.0",
-        "Scales": {
-            "Str": "C",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "24",
-            "Dex": "16",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "158",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "16.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "24",
+        "Dex": "16",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "158",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Old Wolf Curved Sword": {
-        "Weight": "10.0",
-        "Scales": {
-            "Str": "D",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "18",
-            "Dex": "20",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "126",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "10.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "18",
+        "Dex": "20",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "126",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Murakumo": {
-        "Weight": "11.0",
-        "Scales": {
-            "Str": "C",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "20",
-            "Dex": "18",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "158",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "11.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "20",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "158",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Carthus Curved Greatsword": {
-        "Weight": "10.0",
-        "Scales": {
-            "Str": "C",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "18",
-            "Dex": "22",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "143",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "10.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "18",
+        "Dex": "22",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "143",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Harald Curved Greatsword": {
-        "Weight": "14.0",
-        "Scales": {
-            "Str": "C",
-            "Dex": "D",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "25",
-            "Dex": "16",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "158",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "14.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "25",
+        "Dex": "16",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "158",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     }
   },
   "Piercing Swords": {
     "Estoc": {
-        "Weight": "3.0",
-        "Scales": {
-            "Str": "D",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "10",
-            "Dex": "12",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "108",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "10",
+        "Dex": "12",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "108",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Rapier": {
-        "Weight": "2.0",
-        "Scales": {
-            "Str": "E",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "7",
-            "Dex": "12",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "96",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "2.0",
+      "Scales": {
+        "Str": "E",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "7",
+        "Dex": "12",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "96",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Ricard's Rapier": {
-        "Weight": "2.0",
-        "Scales": {
-            "Str": "E",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "8",
-            "Dex": "20",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "105",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "2.0",
+      "Scales": {
+        "Str": "E",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "8",
+        "Dex": "20",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "105",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Crystal Sage's Rapier": {
-        "Weight": "2.5",
-        "Scales": {
-            "Str": "E",
-            "Dex": "C",
-            "Int": "D",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "8",
-            "Dex": "18",
-            "Int": "18",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "76",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "2.5",
+      "Scales": {
+        "Str": "E",
+        "Dex": "C",
+        "Int": "D",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "8",
+        "Dex": "18",
+        "Int": "18",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "76",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Irithyll Rapier": {
-        "Weight": "2.5",
-        "Scales": {
-            "Str": "E",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "12",
-            "Dex": "14",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "91",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "2.5",
+      "Scales": {
+        "Str": "E",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "91",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Crow Quills": {
-        "Weight": "5.5",
-        "Scales": {
-            "Str": "D",
-            "Dex": "B",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "9",
-            "Dex": "16",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "110",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "5.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "B",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "9",
+        "Dex": "16",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "110",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     }
   },
   "Axes": {
     "Battle Axe": {
-        "Weight": "4.0",
-        "Scales": {
-            "Str": "C",
-            "Dex": "D",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "12",
-            "Dex": "8",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "115",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "4.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "8",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "115",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Hand Axe": {
-        "Weight": "3.0",
-        "Scales": {
-            "Str": "D",
-            "Dex": "D",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "9",
-            "Dex": "8",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "105",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "9",
+        "Dex": "8",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "105",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Butcher Knife": {
-        "Weight": "7.0",
-        "Scales": {
-            "Str": "A",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "24",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "156",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "7.0",
+      "Scales": {
+        "Str": "A",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "24",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "156",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Brigand Axe": {
-        "Weight": "5.0",
-        "Scales": {
-            "Str": "C",
-            "Dex": "D",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "15",
-            "Dex": "9",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "119",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "5.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "15",
+        "Dex": "9",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "119",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Dragonslayer's Axe": {
-        "Weight": "5.5",
-        "Scales": {
-            "Str": "C",
-            "Dex": "D",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "18",
-            "Dex": "14",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "119",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "74"
-        }
+      "Weight": "5.5",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "18",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "119",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "74"
+      }
     },
     "Millwood Battle Axe": {
-        "Weight": "8.0",
-        "Scales": {
-            "Str": "B",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "26",
-            "Dex": "8",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "156",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "8.0",
+      "Scales": {
+        "Str": "B",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "26",
+        "Dex": "8",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "156",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Man Serpent Hatchet": {
-        "Weight": "4.5",
-        "Scales": {
-            "Str": "C",
-            "Dex": "D",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "15",
-            "Dex": "14",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "122",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "4.5",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "15",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "122",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Eleonora": {
-        "Weight": "8.0",
-        "Scales": {
-            "Str": "D",
-            "Dex": "D",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "12",
-            "Dex": "8",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "123",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "8.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "8",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "123",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Thrall Axe": {
-        "Weight": "2.5",
-        "Scales": {
-            "Str": "D",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "8",
-            "Dex": "8",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "91",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "2.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "8",
+        "Dex": "8",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "91",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Winged Knight Twinaxes": {
-        "Weight": "14.0",
-        "Scales": {
-            "Str": "C",
-            "Dex": "D",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "20",
-            "Dex": "12",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "138",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "14.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "20",
+        "Dex": "12",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "138",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     }
   },
   "Great Axes": {
     "Greataxe": {
-        "Weight": "16.0",
-        "Scales": {
-            "Str": "B",
-            "Dex": "D",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "32",
-            "Dex": "8",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "158",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "16.0",
+      "Scales": {
+        "Str": "B",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "32",
+        "Dex": "8",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "158",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Dragonslayer Greataxe": {
-        "Weight": "20.0",
-        "Scales": {
-            "Str": "B",
-            "Dex": "D",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "40",
-            "Dex": "9",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "200",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "74"
-        }
+      "Weight": "20.0",
+      "Scales": {
+        "Str": "B",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "40",
+        "Dex": "9",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "200",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "74"
+      }
     },
     "Demon's Greataxe": {
-        "Weight": "14.5",
-        "Scales": {
-            "Str": "B",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "28",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "155",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "14.5",
+      "Scales": {
+        "Str": "B",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "28",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "155",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Earth Seeker": {
-        "Weight": "13.5",
-        "Scales": {
-            "Str": "C",
-            "Dex": "D",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "24",
-            "Dex": "8",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "151",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "13.5",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "24",
+        "Dex": "8",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "151",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Black Knight Greataxe": {
-        "Weight": "18.0",
-        "Scales": {
-            "Str": "B",
-            "Dex": "E",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "36",
-            "Dex": "18",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "158",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "18.0",
+      "Scales": {
+        "Str": "B",
+        "Dex": "E",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "36",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "158",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Great Machete": {
-        "Weight": "12.0",
-        "Scales": {
-            "Str": "A",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "26",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "147",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "12.0",
+      "Scales": {
+        "Str": "A",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "26",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "147",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Yhorm's Great Machete": {
-        "Weight": "19.5",
-        "Scales": {
-            "Str": "A",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "38",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "158",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "19.5",
+      "Scales": {
+        "Str": "A",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "38",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "158",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     }
   },
   "Hammers": {
     "Mace": {
-        "Weight": "4.5",
-        "Scales": {
-            "Str": "C",
-            "Dex": "D",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "12",
-            "Dex": "5",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "109",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "4.5",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "5",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "109",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Morning Star": {
-        "Weight": "4.0",
-        "Scales": {
-            "Str": "C",
-            "Dex": "D",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "11",
-            "Dex": "7",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "112",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "4.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "11",
+        "Dex": "7",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "112",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Reinforced Club": {
-        "Weight": "3.0",
-        "Scales": {
-            "Str": "C",
-            "Dex": "D",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "12",
-            "Dex": "5",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "110",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "5",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "110",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Warpick": {
-        "Weight": "5.0",
-        "Scales": {
-            "Str": "D",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "10",
-            "Dex": "10",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "109",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "5.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "10",
+        "Dex": "10",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "109",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Heysel Pick": {
-        "Weight": "5.0",
-        "Scales": {
-            "Str": "D",
-            "Dex": "D",
-            "Int": "C",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "12",
-            "Dex": "10",
-            "Int": "18",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "112",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "5.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "C",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "10",
+        "Int": "18",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "112",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Club": {
-        "Weight": "3.0",
-        "Scales": {
-            "Str": "C",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "10",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "103",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "10",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "103",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Blacksmith Hammer": {
-        "Weight": "8.0",
-        "Scales": {
-            "Str": "C",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "16",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "126",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "8.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "16",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "126",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Drang Hammers": {
-        "Weight": "6.5",
-        "Scales": {
-            "Str": "D",
-            "Dex": "D",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "18",
-            "Dex": "16",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "117",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "6.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "18",
+        "Dex": "16",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "117",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     }
   },
   "Great Hammers": {
     "Great Club": {
-        "Weight": "18.0",
-        "Scales": {
-            "Str": "B",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "50",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "228",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "18.0",
+      "Scales": {
+        "Str": "B",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "50",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "228",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Smough's Hammer": {
-        "Weight": "26.0",
-        "Scales": {
-            "Str": "A",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "50",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "250",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "26.0",
+      "Scales": {
+        "Str": "A",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "50",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "250",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Ledo's Great Hammer": {
-        "Weight": "20.0",
-        "Scales": {
-            "Str": "A",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "40",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "215",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "20.0",
+      "Scales": {
+        "Str": "A",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "40",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "215",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Black Knight Great Hammer": {
-        "Weight": "18.0",
-        "Scales": {
-            "Str": "B",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "34",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "226",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "18.0",
+      "Scales": {
+        "Str": "B",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "34",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "226",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Great Mace": {
-        "Weight": "10.0",
-        "Scales": {
-            "Str": "C",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "24",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "161",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "10.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "24",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "161",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Large Club": {
-        "Weight": "16.0",
-        "Scales": {
-            "Str": "B",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "34",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "226",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "16.0",
+      "Scales": {
+        "Str": "B",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "34",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "226",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Gargoyle Flame Hammer": {
-        "Weight": "18.0",
-        "Scales": {
-            "Str": "B",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "C"
-        },
-        "Req": {
-            "Str": "24",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "16"
-        },
-        "Atk": {
-            "Physical": "205",
-            "Magic": "0",
-            "Fire": "108",
-            "Lightning": "0"
-        }
+      "Weight": "18.0",
+      "Scales": {
+        "Str": "B",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "C"
+      },
+      "Req": {
+        "Str": "24",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "16"
+      },
+      "Atk": {
+        "Physical": "205",
+        "Magic": "0",
+        "Fire": "108",
+        "Lightning": "0"
+      }
     },
     "Vordt's Great Hammer": {
-        "Weight": "16.0",
-        "Scales": {
-            "Str": "B",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "30",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "211",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "16.0",
+      "Scales": {
+        "Str": "B",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "30",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "211",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Morne's Great Hammer": {
-        "Weight": "20.0",
-        "Scales": {
-            "Str": "A",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "40",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "215",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "20.0",
+      "Scales": {
+        "Str": "A",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "40",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "215",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Great Wooden Hammer": {
-        "Weight": "18.0",
-        "Scales": {
-            "Str": "C",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "30",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "230",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "18.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "30",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "230",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Old King's Great Hammer": {
-        "Weight": "20.0",
-        "Scales": {
-            "Str": "A",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "40",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "220",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "20.0",
+      "Scales": {
+        "Str": "A",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "40",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "220",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Pickaxe": {
-        "Weight": "5.0",
-        "Scales": {
-            "Str": "D",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "12",
-            "Dex": "10",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "125",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "5.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "10",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "125",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Dragon Tooth": {
-        "Weight": "20.0",
-        "Scales": {
-            "Str": "A",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "40",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "226",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "20.0",
+      "Scales": {
+        "Str": "A",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "40",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "226",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Spiked Mace": {
-        "Weight": "9.0",
-        "Scales": {
-            "Str": "C",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "24",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "145",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "9.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "24",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "145",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Quakestone Hammer": {
-        "Weight": "22.0",
-        "Scales": {
-            "Str": "A",
-            "Dex": "-",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "40",
-            "Dex": "0",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "220",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "22.0",
+      "Scales": {
+        "Str": "A",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "40",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "220",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     }
   },
   "Fists": {
     "Claw": {
-        "Weight": "3.0",
-        "Scales": {
-            "Str": "D",
-            "Dex": "D",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "12",
-            "Dex": "12",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "99",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "12",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "99",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Caestus": {
-        "Weight": "1.0",
-        "Scales": {
-            "Str": "D",
-            "Dex": "E",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "7",
-            "Dex": "7",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "56",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "1.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "E",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "7",
+        "Dex": "7",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "56",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Dark Hand": {
-        "Weight": "1.5",
-        "Scales": {
-            "Str": "D",
-            "Dex": "E",
-            "Int": "B",
-            "Fth": "B"
-        },
-        "Req": {
-            "Str": "6",
-            "Dex": "6",
-            "Int": "16",
-            "Fth": "16"
-        },
-        "Atk": {
-            "Physical": "80",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "1.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "E",
+        "Int": "B",
+        "Fth": "B"
+      },
+      "Req": {
+        "Str": "6",
+        "Dex": "6",
+        "Int": "16",
+        "Fth": "16"
+      },
+      "Atk": {
+        "Physical": "80",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Demon's Fist": {
-        "Weight": "5.0",
-        "Scales": {
-            "Str": "C",
-            "Dex": "D",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "18",
-            "Dex": "9",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "140",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "5.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "18",
+        "Dex": "9",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "140",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Manikin Claws": {
-        "Weight": "4.5",
-        "Scales": {
-            "Str": "C",
-            "Dex": "D",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "16",
-            "Dex": "9",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "130",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "4.5",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "16",
+        "Dex": "9",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "130",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
     "Crow Talons": {
-        "Weight": "3.0",
-        "Scales": {
-            "Str": "C",
-            "Dex": "C",
-            "Int": "-",
-            "Fth": "-"
-        },
-        "Req": {
-            "Str": "12",
-            "Dex": "18",
-            "Int": "0",
-            "Fth": "0"
-        },
-        "Atk": {
-            "Physical": "120",
-            "Magic": "0",
-            "Fire": "0",
-            "Lightning": "0"
-        }
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "120",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     }
   },
   "Spears & Pikes": {
@@ -3366,7 +3366,237 @@
       }
     }
   },
-  "Halberds":{
-
+  "Halberds": {
+    "Halberd": {
+      "Weight": "8.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "18",
+        "Dex": "10",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "150",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Lucerne": {
+      "Weight": "6.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "9",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "125",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Winged Knight Halberd": {
+      "Weight": "9.0",
+      "Scales": {
+        "Str": "B",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "22",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "155",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Red Hilted Halberd": {
+      "Weight": "7.5",
+      "Scales": {
+        "Str": "C",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "18",
+        "Dex": "12",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "140",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Black Knight Glaive": {
+      "Weight": "12.0",
+      "Scales": {
+        "Str": "A",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "24",
+        "Dex": "10",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "200",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Gundyr's Halberd": {
+      "Weight": "10.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "22",
+        "Dex": "12",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "170",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Immolation Tinder": {
+      "Weight": "8.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "C"
+      },
+      "Req": {
+        "Str": "18",
+        "Dex": "9",
+        "Int": "0",
+        "Fth": "12"
+      },
+      "Atk": {
+        "Physical": "135",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Crescent Axe": {
+      "Weight": "10.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "20",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "160",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Glaive": {
+      "Weight": "7.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "B",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "15",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "140",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Splitleaf Greatsword": {
+      "Weight": "12.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "B",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "18",
+        "Dex": "20",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "150",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Crucifix of the Mad King": {
+      "Weight": "14.0",
+      "Scales": {
+        "Str": "B",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "26",
+        "Dex": "10",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "220",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    }
   }
 }
