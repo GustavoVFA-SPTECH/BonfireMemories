@@ -1,1401 +1,1399 @@
 {
-    "Daggers": {
-        "Dagger": {
-            "Weight": "1.5",
-            "Scales": {
-                "Str": "E",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "5",
-                "Dex": "9",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "75",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Bandit's Knife": {
-            "Weight": "1.5",
-            "Scales": {
-                "Str": "E",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "5",
-                "Dex": "14",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "79",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Corvian Greatknife": {
-            "Weight": "2.5",
-            "Scales": {
-                "Str": "E",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "8",
-                "Dex": "18",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "84",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Harpe": {
-            "Weight": "2.0",
-            "Scales": {
-                "Str": "E",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "8",
-                "Dex": "16",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "77",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Scholar's Candlestick": {
-            "Weight": "1.5",
-            "Scales": {
-                "Str": "E",
-                "Dex": "E",
-                "Int": "C",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "3",
-                "Dex": "12",
-                "Int": "12",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "54",
-                "Magic": "76",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Tailbone Short Sword": {
-            "Weight": "2.0",
-            "Scales": {
-                "Str": "E",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "9",
-                "Dex": "14",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "76",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Parrying Dagger": {
-            "Weight": "1.5",
-            "Scales": {
-                "Str": "E",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "5",
-                "Dex": "14",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "65",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Handmaid's Dagger": {
-            "Weight": "1.5",
-            "Scales": {
-                "Str": "E",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "5",
-                "Dex": "14",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "63",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Morion Blade": {
-            "Weight": "3.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "10",
-                "Dex": "20",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "120",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Brigand Twindaggers": {
-            "Weight": "2.0",
-            "Scales": {
-                "Str": "E",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "5",
-                "Dex": "18",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "55",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Mail Breaker": {
-            "Weight": "1.5",
-            "Scales": {
-                "Str": "E",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "5",
-                "Dex": "12",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "65",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Rotten Ghru Dagger": {
-            "Weight": "1.5",
-            "Scales": {
-                "Str": "D",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "5",
-                "Dex": "12",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "75",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Murky Hand Scythe": {
-            "Weight": "1.5",
-            "Scales": {
-                "Str": "E",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "7",
-                "Dex": "12",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "70",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Aquamarine Dagger": {
-            "Weight": "1.5",
-            "Scales": {
-                "Str": "E",
-                "Dex": "C",
-                "Int": "C",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "5",
-                "Dex": "14",
-                "Int": "15",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "80",
-                "Magic": "60",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        }
+  "Daggers": {
+    "Dagger": {
+      "Weight": "1.5",
+      "Scales": {
+        "Str": "E",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "5",
+        "Dex": "9",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "75",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
-    "Katanas": {
-        "Uchigatana": {
-            "Weight": "5.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "11",
-                "Dex": "16",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "115",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Chaos Blade": {
-            "Weight": "6.5",
-            "Scales": {
-                "Str": "E",
-                "Dex": "A",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "16",
-                "Dex": "14",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "125",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Black Blade": {
-            "Weight": "6.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "14",
-                "Dex": "26",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "128",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Bloodlust": {
-            "Weight": "5.5",
-            "Scales": {
-                "Str": "E",
-                "Dex": "B",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "12",
-                "Dex": "25",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "108",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Frayed Blade": {
-            "Weight": "5.5",
-            "Scales": {
-                "Str": "E",
-                "Dex": "S",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "11",
-                "Dex": "40",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "103",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Onikiri and Ubadachi": {
-            "Weight": "8.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "12",
-                "Dex": "24",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "123",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Washing Pole": {
-            "Weight": "8.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "18",
-                "Dex": "20",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "115",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Darkdrift": {
-            "Weight": "5.5",
-            "Scales": {
-                "Str": "E",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "12",
-                "Dex": "16",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "110",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        }
+    "Bandit's Knife": {
+      "Weight": "1.5",
+      "Scales": {
+        "Str": "E",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "5",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "79",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
-    "Straight Swords": {
-        "Broken Straight Sword": {
-            "Weight": "2.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "8",
-                "Dex": "8",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "82",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Short Sword": {
-            "Weight": "2.5",
-            "Scales": {
-                "Str": "D",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "8",
-                "Dex": "10",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "100",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Cleric's Candlestick": {
-            "Weight": "3.0",
-            "Scales": {
-                "Str": "E",
-                "Dex": "E",
-                "Int": "D",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "8",
-                "Dex": "12",
-                "Int": "12",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "75",
-                "Magic": "79",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Dark Sword": {
-            "Weight": "4.5",
-            "Scales": {
-                "Str": "C",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "16",
-                "Dex": "15",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "115",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Valorheart": {
-            "Weight": "4.5",
-            "Scales": {
-                "Str": "D",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "12",
-                "Dex": "14",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "108",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Ringed Knight Straight Sword": {
-            "Weight": "4.0",
-            "Scales": {
-                "Str": "C",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "12",
-                "Dex": "12",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "126",
-                "Magic": "0",
-                "Fire": "85",
-                "Lightning": "0"
-            }
-        },
-        "Long Sword": {
-            "Weight": "3.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "10",
-                "Dex": "10",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "110",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Broadsword": {
-            "Weight": "3.0",
-            "Scales": {
-                "Str": "C",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "10",
-                "Dex": "10",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "117",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Sunlight Straight Sword": {
-            "Weight": "3.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "C"
-            },
-            "Req": {
-                "Str": "12",
-                "Dex": "12",
-                "Int": "0",
-                "Fth": "16"
-            },
-            "Atk": {
-                "Physical": "117",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Astora Straight Sword": {
-            "Weight": "3.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "10",
-                "Dex": "10",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "122",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Lothric Knight Sword": {
-            "Weight": "4.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "11",
-                "Dex": "18",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "110",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Irithyll Straight Sword": {
-            "Weight": "3.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "12",
-                "Dex": "14",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "119",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Anri's Straight Sword": {
-            "Weight": "3.0",
-            "Scales": {
-                "Str": "C",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "10",
-                "Dex": "10",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "103",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Barbed Straight Sword": {
-            "Weight": "3.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "11",
-                "Dex": "13",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "115",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Morion Blade": {
-            "Weight": "3.5",
-            "Scales": {
-                "Str": "D",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "10",
-                "Dex": "20",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "120",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Gotthard Twinswords": {
-            "Weight": "4.5",
-            "Scales": {
-                "Str": "D",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "10",
-                "Dex": "18",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "110",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Lothric's Holy Sword": {
-            "Weight": "4.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "C"
-            },
-            "Req": {
-                "Str": "12",
-                "Dex": "12",
-                "Int": "0",
-                "Fth": "16"
-            },
-            "Atk": {
-                "Physical": "115",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        }
+    "Corvian Greatknife": {
+      "Weight": "2.5",
+      "Scales": {
+        "Str": "E",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "8",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "84",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
-    "Great Swords": {
-        "Claymore": {
-            "Weight": "9.0",
-            "Scales": {
-                "Str": "C",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "16",
-                "Dex": "13",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "138",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Bastard Sword": {
-            "Weight": "8.5",
-            "Scales": {
-                "Str": "C",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "16",
-                "Dex": "10",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "133",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Hollowslayer Greatsword": {
-            "Weight": "8.5",
-            "Scales": {
-                "Str": "C",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "14",
-                "Dex": "18",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "138",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Executioner's Greatsword": {
-            "Weight": "11.0",
-            "Scales": {
-                "Str": "C",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "19",
-                "Dex": "13",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "130",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Black Knight Sword": {
-            "Weight": "10.0",
-            "Scales": {
-                "Str": "C",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "20",
-                "Dex": "18",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "149",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Flamberge": {
-            "Weight": "8.5",
-            "Scales": {
-                "Str": "C",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "15",
-                "Dex": "14",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "128",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Wolf Knight's Greatsword": {
-            "Weight": "9.5",
-            "Scales": {
-                "Str": "C",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "24",
-                "Dex": "18",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "149",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Wolnir's Holy Sword": {
-            "Weight": "8.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "C"
-            },
-            "Req": {
-                "Str": "13",
-                "Dex": "13",
-                "Int": "0",
-                "Fth": "15"
-            },
-            "Atk": {
-                "Physical": "124",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Greatsword of Judgment": {
-            "Weight": "8.5",
-            "Scales": {
-                "Str": "D",
-                "Dex": "D",
-                "Int": "C",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "17",
-                "Dex": "15",
-                "Int": "30",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "131",
-                "Magic": "76",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Moonlight Greatsword": {
-            "Weight": "10.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "D",
-                "Int": "A",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "16",
-                "Dex": "11",
-                "Int": "32",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "82",
-                "Magic": "92",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Storm Ruler": {
-            "Weight": "8.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "16",
-                "Dex": "10",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "130",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Firelink Greatsword": {
-            "Weight": "10.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "20",
-                "Dex": "19",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "144",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Twin Princes' Greatsword": {
-            "Weight": "10.5",
-            "Scales": {
-                "Str": "D",
-                "Dex": "D",
-                "Int": "D",
-                "Fth": "D"
-            },
-            "Req": {
-                "Str": "22",
-                "Dex": "18",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "140",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Drakeblood Greatsword": {
-            "Weight": "8.5",
-            "Scales": {
-                "Str": "D",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "18",
-                "Dex": "16",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "138",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "80"
-            }
-        },
-        "Onyx Blade": {
-            "Weight": "10.5",
-            "Scales": {
-                "Str": "D",
-                "Dex": "D",
-                "Int": "C",
-                "Fth": "C"
-            },
-            "Req": {
-                "Str": "14",
-                "Dex": "12",
-                "Int": "15",
-                "Fth": "15"
-            },
-            "Atk": {
-                "Physical": "140",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Gael's Greatsword": {
-            "Weight": "11.0",
-            "Scales": {
-                "Str": "C",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "20",
-                "Dex": "15",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "147",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        }
+    "Harpe": {
+      "Weight": "2.0",
+      "Scales": {
+        "Str": "E",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "8",
+        "Dex": "16",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "77",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
-    "Ultra Greatswords": {
-        "Fume Ultra Greatsword": {
-            "Weight": "25.5",
-            "Scales": {
-                "Str": "B",
-                "Dex": "E",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "50",
-                "Dex": "10",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "149",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Greatsword": {
-            "Weight": "20.0",
-            "Scales": {
-                "Str": "B",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "28",
-                "Dex": "10",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "155",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Zweihander": {
-            "Weight": "10.0",
-            "Scales": {
-                "Str": "C",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "19",
-                "Dex": "11",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "141",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Lothric Knight Greatsword": {
-            "Weight": "14.0",
-            "Scales": {
-                "Str": "C",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "24",
-                "Dex": "16",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "144",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Black Knight Greatsword": {
-            "Weight": "16.0",
-            "Scales": {
-                "Str": "B",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "32",
-                "Dex": "18",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "149",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Cathedral Knight Greatsword": {
-            "Weight": "18.0",
-            "Scales": {
-                "Str": "B",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "26",
-                "Dex": "10",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "151",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Profaned Greatsword": {
-            "Weight": "11.0",
-            "Scales": {
-                "Str": "C",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "22",
-                "Dex": "10",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "144",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Astora Greatsword": {
-            "Weight": "8.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "16",
-                "Dex": "18",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "138",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Ringed Knight Paired Greatswords": {
-            "Weight": "18.5",
-            "Scales": {
-                "Str": "C",
-                "Dex": "D",
-                "Int": "-",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "40",
-                "Dex": "15",
-                "Int": "0",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "133",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Farron Greatsword": {
-            "Weight": "7.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "C",
-                "Int": "-",
-                "Fth": "B"
-            },
-            "Req": {
-                "Str": "16",
-                "Dex": "14",
-                "Int": "0",
-                "Fth": "24"
-            },
-            "Atk": {
-                "Physical": "123",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        },
-        "Lorian's Greatsword": {
-            "Weight": "8.0",
-            "Scales": {
-                "Str": "D",
-                "Dex": "C",
-                "Int": "C",
-                "Fth": "-"
-            },
-            "Req": {
-                "Str": "16",
-                "Dex": "11",
-                "Int": "16",
-                "Fth": "0"
-            },
-            "Atk": {
-                "Physical": "130",
-                "Magic": "0",
-                "Fire": "0",
-                "Lightning": "0"
-            }
-        }
+    "Scholar's Candlestick": {
+      "Weight": "1.5",
+      "Scales": {
+        "Str": "E",
+        "Dex": "E",
+        "Int": "C",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "3",
+        "Dex": "12",
+        "Int": "12",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "54",
+        "Magic": "76",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     },
-    "Curved Swords":{
-        
+    "Tailbone Short Sword": {
+      "Weight": "2.0",
+      "Scales": {
+        "Str": "E",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "9",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "76",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Parrying Dagger": {
+      "Weight": "1.5",
+      "Scales": {
+        "Str": "E",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "5",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "65",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Handmaid's Dagger": {
+      "Weight": "1.5",
+      "Scales": {
+        "Str": "E",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "5",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "63",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Morion Blade": {
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "10",
+        "Dex": "20",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "120",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Brigand Twindaggers": {
+      "Weight": "2.0",
+      "Scales": {
+        "Str": "E",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "5",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "55",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Mail Breaker": {
+      "Weight": "1.5",
+      "Scales": {
+        "Str": "E",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "5",
+        "Dex": "12",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "65",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Rotten Ghru Dagger": {
+      "Weight": "1.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "5",
+        "Dex": "12",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "75",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Murky Hand Scythe": {
+      "Weight": "1.5",
+      "Scales": {
+        "Str": "E",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "7",
+        "Dex": "12",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "70",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Aquamarine Dagger": {
+      "Weight": "1.5",
+      "Scales": {
+        "Str": "E",
+        "Dex": "C",
+        "Int": "C",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "5",
+        "Dex": "14",
+        "Int": "15",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "80",
+        "Magic": "60",
+        "Fire": "0",
+        "Lightning": "0"
+      }
     }
+  },
+  "Katanas": {
+    "Uchigatana": {
+      "Weight": "5.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "11",
+        "Dex": "16",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "115",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Chaos Blade": {
+      "Weight": "6.5",
+      "Scales": {
+        "Str": "E",
+        "Dex": "A",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "16",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "125",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Black Blade": {
+      "Weight": "6.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "14",
+        "Dex": "26",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "128",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Bloodlust": {
+      "Weight": "5.5",
+      "Scales": {
+        "Str": "E",
+        "Dex": "B",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "25",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "108",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Frayed Blade": {
+      "Weight": "5.5",
+      "Scales": {
+        "Str": "E",
+        "Dex": "S",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "11",
+        "Dex": "40",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "103",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Onikiri and Ubadachi": {
+      "Weight": "8.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "24",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "123",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Washing Pole": {
+      "Weight": "8.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "18",
+        "Dex": "20",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "115",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Darkdrift": {
+      "Weight": "5.5",
+      "Scales": {
+        "Str": "E",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "16",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "110",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    }
+  },
+  "Straight Swords": {
+    "Broken Straight Sword": {
+      "Weight": "2.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "8",
+        "Dex": "8",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "82",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Short Sword": {
+      "Weight": "2.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "8",
+        "Dex": "10",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "100",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Cleric's Candlestick": {
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "E",
+        "Dex": "E",
+        "Int": "D",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "8",
+        "Dex": "12",
+        "Int": "12",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "75",
+        "Magic": "79",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Dark Sword": {
+      "Weight": "4.5",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "16",
+        "Dex": "15",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "115",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Valorheart": {
+      "Weight": "4.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "108",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Ringed Knight Straight Sword": {
+      "Weight": "4.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "12",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "126",
+        "Magic": "0",
+        "Fire": "85",
+        "Lightning": "0"
+      }
+    },
+    "Long Sword": {
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "10",
+        "Dex": "10",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "110",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Broadsword": {
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "10",
+        "Dex": "10",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "117",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Sunlight Straight Sword": {
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "C"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "12",
+        "Int": "0",
+        "Fth": "16"
+      },
+      "Atk": {
+        "Physical": "117",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Astora Straight Sword": {
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "10",
+        "Dex": "10",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "122",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Lothric Knight Sword": {
+      "Weight": "4.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "11",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "110",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Irithyll Straight Sword": {
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "119",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Anri's Straight Sword": {
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "10",
+        "Dex": "10",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "103",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Barbed Straight Sword": {
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "11",
+        "Dex": "13",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "115",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Morion Blade": {
+      "Weight": "3.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "10",
+        "Dex": "20",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "120",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Gotthard Twinswords": {
+      "Weight": "4.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "10",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "110",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Lothric's Holy Sword": {
+      "Weight": "4.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "C"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "12",
+        "Int": "0",
+        "Fth": "16"
+      },
+      "Atk": {
+        "Physical": "115",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    }
+  },
+  "Great Swords": {
+    "Claymore": {
+      "Weight": "9.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "16",
+        "Dex": "13",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "138",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Bastard Sword": {
+      "Weight": "8.5",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "16",
+        "Dex": "10",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "133",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Hollowslayer Greatsword": {
+      "Weight": "8.5",
+      "Scales": {
+        "Str": "C",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "14",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "138",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Executioner's Greatsword": {
+      "Weight": "11.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "19",
+        "Dex": "13",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "130",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Black Knight Sword": {
+      "Weight": "10.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "20",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "149",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Flamberge": {
+      "Weight": "8.5",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "15",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "128",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Wolf Knight's Greatsword": {
+      "Weight": "9.5",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "24",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "149",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Wolnir's Holy Sword": {
+      "Weight": "8.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "C"
+      },
+      "Req": {
+        "Str": "13",
+        "Dex": "13",
+        "Int": "0",
+        "Fth": "15"
+      },
+      "Atk": {
+        "Physical": "124",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Greatsword of Judgment": {
+      "Weight": "8.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "C",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "17",
+        "Dex": "15",
+        "Int": "30",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "131",
+        "Magic": "76",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Moonlight Greatsword": {
+      "Weight": "10.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "A",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "16",
+        "Dex": "11",
+        "Int": "32",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "82",
+        "Magic": "92",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Storm Ruler": {
+      "Weight": "8.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "16",
+        "Dex": "10",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "130",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Firelink Greatsword": {
+      "Weight": "10.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "20",
+        "Dex": "19",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "144",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Twin Princes' Greatsword": {
+      "Weight": "10.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "D",
+        "Fth": "D"
+      },
+      "Req": {
+        "Str": "22",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "140",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Drakeblood Greatsword": {
+      "Weight": "8.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "18",
+        "Dex": "16",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "138",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "80"
+      }
+    },
+    "Onyx Blade": {
+      "Weight": "10.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "C",
+        "Fth": "C"
+      },
+      "Req": {
+        "Str": "14",
+        "Dex": "12",
+        "Int": "15",
+        "Fth": "15"
+      },
+      "Atk": {
+        "Physical": "140",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Gael's Greatsword": {
+      "Weight": "11.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "20",
+        "Dex": "15",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "147",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    }
+  },
+  "Ultra Greatswords": {
+    "Fume Ultra Greatsword": {
+      "Weight": "25.5",
+      "Scales": {
+        "Str": "B",
+        "Dex": "E",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "50",
+        "Dex": "10",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "149",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Greatsword": {
+      "Weight": "20.0",
+      "Scales": {
+        "Str": "B",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "28",
+        "Dex": "10",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "155",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Zweihander": {
+      "Weight": "10.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "19",
+        "Dex": "11",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "141",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Lothric Knight Greatsword": {
+      "Weight": "14.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "24",
+        "Dex": "16",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "144",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Black Knight Greatsword": {
+      "Weight": "16.0",
+      "Scales": {
+        "Str": "B",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "32",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "149",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Cathedral Knight Greatsword": {
+      "Weight": "18.0",
+      "Scales": {
+        "Str": "B",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "26",
+        "Dex": "10",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "151",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Profaned Greatsword": {
+      "Weight": "11.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "22",
+        "Dex": "10",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "144",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Astora Greatsword": {
+      "Weight": "8.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "16",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "138",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Ringed Knight Paired Greatswords": {
+      "Weight": "18.5",
+      "Scales": {
+        "Str": "C",
+        "Dex": "D",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "40",
+        "Dex": "15",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "133",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Farron Greatsword": {
+      "Weight": "7.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "B"
+      },
+      "Req": {
+        "Str": "16",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "24"
+      },
+      "Atk": {
+        "Physical": "123",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Lorian's Greatsword": {
+      "Weight": "8.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "C",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "16",
+        "Dex": "11",
+        "Int": "16",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "130",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    }
+  },
+  "Curved Swords": {}
 }
