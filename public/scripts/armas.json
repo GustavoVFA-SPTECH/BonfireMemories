@@ -3598,5 +3598,419 @@
         "Lightning": "0"
       }
     }
+  },
+  "Scythes": {
+    "Great Scythe": {
+      "Weight": "7.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "16",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "150",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Pontiff Knight Great Scythe": {
+      "Weight": "7.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "B",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "16",
+        "Int": "16",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "145",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Great Corvian Scythe": {
+      "Weight": "6.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "16",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "130",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Friede's Great Scythe": {
+      "Weight": "7.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "B",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "16",
+        "Dex": "16",
+        "Int": "18",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "140",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    }
+  },
+  "Whips & Floggers": {
+    "Whip": {
+      "Weight": "2.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "6",
+        "Dex": "12",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "60",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Notched Whip": {
+      "Weight": "2.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "6",
+        "Dex": "12",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "80",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Witch's Locks": {
+      "Weight": "5.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "C",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "8",
+        "Dex": "10",
+        "Int": "16",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "80",
+        "Magic": "80",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Spotted Whip": {
+      "Weight": "2.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "6",
+        "Dex": "12",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "70",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Rose of Ariandel": {
+      "Weight": "5.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "D",
+        "Int": "C",
+        "Fth": "B"
+      },
+      "Req": {
+        "Str": "8",
+        "Dex": "8",
+        "Int": "18",
+        "Fth": "16"
+      },
+      "Atk": {
+        "Physical": "80",
+        "Magic": "0",
+        "Fire": "50",
+        "Lightning": "0"
+      }
+    }
+  },
+  "Bows": {
+    "Short Bow": {
+      "Weight": "2.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "6",
+        "Dex": "9",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "80",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Longbow": {
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "11",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "100",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Black Bow of Pharis": {
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "B",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "10",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "105",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Dragonrider Bow": {
+      "Weight": "6.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "18",
+        "Dex": "12",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "140",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Composite Bow": {
+      "Weight": "3.5",
+      "Scales": {
+        "Str": "C",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "12",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "115",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Darkmoon Longbow": {
+      "Weight": "3.5",
+      "Scales": {
+        "Str": "D",
+        "Dex": "B",
+        "Int": "B",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "12",
+        "Int": "16",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "110",
+        "Magic": "70",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "White Birch Bow": {
+      "Weight": "5.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "B",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "11",
+        "Dex": "15",
+        "Int": "16",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "115",
+        "Magic": "80",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    }
+  },
+  "Greatbows": {
+    "Dragonslayer Greatbow": {
+      "Weight": "18.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "20",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "180",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Onislayer Greatbow": {
+      "Weight": "18.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "20",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "180",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Millwood Greatbow": {
+      "Weight": "18.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "22",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "190",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    }
+  },
+  "":{
+    
   }
 }
+  
+  
+  
+  
