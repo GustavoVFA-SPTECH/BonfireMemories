@@ -189,31 +189,31 @@ function calcularResistenciaVeneno(endurance) {
 }
 
 function calcularResistenciaBleed(vitality) {
-    return 10 + vitality * 2; // Exemplo de fórmula para resistência de Bleed
+    return 10 + vitality * 2; 
 }
 
 function calcularResistenciaFrost(endurance) {
-    return 10 + endurance * 1.5; // Exemplo de fórmula para resistência de Frost
+    return 10 + endurance * 1.5; 
 }
 
 function calcularResistenciaCurse(luck) {
-    return 10 + luck * 1.2; // Exemplo de fórmula para resistência de Curse
+    return 10 + luck * 1.2; 
 }
 
 function calcularDefesaMagica(intelligence) {
-    return 10 + intelligence * 2; // Exemplo de fórmula para defesa mágica
+    return 10 + intelligence * 2; 
 }
 
 function calcularDefesaFogo(faith) {
-    return 10 + faith * 1.8; // Exemplo de fórmula para defesa contra fogo
+    return 10 + faith * 1.8; 
 }
 
 function calcularDefesaLightning(faith) {
-    return 10 + faith * 1.5; // Exemplo de fórmula para defesa contra raios
+    return 10 + faith * 1.5; 
 }
 
 function calcularDefesaDark(intelligence) {
-    return 10 + intelligence * 1.7; // Exemplo de fórmula para defesa contra trevas
+    return 10 + intelligence * 1.7; 
 }
 
 
@@ -260,3 +260,61 @@ document.getElementById("downFaith").addEventListener("click", () => adjustAttri
 
 document.getElementById("upLuck").addEventListener("click", () => adjustAttribute("finalLuck", 1));
 document.getElementById("downLuck").addEventListener("click", () => adjustAttribute("finalLuck", -1));
+
+
+
+
+
+async function carregarArmas() {
+    const response = await fetch('../scripts/weapons.json'); 
+    const armas = await response.json();
+    return armas;
+}
+
+
+async function preencherArmasNosSelects() {
+    const armas = await carregarArmas();
+
+    
+    const selectR1 = document.getElementById("R1Select");
+    const selectR2 = document.getElementById("R2Select");
+    const selectR3 = document.getElementById("R3Select");
+    const selectL1 = document.getElementById("L1Select");
+    const selectL2 = document.getElementById("L2Select");
+    const selectL3 = document.getElementById("L3Select");
+
+    const adicionarOpcoesAoSelect = (selectElement, armas) => {
+        
+        selectElement.innerHTML = "";
+
+        const optionDefault = document.createElement("option");
+        optionDefault.value = "";
+        optionDefault.textContent = "Selecione a arma";
+        selectElement.appendChild(optionDefault);
+
+        
+        for (let categoria in armas) {
+            const categoriaArmas = armas[categoria]; 
+            for (let weaponName in categoriaArmas) {
+                const weapon = categoriaArmas[weaponName]; 
+
+                const option = document.createElement("option");
+                option.value = weaponName; 
+                option.textContent = `${weaponName} (${categoria})`; 
+
+                selectElement.appendChild(option);
+            }
+        }
+    };
+
+    
+    adicionarOpcoesAoSelect(selectR1, armas); 
+    adicionarOpcoesAoSelect(selectR2, armas); 
+    adicionarOpcoesAoSelect(selectR3, armas); 
+    adicionarOpcoesAoSelect(selectL1, armas); 
+    adicionarOpcoesAoSelect(selectL2, armas); 
+    adicionarOpcoesAoSelect(selectL3, armas); 
+}
+
+
+document.addEventListener("DOMContentLoaded", preencherArmasNosSelects);

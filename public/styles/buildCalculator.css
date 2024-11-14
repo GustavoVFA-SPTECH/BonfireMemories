@@ -243,7 +243,8 @@ body {
 
 .selectEquips{
     border: var(--gold) 3px solid;
-    background-color: transparent;
+    background-color: var(--darkGray);
+    color: white;
     width: 60%;
     height: 60%;
     gap: 5px;
