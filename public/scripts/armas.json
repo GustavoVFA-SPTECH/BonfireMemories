@@ -4006,11 +4006,157 @@
       }
     }
   },
+  "Crossbows": {
+    "Light Crossbow": {
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "7",
+        "Dex": "13",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "100",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Knight's Crossbow": {
+      "Weight": "4.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "9",
+        "Dex": "12",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "120",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Arbalest": {
+      "Weight": "7.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "B",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "14",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "150",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Sniper Crossbow": {
+      "Weight": "5.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "B",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "150",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Avelyn": {
+      "Weight": "8.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "B",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "18",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "200",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Heavy Crossbow": {
+      "Weight": "9.0",
+      "Scales": {
+        "Str": "C",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "14",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "160",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Repeating Crossbow": {
+      "Weight": "7.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "C",
+        "Int": "-",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "9",
+        "Dex": "14",
+        "Int": "0",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "125",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    }
+  },
   "":{
     
   }
 }
-  
-  
-  
   
