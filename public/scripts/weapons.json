@@ -4155,8 +4155,579 @@
       }
     }
   },
-  "":{
-    
+  "Staffs": {
+    "Sorcerer's Staff": {
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "E",
+        "Dex": "E",
+        "Int": "C",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "3",
+        "Dex": "3",
+        "Int": "10",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "50",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Court Sorcerer's Staff": {
+      "Weight": "2.0",
+      "Scales": {
+        "Str": "E",
+        "Dex": "E",
+        "Int": "B",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "3",
+        "Dex": "3",
+        "Int": "10",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "30",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Heretic Staff": {
+      "Weight": "3.5",
+      "Scales": {
+        "Str": "E",
+        "Dex": "E",
+        "Int": "C",
+        "Fth": "C"
+      },
+      "Req": {
+        "Str": "3",
+        "Dex": "3",
+        "Int": "12",
+        "Fth": "12"
+      },
+      "Atk": {
+        "Physical": "40",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Witch's Tree Branch": {
+      "Weight": "1.0",
+      "Scales": {
+        "Str": "E",
+        "Dex": "D",
+        "Int": "C",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "3",
+        "Dex": "3",
+        "Int": "12",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "25",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Sage's Crystal Staff": {
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "E",
+        "Dex": "E",
+        "Int": "B",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "3",
+        "Dex": "3",
+        "Int": "12",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "30",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Izalith Staff": {
+      "Weight": "4.0",
+      "Scales": {
+        "Str": "E",
+        "Dex": "E",
+        "Int": "C",
+        "Fth": "C"
+      },
+      "Req": {
+        "Str": "3",
+        "Dex": "3",
+        "Int": "16",
+        "Fth": "16"
+      },
+      "Atk": {
+        "Physical": "50",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Storyteller's Staff": {
+      "Weight": "4.0",
+      "Scales": {
+        "Str": "E",
+        "Dex": "E",
+        "Int": "C",
+        "Fth": "C"
+      },
+      "Req": {
+        "Str": "3",
+        "Dex": "3",
+        "Int": "15",
+        "Fth": "10"
+      },
+      "Atk": {
+        "Physical": "45",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Archdeacon Great Staff": {
+      "Weight": "7.0",
+      "Scales": {
+        "Str": "E",
+        "Dex": "E",
+        "Int": "A",
+        "Fth": "B"
+      },
+      "Req": {
+        "Str": "3",
+        "Dex": "3",
+        "Int": "16",
+        "Fth": "16"
+      },
+      "Atk": {
+        "Physical": "50",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Man-Grub's Staff": {
+      "Weight": "5.0",
+      "Scales": {
+        "Str": "E",
+        "Dex": "E",
+        "Int": "D",
+        "Fth": "C"
+      },
+      "Req": {
+        "Str": "3",
+        "Dex": "3",
+        "Int": "10",
+        "Fth": "10"
+      },
+      "Atk": {
+        "Physical": "40",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Mendicant's Staff": {
+      "Weight": "4.0",
+      "Scales": {
+        "Str": "E",
+        "Dex": "E",
+        "Int": "C",
+        "Fth": "C"
+      },
+      "Req": {
+        "Str": "3",
+        "Dex": "3",
+        "Int": "10",
+        "Fth": "10"
+      },
+      "Atk": {
+        "Physical": "40",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Preacher's Right Arm": {
+      "Weight": "4.0",
+      "Scales": {
+        "Str": "D",
+        "Dex": "E",
+        "Int": "B",
+        "Fth": "B"
+      },
+      "Req": {
+        "Str": "12",
+        "Dex": "5",
+        "Int": "12",
+        "Fth": "12"
+      },
+      "Atk": {
+        "Physical": "60",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Murky Longstaff": {
+      "Weight": "4.0",
+      "Scales": {
+        "Str": "E",
+        "Dex": "D",
+        "Int": "B",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "3",
+        "Dex": "3",
+        "Int": "16",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "45",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    }
+  },
+  "Flames": {
+    "Pyromancy Flame": {
+      "Weight": "1.0",
+      "Scales": {
+        "Str": "E",
+        "Dex": "E",
+        "Int": "C",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "3",
+        "Dex": "3",
+        "Int": "10",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "30",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Pyromancer's Parting Flame": {
+      "Weight": "1.0",
+      "Scales": {
+        "Str": "E",
+        "Dex": "E",
+        "Int": "B",
+        "Fth": "-"
+      },
+      "Req": {
+        "Str": "3",
+        "Dex": "3",
+        "Int": "16",
+        "Fth": "0"
+      },
+      "Atk": {
+        "Physical": "40",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    }
+  },
+  "Talismans": {
+    "Talisman": {
+      "Weight": "0.5",
+      "Scales": {
+        "Str": "-",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "C"
+      },
+      "Req": {
+        "Str": "0",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "10"
+      },
+      "Atk": {
+        "Physical": "0",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Saint's Talisman": {
+      "Weight": "0.5",
+      "Scales": {
+        "Str": "-",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "B"
+      },
+      "Req": {
+        "Str": "0",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "16"
+      },
+      "Atk": {
+        "Physical": "0",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Sunlight Talisman": {
+      "Weight": "0.5",
+      "Scales": {
+        "Str": "-",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "A"
+      },
+      "Req": {
+        "Str": "0",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "20"
+      },
+      "Atk": {
+        "Physical": "0",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "White Hair Talisman": {
+      "Weight": "0.5",
+      "Scales": {
+        "Str": "-",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "B"
+      },
+      "Req": {
+        "Str": "0",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "16"
+      },
+      "Atk": {
+        "Physical": "0",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Sunless Talisman": {
+      "Weight": "0.5",
+      "Scales": {
+        "Str": "-",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "B"
+      },
+      "Req": {
+        "Str": "0",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "16"
+      },
+      "Atk": {
+        "Physical": "0",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Canvas Talisman": {
+      "Weight": "0.5",
+      "Scales": {
+        "Str": "-",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "C"
+      },
+      "Req": {
+        "Str": "0",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "10"
+      },
+      "Atk": {
+        "Physical": "0",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    }
+  },
+  "Sacred chimes": {
+    "Priest Chime": {
+      "Weight": "3.0",
+      "Scales": {
+        "Str": "-",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "B"
+      },
+      "Req": {
+        "Str": "0",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "14"
+      },
+      "Atk": {
+        "Physical": "0",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Cleric's Sacred Chime": {
+      "Weight": "2.5",
+      "Scales": {
+        "Str": "-",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "C"
+      },
+      "Req": {
+        "Str": "0",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "12"
+      },
+      "Atk": {
+        "Physical": "0",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Caitha's Chime": {
+      "Weight": "2.0",
+      "Scales": {
+        "Str": "-",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "B"
+      },
+      "Req": {
+        "Str": "0",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "16"
+      },
+      "Atk": {
+        "Physical": "0",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Saint-tree Bellvine": {
+      "Weight": "3.5",
+      "Scales": {
+        "Str": "-",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "B"
+      },
+      "Req": {
+        "Str": "0",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "16"
+      },
+      "Atk": {
+        "Physical": "0",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Crystal Chime": {
+      "Weight": "4.0",
+      "Scales": {
+        "Str": "-",
+        "Dex": "-",
+        "Int": "B",
+        "Fth": "B"
+      },
+      "Req": {
+        "Str": "0",
+        "Dex": "0",
+        "Int": "16",
+        "Fth": "16"
+      },
+      "Atk": {
+        "Physical": "0",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Yorshka's Chime": {
+      "Weight": "3.5",
+      "Scales": {
+        "Str": "-",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "B"
+      },
+      "Req": {
+        "Str": "0",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "16"
+      },
+      "Atk": {
+        "Physical": "0",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    },
+    "Sacred Chime of Filianore": {
+      "Weight": "4.0",
+      "Scales": {
+        "Str": "-",
+        "Dex": "-",
+        "Int": "-",
+        "Fth": "B"
+      },
+      "Req": {
+        "Str": "0",
+        "Dex": "0",
+        "Int": "0",
+        "Fth": "16"
+      },
+      "Atk": {
+        "Physical": "0",
+        "Magic": "0",
+        "Fire": "0",
+        "Lightning": "0"
+      }
+    }
   }
 }
-  
