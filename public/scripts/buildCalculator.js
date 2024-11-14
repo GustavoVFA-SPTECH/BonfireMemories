@@ -262,20 +262,30 @@ document.getElementById("upLuck").addEventListener("click", () => adjustAttribut
 document.getElementById("downLuck").addEventListener("click", () => adjustAttribute("finalLuck", -1));
 
 
-
-
+let armas = {};  
 
 async function carregarArmas() {
-    const response = await fetch('../scripts/weapons.json'); 
-    const armas = await response.json();
-    return armas;
+    try {
+        const response = await fetch('../scripts/weapons.json');
+        if (!response.ok) {
+            throw new Error('Erro ao carregar o arquivo JSON das armas');
+        }
+        armas = await response.json();  
+    } catch (error) {
+        console.error("Falha ao carregar armas:", error);
+    }
 }
 
 
 async function preencherArmasNosSelects() {
-    const armas = await carregarArmas();
+    await carregarArmas(); 
 
     
+    if (!armas || Object.keys(armas).length === 0) {
+        console.error("As armas não foram carregadas corretamente.");
+        return;
+    }
+
     const selectR1 = document.getElementById("R1Select");
     const selectR2 = document.getElementById("R2Select");
     const selectR3 = document.getElementById("R3Select");
@@ -284,7 +294,6 @@ async function preencherArmasNosSelects() {
     const selectL3 = document.getElementById("L3Select");
 
     const adicionarOpcoesAoSelect = (selectElement, armas) => {
-        
         selectElement.innerHTML = "";
 
         const optionDefault = document.createElement("option");
@@ -292,15 +301,14 @@ async function preencherArmasNosSelects() {
         optionDefault.textContent = "Selecione a arma";
         selectElement.appendChild(optionDefault);
 
-        
         for (let categoria in armas) {
-            const categoriaArmas = armas[categoria]; 
+            const categoriaArmas = armas[categoria];
             for (let weaponName in categoriaArmas) {
-                const weapon = categoriaArmas[weaponName]; 
+                const weapon = categoriaArmas[weaponName];
 
                 const option = document.createElement("option");
-                option.value = weaponName; 
-                option.textContent = `${weaponName} (${categoria})`; 
+                option.value = weaponName;
+                option.textContent = `${weaponName} (${categoria})`;
 
                 selectElement.appendChild(option);
             }
@@ -308,13 +316,112 @@ async function preencherArmasNosSelects() {
     };
 
     
-    adicionarOpcoesAoSelect(selectR1, armas); 
-    adicionarOpcoesAoSelect(selectR2, armas); 
-    adicionarOpcoesAoSelect(selectR3, armas); 
-    adicionarOpcoesAoSelect(selectL1, armas); 
-    adicionarOpcoesAoSelect(selectL2, armas); 
-    adicionarOpcoesAoSelect(selectL3, armas); 
+    adicionarOpcoesAoSelect(selectR1, armas);
+    adicionarOpcoesAoSelect(selectR2, armas);
+    adicionarOpcoesAoSelect(selectR3, armas);
+    adicionarOpcoesAoSelect(selectL1, armas);
+    adicionarOpcoesAoSelect(selectL2, armas);
+    adicionarOpcoesAoSelect(selectL3, armas);
 }
+
+
+function getArmaDados(weaponName, armas) {
+    for (let categoria in armas) {
+        const categoriaArmas = armas[categoria];
+        if (categoriaArmas[weaponName]) {
+            return categoriaArmas[weaponName];
+        }
+    }
+    return null;
+}
+
+
+function calcularEscalamento(escala, atributo) {
+    const escalas = {
+        "E": 0.5, 
+        "D": 0.75, 
+        "C": 1.0,  
+        "B": 1.25, 
+        "A": 1.5,  
+        "S": 2.0   
+    };
+
+    const fatorEscalamento = escalas[escala] || 0;
+
+    return atributo * fatorEscalamento;
+}
+
+
+async function atualizarDanoArma(selectId) {
+    const selectElement = document.getElementById(selectId);
+    const weaponName = selectElement.value;
+
+    if (!weaponName) {
+        console.warn(`Nenhuma arma selecionada no ${selectId}`);
+        return;
+    }
+
+    
+    if (!armas || Object.keys(armas).length === 0) {
+        console.error("As armas não foram carregadas corretamente.");
+        return;
+    }
+
+    
+    const arma = getArmaDados(weaponName, armas);
+    if (!arma) {
+        console.warn(`Arma ${weaponName} não encontrada.`);
+        return;
+    }
+
+    
+    const playerStats = {
+        strength: parseInt(document.getElementById("finalStrength").value) || 0,
+        dexterity: parseInt(document.getElementById("finalDexterity").value) || 0,
+        intelligence: parseInt(document.getElementById("finalIntelligence").value) || 0,
+        faith: parseInt(document.getElementById("finalFaith").value) || 0
+    };
+
+    
+    const weight = parseFloat(arma.Weight); 
+    const atk = parseFloat(arma.Atk.Physical); 
+    const scales = arma.Scales; 
+
+    
+    let danoCalculado = atk; 
+
+    
+    if (scales.Str && playerStats.strength > 0) {
+        danoCalculado += calcularEscalamento(scales.Str, playerStats.strength);
+    }
+    if (scales.Dex && playerStats.dexterity > 0) {
+        danoCalculado += calcularEscalamento(scales.Dex, playerStats.dexterity);
+    }
+
+    
+    if (isNaN(danoCalculado)) {
+        console.error("Erro: Dano calculado não é um número válido.");
+        return;
+    }
+
+    
+    const resultadoDanoId = `final${selectId.replace("Select", "")}Weapon`; 
+    const resultadoDanoElement = document.getElementById(resultadoDanoId);
+
+    if (resultadoDanoElement) {
+        resultadoDanoElement.innerHTML = `${danoCalculado.toFixed(0)}`;
+    } else {
+        console.warn(`Elemento de resultado de dano não encontrado para ${resultadoDanoId}`);
+    }
+}
+
+
+document.getElementById("R1Select").addEventListener("change", () => atualizarDanoArma("R1Select"));
+document.getElementById("R2Select").addEventListener("change", () => atualizarDanoArma("R2Select"));
+document.getElementById("R3Select").addEventListener("change", () => atualizarDanoArma("R3Select"));
+document.getElementById("L1Select").addEventListener("change", () => atualizarDanoArma("L1Select"));
+document.getElementById("L2Select").addEventListener("change", () => atualizarDanoArma("L2Select"));
+document.getElementById("L3Select").addEventListener("change", () => atualizarDanoArma("L3Select"));
 
 
 document.addEventListener("DOMContentLoaded", preencherArmasNosSelects);
