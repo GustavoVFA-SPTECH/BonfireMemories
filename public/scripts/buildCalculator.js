@@ -425,3 +425,59 @@ document.getElementById("L3Select").addEventListener("change", () => atualizarDa
 
 
 document.addEventListener("DOMContentLoaded", preencherArmasNosSelects);
+
+
+async function carregarArmaduras() {
+    try {
+        const response = await fetch('../scripts/armors.json'); 
+        if (!response.ok) {
+            throw new Error('Erro ao carregar o arquivo JSON das armaduras');
+        }
+        return await response.json();  
+    } catch (error) {
+        console.error("Falha ao carregar armaduras:", error);
+        return {};  
+    }
+}
+
+
+async function preencherArmadurasNosSelects() {
+    const armaduras = await carregarArmaduras();
+
+    
+    if (!armaduras || Object.keys(armaduras).length === 0) {
+        console.error("As armaduras não foram carregadas corretamente.");
+        return;
+    }
+
+    const selectCapacetes = document.getElementById("helmetSelect");
+    const selectPeitorais = document.getElementById("chestSelect");
+    const selectLuvas = document.getElementById("handsSelect");
+    const selectCalcas = document.getElementById("legsSelect");
+
+    
+    const adicionarOpcoesAoSelect = (selectElement, armadurasArray) => {
+        selectElement.innerHTML = ""; 
+
+        const optionDefault = document.createElement("option");
+        optionDefault.value = "";
+        optionDefault.textContent = "Selecione uma armadura";
+        selectElement.appendChild(optionDefault);
+
+        armadurasArray.forEach((armadura) => {
+            const option = document.createElement("option");
+            option.value = armadura; 
+            option.textContent = armadura; 
+            selectElement.appendChild(option);
+        });
+    };
+
+    
+    adicionarOpcoesAoSelect(selectCapacetes, armaduras.helmets);
+    adicionarOpcoesAoSelect(selectPeitorais, armaduras.chests);
+    adicionarOpcoesAoSelect(selectLuvas, armaduras.hands);
+    adicionarOpcoesAoSelect(selectCalcas, armaduras.legs);
+}
+
+
+document.addEventListener("DOMContentLoaded", preencherArmadurasNosSelects);
