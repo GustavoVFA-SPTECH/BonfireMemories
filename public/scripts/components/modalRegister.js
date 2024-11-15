@@ -20,7 +20,7 @@ function modalRegister() {
               <input class="inputRegister" type="text" placeholder="Confirm password" id="registerConfirmPassword"/>
             </div>
             <div class="buttonsRegister">
-              <button class="buttonRegister" onclick="buttonBack">Back</button>
+              <button class="buttonRegister" onclick="backButton()">Back</button>
               <button class="buttonRegister" id="registerButton">Register</button>
             </div>
           </div>
@@ -85,6 +85,6 @@ function register() {
 
 registerButton.addEventListener("click", register);
 
-function buttonBack(){
-  document.querySelector(".modalRegister").style.display = "none";
+function backButton(){
+  document.querySelector(".registerModal").style.display = "none";
 }

@@ -21,6 +21,7 @@ function modalLogin() {
             <button class="buttonLogin"  onclick="buttonBack()">Back</button>
             <button class="buttonLogin" id="loginButton">Login</button>
           </div>
+            <span onclick="registerModal()">Register</span>
         </div>
       </div>
     </div>
@@ -55,7 +56,8 @@ function login(){
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(data)
-  }).then( document.querySelector(".modalLogin").style.display = "none").catch(document.querySelector(".errorMessageLogin").style.display = "flex")
+  }).catch(document.querySelector(".errorMessageLogin").style.display = "flex")
+  .then( document.querySelector(".modalLogin").style.display = "none")
 }
 
 loginButton.addEventListener('click', login)
@@ -64,3 +66,7 @@ function buttonBack(){
   document.querySelector(".modalLogin").style.display = "none";
 }
 
+function registerModal(){
+  document.querySelector(".modalLogin").style.display = "none";
+  document.querySelector(".registerModal").style.display = "flex";
+}

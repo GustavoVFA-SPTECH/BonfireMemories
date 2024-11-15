@@ -6,9 +6,9 @@ function sideBar() {
     scriptParent.insertAdjacentHTML("beforeend", `
         <div class="sideBar">
             <div class="sideButtons">
-                <button class="sideButton">HomePage</button>
-                <button class="sideButton">Build Calculator</button>
-                <button class="sideButton">New Post</button>
+                <button class="sideButton"><a href="homepage.html">HomePage<a/></button>
+                <button class="sideButton"><a href="buildCalculator.html">BuildCaculator<a/></button>
+                <button class="sideButton"><a href="homepage.html">NewPost<a/></button>
             </div>
         </div>
        `);
