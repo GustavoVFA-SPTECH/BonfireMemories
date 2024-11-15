@@ -625,7 +625,7 @@ async function carregarAneis() {
       throw new Error("Erro ao carregar o arquivo JSON dos anéis");
     }
     const json = await response.json();
-    aneis = json.rings; // Usar o array "rings" do JSON gerado
+    aneis = json.rings; 
   } catch (error) {
     console.error("Falha ao carregar anéis:", error);
   }
@@ -639,7 +639,7 @@ async function preencherAneisNosSelects() {
     return;
   }
 
-  // Seletores para os selects de anéis
+  
   const selectRing1 = document.getElementById("Ring1Select");
   const selectRing2 = document.getElementById("Ring2Select");
   const selectRing3 = document.getElementById("Ring3Select");
@@ -647,59 +647,59 @@ async function preencherAneisNosSelects() {
 
   const selects = [selectRing1, selectRing2, selectRing3, selectRing4];
 
-  // Rastrear quais anéis estão equipados
+  
   const aneisEquipados = new Set();
 
-  // Função para atualizar os selects dinamicamente
+  
   const atualizarOpcoes = () => {
     selects.forEach((select) => {
       const valorSelecionado = select.value;
       aneisEquipados.clear();
 
-      // Atualizar o conjunto de anéis equipados
+      
       selects.forEach((s) => {
         if (s.value) {
           aneisEquipados.add(s.value);
         }
       });
 
-      // Atualizar opções do select
+      
       selects.forEach((s) => {
         const valorAtual = s.value;
         s.innerHTML = "";
 
-        // Adicionar opção padrão
+        
         const optionDefault = document.createElement("option");
         optionDefault.value = "";
         optionDefault.textContent = "Selecione um anel";
         s.appendChild(optionDefault);
 
-        // Adicionar as opções disponíveis
+        
         aneis.forEach((anel) => {
           const option = document.createElement("option");
           option.value = anel;
           option.textContent = anel;
 
-          // Mostrar opção se não estiver equipada ou for a atual
+          
           if (!aneisEquipados.has(anel) || anel === valorAtual) {
             s.appendChild(option);
           }
         });
 
-        // Reaplicar valor selecionado
+        
         s.value = valorAtual;
       });
     });
   };
 
-  // Inicializar opções nos selects
+  
   atualizarOpcoes();
 
-  // Adicionar eventos para atualização dinâmica
+  
   selects.forEach((select) => {
     select.addEventListener("change", atualizarOpcoes);
   });
 }
 
-// Chamar a função após o carregamento completo da página
+
 document.addEventListener("DOMContentLoaded", preencherAneisNosSelects);
