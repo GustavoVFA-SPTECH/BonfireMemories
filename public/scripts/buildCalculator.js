@@ -625,7 +625,7 @@ async function carregarAneis() {
       throw new Error("Erro ao carregar o arquivo JSON dos anéis");
     }
     const json = await response.json();
-    aneis = json.rings; 
+    aneis = json.rings;
   } catch (error) {
     console.error("Falha ao carregar anéis:", error);
   }
@@ -639,7 +639,6 @@ async function preencherAneisNosSelects() {
     return;
   }
 
-  
   const selectRing1 = document.getElementById("Ring1Select");
   const selectRing2 = document.getElementById("Ring2Select");
   const selectRing3 = document.getElementById("Ring3Select");
@@ -647,59 +646,140 @@ async function preencherAneisNosSelects() {
 
   const selects = [selectRing1, selectRing2, selectRing3, selectRing4];
 
-  
   const aneisEquipados = new Set();
 
-  
   const atualizarOpcoes = () => {
     selects.forEach((select) => {
       const valorSelecionado = select.value;
       aneisEquipados.clear();
 
-      
       selects.forEach((s) => {
         if (s.value) {
           aneisEquipados.add(s.value);
         }
       });
 
-      
       selects.forEach((s) => {
         const valorAtual = s.value;
         s.innerHTML = "";
 
-        
         const optionDefault = document.createElement("option");
         optionDefault.value = "";
         optionDefault.textContent = "Selecione um anel";
         s.appendChild(optionDefault);
 
-        
         aneis.forEach((anel) => {
           const option = document.createElement("option");
           option.value = anel;
           option.textContent = anel;
 
-          
           if (!aneisEquipados.has(anel) || anel === valorAtual) {
             s.appendChild(option);
           }
         });
 
-        
         s.value = valorAtual;
       });
     });
   };
 
-  
   atualizarOpcoes();
 
-  
   selects.forEach((select) => {
     select.addEventListener("change", atualizarOpcoes);
   });
 }
 
-
 document.addEventListener("DOMContentLoaded", preencherAneisNosSelects);
+
+let feits = {};
+
+async function carregarFeiticos() {
+  try {
+    const response = await fetch("../scripts/spells.json");
+    if (!response.ok) {
+      throw new Error("Erro ao carregar o arquivo JSON dos feitiços");
+    }
+    feits = await response.json();
+  } catch (error) {
+    console.error("Falha ao carregar feitiços:", error);
+  }
+}
+
+async function preencherFeiticosNosSelects() {
+  await carregarFeiticos();
+
+  if (!feits || Object.keys(feits).length === 0) {
+    console.error("Os feitiços não foram carregados corretamente.");
+    return;
+  }
+
+  const todosFeiticos = [
+    ...feits.spells.sorceries.map((spell) => ({
+      name: spell,
+      category: "Sorcery",
+    })),
+    ...feits.spells.pyromancies.map((spell) => ({
+      name: spell,
+      category: "Pyromancy",
+    })),
+    ...feits.spells.miracles.map((spell) => ({
+      name: spell,
+      category: "Miracle",
+    })),
+    ...feits.spells.dark_magics.map((spell) => ({
+      name: spell,
+      category: "Dark Magic",
+    })),
+  ];
+
+  const selects = [];
+  for (let i = 1; i <= 12; i++) {
+    selects.push(document.getElementById(`${i}Spell`));
+  }
+
+  const feiticosEquipados = new Set();
+
+  const atualizarOpcoes = () => {
+    selects.forEach((select) => {
+      const valorSelecionado = select.value;
+      feiticosEquipados.clear();
+
+      selects.forEach((s) => {
+        if (s.value) {
+          feiticosEquipados.add(s.value);
+        }
+      });
+
+      selects.forEach((s) => {
+        const valorAtual = s.value;
+        s.innerHTML = "";
+
+        const optionDefault = document.createElement("option");
+        optionDefault.value = "";
+        optionDefault.textContent = "Selecione um feitiço";
+        s.appendChild(optionDefault);
+
+        todosFeiticos.forEach((spell) => {
+          const option = document.createElement("option");
+          option.value = spell.name;
+          option.textContent = `${spell.name} (${spell.category})`;
+
+          if (!feiticosEquipados.has(spell.name) || spell.name === valorAtual) {
+            s.appendChild(option);
+          }
+        });
+
+        s.value = valorAtual;
+      });
+    });
+  };
+
+  atualizarOpcoes();
+
+  selects.forEach((select) => {
+    select.addEventListener("change", atualizarOpcoes);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", preencherFeiticosNosSelects);
