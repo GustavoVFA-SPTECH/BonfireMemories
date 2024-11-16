@@ -818,7 +818,7 @@ document.addEventListener("DOMContentLoaded", () => {
               buildOwner: 1, // Substitua por um ID dinâmico do usuário logado, se necessário
           };
 
-          // Capturar equipamentos de armas, excluindo aqueles com valor igual a "#" ou ""
+          // Capturar equipamentos de armas e equipamentos de armadura, excluindo aqueles com valor igual a "#" ou ""
           const equipment = [
               { name: document.getElementById("R1Select").value, type: "weapon" },
               { name: document.getElementById("R2Select").value, type: "weapon" },
@@ -829,7 +829,11 @@ document.addEventListener("DOMContentLoaded", () => {
               { name: document.getElementById("Ring1Select").value, type: "ring" },
               { name: document.getElementById("Ring2Select").value, type: "ring" },
               { name: document.getElementById("Ring3Select").value, type: "ring" },
-              { name: document.getElementById("Ring4Select").value, type: "ring" }
+              { name: document.getElementById("Ring4Select").value, type: "ring" },
+              { name: document.getElementById("helmetSelect").value, type: "helmet" },
+              { name: document.getElementById("chestSelect").value, type: "chest" },
+              { name: document.getElementById("handsSelect").value, type: "hands" },
+              { name: document.getElementById("legsSelect").value, type: "legs" }
           ]
           // Filtra os equipamentos, excluindo aqueles com valor igual a "#" ou ""
           .filter(equip => equip.name !== "" && equip.name !== "#")  
@@ -850,4 +854,3 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Save Stats Button not found in the DOM.");
   }
 });
-
