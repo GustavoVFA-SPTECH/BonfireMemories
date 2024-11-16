@@ -436,7 +436,7 @@ async function preencherArmasNosSelects() {
     selectElement.innerHTML = "";
 
     const optionDefault = document.createElement("option");
-    optionDefault.value = "";
+    optionDefault.value = "#";
     optionDefault.textContent = "Selecione a arma";
     selectElement.appendChild(optionDefault);
 
@@ -783,3 +783,56 @@ async function preencherFeiticosNosSelects() {
 }
 
 document.addEventListener("DOMContentLoaded", preencherFeiticosNosSelects);
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const saveStatsButton = document.getElementById("saveStatsButton");
+  if (saveStatsButton) {
+      saveStatsButton.addEventListener("click", async () => {
+          // Capturar stats
+          const stats = {
+              level: parseInt(document.getElementById("finalLevel").value) || 0,
+              vigor: parseInt(document.getElementById("finalVigor").value) || 0,
+              attunement: parseInt(document.getElementById("finalAttunement").value) || 0,
+              endurence: parseInt(document.getElementById("finalEndurance").value) || 0,
+              vitality: parseInt(document.getElementById("finalVitality").value) || 0,
+              strength: parseInt(document.getElementById("finalStrength").value) || 0,
+              dexterity: parseInt(document.getElementById("finalDexterity").value) || 0,
+              inteligence: parseInt(document.getElementById("finalIntelligence").value) || 0,
+              faith: parseInt(document.getElementById("finalFaith").value) || 0,
+              luck: parseInt(document.getElementById("finalLuck").value) || 0,
+          };
+
+          // Capturar informações da build
+          const build = {
+              name: document.getElementById("buildName").value || "Default Build",
+              class: document.getElementById("class").value || "Default Class", // Adicione um campo para classe no HTML
+              buildOwner: 1, // Substitua por um ID dinâmico do usuário logado, se necessário
+          };
+
+          // Capturar equipamentos, excluindo aqueles com valor igual a "#"
+          const equipment = [
+              { name: document.getElementById("R1Select").value, type: "weapon" },
+              { name: document.getElementById("R2Select").value, type: "weapon" },
+              { name: document.getElementById("R3Select").value, type: "weapon" },
+              { name: document.getElementById("L1Select").value, type: "weapon" },
+              { name: document.getElementById("L2Select").value, type: "weapon" },
+              { name: document.getElementById("L3Select").value, type: "weapon" },
+          ]
+          .filter(equip => equip.name !== "#")  // Filtra as armas que têm valor diferente de "#"
+          .map(equip => ({ name: equip.name, type: equip.type })); // Retorna apenas as propriedades name e type
+
+          try {
+              // Chamar a função saveBuild com os parâmetros necessários
+              // await saveBuild(stats, build, equipment);
+              console.log(stats, equipment, build);
+              alert("Build saved successfully!");
+          } catch (error) {
+              console.error("Error saving build:", error);
+              alert("Failed to save build.");
+          }
+      });
+  } else {
+      console.error("Save Stats Button not found in the DOM.");
+  }
+});
