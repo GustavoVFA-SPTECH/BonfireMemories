@@ -815,7 +815,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const build = {
               name: document.getElementById("buildName").value || "Default Build",
               class: document.getElementById("class").value || "Default Class", // Adicione um campo para classe no HTML
-              buildOwner: 1, // Substitua por um ID dinâmico do usuário logado, se necessário
+              buildOwner: "", // Substitua por um ID dinâmico do usuário logado, se necessário
           };
 
           // Capturar equipamentos de armas e equipamentos de armadura, excluindo aqueles com valor igual a "#" ou ""
