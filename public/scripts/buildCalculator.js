@@ -596,7 +596,7 @@ async function preencherArmadurasNosSelects() {
     selectElement.innerHTML = "";
 
     const optionDefault = document.createElement("option");
-    optionDefault.value = "";
+    optionDefault.value = "#";
     optionDefault.textContent = "Selecione uma armadura";
     selectElement.appendChild(optionDefault);
 
@@ -650,40 +650,48 @@ async function preencherAneisNosSelects() {
 
   const atualizarOpcoes = () => {
     selects.forEach((select) => {
-      const valorSelecionado = select.value;
       aneisEquipados.clear();
-
+  
       selects.forEach((s) => {
         if (s.value) {
           aneisEquipados.add(s.value);
         }
       });
-
-      selects.forEach((s) => {
-        const valorAtual = s.value;
-        s.innerHTML = "";
-
-        const optionDefault = document.createElement("option");
-        optionDefault.value = "";
-        optionDefault.textContent = "Selecione um anel";
-        s.appendChild(optionDefault);
-
-        aneis.forEach((anel) => {
-          const option = document.createElement("option");
-          option.value = anel;
-          option.textContent = anel;
-
-          if (!aneisEquipados.has(anel) || anel === valorAtual) {
-            s.appendChild(option);
-          }
-        });
-
-        s.value = valorAtual;
+  
+      const valorAtual = select.value;
+      select.innerHTML = "";  // Limpa as opções existentes
+  
+      // Adiciona a opção default
+      const optionDefault = document.createElement("option");
+      optionDefault.value = "";  // Usar # como valor para a opção default
+      optionDefault.textContent = "Selecione um anel";
+      select.appendChild(optionDefault);
+  
+      // Adiciona as opções de aneis
+      aneis.forEach((anel) => {
+        const option = document.createElement("option");
+        option.value = anel;
+        option.textContent = anel;
+  
+        // Adiciona o anel, exceto os já equipados, ou o valor atual selecionado
+        if (!aneisEquipados.has(anel) || anel === valorAtual || valorAtual === "#") {
+          select.appendChild(option);
+        }
       });
+  
+      // Restaura o valor atual do select
+      if (valorAtual === "#") {
+        select.value = "#";  // Isso mantém a opção "Selecione um anel" selecionada
+      } else {
+        select.value = valorAtual;  // Se não for #, restaura o valor normal
+      }
     });
   };
-
+  
   atualizarOpcoes();
+  
+  
+  
 
   selects.forEach((select) => {
     select.addEventListener("change", atualizarOpcoes);
@@ -756,7 +764,7 @@ async function preencherFeiticosNosSelects() {
         s.innerHTML = "";
 
         const optionDefault = document.createElement("option");
-        optionDefault.value = "";
+        optionDefault.value = "#";
         optionDefault.textContent = "Selecione um feitiço";
         s.appendChild(optionDefault);
 
@@ -810,7 +818,7 @@ document.addEventListener("DOMContentLoaded", () => {
               buildOwner: 1, // Substitua por um ID dinâmico do usuário logado, se necessário
           };
 
-          // Capturar equipamentos, excluindo aqueles com valor igual a "#"
+          // Capturar equipamentos de armas, excluindo aqueles com valor igual a "#" ou ""
           const equipment = [
               { name: document.getElementById("R1Select").value, type: "weapon" },
               { name: document.getElementById("R2Select").value, type: "weapon" },
@@ -818,9 +826,15 @@ document.addEventListener("DOMContentLoaded", () => {
               { name: document.getElementById("L1Select").value, type: "weapon" },
               { name: document.getElementById("L2Select").value, type: "weapon" },
               { name: document.getElementById("L3Select").value, type: "weapon" },
+              { name: document.getElementById("Ring1Select").value, type: "ring" },
+              { name: document.getElementById("Ring2Select").value, type: "ring" },
+              { name: document.getElementById("Ring3Select").value, type: "ring" },
+              { name: document.getElementById("Ring4Select").value, type: "ring" }
           ]
-          .filter(equip => equip.name !== "#")  // Filtra as armas que têm valor diferente de "#"
-          .map(equip => ({ name: equip.name, type: equip.type })); // Retorna apenas as propriedades name e type
+          // Filtra os equipamentos, excluindo aqueles com valor igual a "#" ou ""
+          .filter(equip => equip.name !== "" && equip.name !== "#")  
+          // Retorna apenas as propriedades name e type
+          .map(equip => ({ name: equip.name, type: equip.type }));
 
           try {
               // Chamar a função saveBuild com os parâmetros necessários
@@ -836,3 +850,4 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Save Stats Button not found in the DOM.");
   }
 });
+
