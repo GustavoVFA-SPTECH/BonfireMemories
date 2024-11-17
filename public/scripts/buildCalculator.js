@@ -1,3 +1,5 @@
+const { saveBuild } = require("../../src/Models/buildModel");
+
 const classes = {
   Knight: {
     level: 9,
@@ -659,31 +661,31 @@ async function preencherAneisNosSelects() {
       });
   
       const valorAtual = select.value;
-      select.innerHTML = "";  // Limpa as opções existentes
+      select.innerHTML = "";  
   
-      // Adiciona a opção default
+      
       const optionDefault = document.createElement("option");
-      optionDefault.value = "";  // Usar # como valor para a opção default
+      optionDefault.value = "";  
       optionDefault.textContent = "Selecione um anel";
       select.appendChild(optionDefault);
   
-      // Adiciona as opções de aneis
+      
       aneis.forEach((anel) => {
         const option = document.createElement("option");
         option.value = anel;
         option.textContent = anel;
   
-        // Adiciona o anel, exceto os já equipados, ou o valor atual selecionado
+        
         if (!aneisEquipados.has(anel) || anel === valorAtual || valorAtual === "#") {
           select.appendChild(option);
         }
       });
   
-      // Restaura o valor atual do select
+      
       if (valorAtual === "#") {
-        select.value = "#";  // Isso mantém a opção "Selecione um anel" selecionada
+        select.value = "#";  
       } else {
-        select.value = valorAtual;  // Se não for #, restaura o valor normal
+        select.value = valorAtual;  
       }
     });
   };
@@ -797,7 +799,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const saveStatsButton = document.getElementById("saveStatsButton");
   if (saveStatsButton) {
       saveStatsButton.addEventListener("click", async () => {
-          // Capturar stats
+          
           const stats = {
               level: parseInt(document.getElementById("finalLevel").value) || 0,
               vigor: parseInt(document.getElementById("finalVigor").value) || 0,
@@ -811,14 +813,14 @@ document.addEventListener("DOMContentLoaded", () => {
               luck: parseInt(document.getElementById("finalLuck").value) || 0,
           };
 
-          // Capturar informações da build
+          
           const build = {
               name: document.getElementById("buildName").value || "Default Build",
-              class: document.getElementById("class").value || "Default Class", // Adicione um campo para classe no HTML
-              buildOwner: "", // Substitua por um ID dinâmico do usuário logado, se necessário
+              class: document.getElementById("class").value || "Default Class", 
+              buildOwner: "", 
           };
 
-          // Capturar equipamentos de armas e equipamentos de armadura, excluindo aqueles com valor igual a "#" ou ""
+          
           const equipment = [
               { name: document.getElementById("R1Select").value, type: "weapon" },
               { name: document.getElementById("R2Select").value, type: "weapon" },
@@ -835,14 +837,13 @@ document.addEventListener("DOMContentLoaded", () => {
               { name: document.getElementById("handsSelect").value, type: "hands" },
               { name: document.getElementById("legsSelect").value, type: "legs" }
           ]
-          // Filtra os equipamentos, excluindo aqueles com valor igual a "#" ou ""
+          
           .filter(equip => equip.name !== "" && equip.name !== "#")  
-          // Retorna apenas as propriedades name e type
+          
           .map(equip => ({ name: equip.name, type: equip.type }));
 
           try {
-              // Chamar a função saveBuild com os parâmetros necessários
-              // await saveBuild(stats, build, equipment);
+              await saveBuild(stats, build, equipment);
               console.log(stats, equipment, build);
               alert("Build saved successfully!");
           } catch (error) {
