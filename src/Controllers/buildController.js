@@ -14,3 +14,7 @@ const createBuild = async (req, res, next) => {
     return next(error);
   }
 };
+
+module.exports = {
+  createBuild,
+}

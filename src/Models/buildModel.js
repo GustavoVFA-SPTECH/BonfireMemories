@@ -36,3 +36,15 @@ async function saveBuild(stats, build, equipment) {
     );
   }
 }
+
+async function load(buildID) {
+  const [build] = await database.executar(
+    `SELECT name FROM Build WHERE idBuild =?;`,
+    [buildID]
+  );
+}
+
+module.exports = {
+  saveBuild,
+  load
+};
