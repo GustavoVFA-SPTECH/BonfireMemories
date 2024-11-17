@@ -1,4 +1,4 @@
-const { saveBuild } = require("../../src/Models/buildModel");
+// const buildModel = require("");
 
 const classes = {
   Knight: {
@@ -692,9 +692,6 @@ async function preencherAneisNosSelects() {
   
   atualizarOpcoes();
   
-  
-  
-
   selects.forEach((select) => {
     select.addEventListener("change", atualizarOpcoes);
   });
@@ -766,7 +763,7 @@ async function preencherFeiticosNosSelects() {
         s.innerHTML = "";
 
         const optionDefault = document.createElement("option");
-        optionDefault.value = "#";
+        optionDefault.value = "";
         optionDefault.textContent = "Selecione um feitiço";
         s.appendChild(optionDefault);
 
@@ -817,7 +814,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const build = {
               name: document.getElementById("buildName").value || "Default Build",
               class: document.getElementById("class").value || "Default Class", 
-              buildOwner: "", 
+              buildOwner: '1', 
           };
 
           
@@ -843,7 +840,16 @@ document.addEventListener("DOMContentLoaded", () => {
           .map(equip => ({ name: equip.name, type: equip.type }));
 
           try {
-              await saveBuild(stats, build, equipment);
+
+              fetch("/saveBuild",{
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ stats, build, equipment })
+              })
+          
+              // await buildModel.saveBuild(stats, build, equipment);
               console.log(stats, equipment, build);
               alert("Build saved successfully!");
           } catch (error) {

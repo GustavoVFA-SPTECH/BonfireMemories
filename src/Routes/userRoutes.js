@@ -8,7 +8,7 @@ const userRouter = Router();
 
 userRouter.post("/register", userController.createUser);
 userRouter.post("/login", authController.login);
-// userRouter.delete("/deleteUser")
-// userRouter.put("/updateUser")
+// userRouter.delete("/deleteUser");
+// userRouter.put("/updateUser");
 
 module.exports = userRouter;
