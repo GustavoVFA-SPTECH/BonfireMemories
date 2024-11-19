@@ -313,3 +313,71 @@ button:hover{
     font-size: 50px;
     text-decoration: underline;
 }
+
+.listModal{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blackTransparent);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.buildList{
+    background-color: var(--darkGray);
+    border: var(--gold) 3px solid;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    flex-direction: column;
+    gap: 20px;
+    width: 30%;
+}
+
+.list{
+    overflow: auto;
+    height: 80%;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.listTitle{
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+.listItem{
+    border: 3px solid var(--gold);
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 98%;
+    background-color: var(--darkGreen);
+    flex-direction: row;
+    gap: 30px;
+    border-radius: 10px;
+}
+
+.buildListName{
+    font-size: 30px;
+    /* border: white 1px solid; */
+    width: 50%;
+    text-align: center;
+}
+
+.buildListLevel{
+    font-size: 25px;
+    /* border: white 1px solid; */
+    width: 50%;
+    text-align: center;
+}

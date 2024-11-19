@@ -38,11 +38,69 @@ async function saveBuild(stats, build, equipment) {
 }
 
 async function load(buildID) {
+  // Recuperar os dados da Build
   const [build] = await database.executar(
-    `SELECT name FROM Build WHERE idBuild =?;`,
+    `SELECT idBuild, name, class, buildOwner, fkStats FROM Build WHERE idBuild = ?;`,
     [buildID]
   );
+
+  if (!build) {
+    throw new Error('Build não encontrada');
+  }
+
+  // Recuperar os dados de Stats associados à Build
+  const [stats] = await database.executar(
+    `SELECT level, vigor, attunement, endurence, vitality, strength, dexterity, inteligence, faith, luck 
+     FROM Stats WHERE idStats = ?;`,
+    [build.fkStats]
+  );
+
+  if (!stats) {
+    throw new Error('Stats não encontrados');
+  }
+
+  // Recuperar os equipamentos associados à Build
+  const [equipment] = await database.executar(
+    `SELECT name, type FROM Equipament WHERE fkBuild = ?;`,
+    [build.idBuild]
+  );
+
+  // Retornar os dados no mesmo formato de 'saveBuild'
+  return {
+    stats: {
+      level: stats.level,
+      vigor: stats.vigor,
+      attunement: stats.attunement,
+      endurence: stats.endurence,
+      vitality: stats.vitality,
+      strength: stats.strength,
+      dexterity: stats.dexterity,
+      inteligence: stats.inteligence,
+      faith: stats.faith,
+      luck: stats.luck
+    },
+    build: {
+      name: build.name,
+      class: build.class,
+      buildOwner: build.buildOwner
+    },
+    equipment: equipment.map(equip => ({
+      name: equip.name,
+      type: equip.type
+    }))
+  };
 }
+
+async function getBuild() {
+  try {
+    const builds = await database.executar("SELECT idBuild, name FROM build");
+    return builds;
+  } catch (error) {
+    console.error("Erro ao recuperar builds:", error);
+    throw new Error("Não foi possível recuperar as builds");
+  }
+}
+
 
 module.exports = {
   saveBuild,

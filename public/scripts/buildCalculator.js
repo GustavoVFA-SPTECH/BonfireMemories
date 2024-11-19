@@ -1,4 +1,3 @@
-// const buildModel = require("");
 
 const classes = {
   Knight: {
@@ -920,7 +919,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   };
 
   // Carregar dados ao iniciar
-  await loadBuildData();
+  // await loadBuildData();
 
   // Adicionar evento de salvar ao botão
   if (saveStatsButton) {

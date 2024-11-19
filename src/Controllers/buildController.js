@@ -15,6 +15,26 @@ const createBuild = async (req, res, next) => {
   }
 };
 
+const getBuild = async (req, res, next) => {
+  const { buildId } = req.params;
+
+  try {
+    const build = await buildModel.load(buildId);
+
+    if (!build) {
+      const error = new Error('Build não encontrada');
+      error.status = 404;  
+      throw error;
+    }
+    
+    res.json(build);
+
+  } catch (error) {    
+    return next(error);
+  }
+};
+
 module.exports = {
   createBuild,
+  getBuild
 }
