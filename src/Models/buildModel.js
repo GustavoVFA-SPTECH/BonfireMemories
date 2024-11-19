@@ -91,16 +91,17 @@ async function load(buildID) {
   };
 }
 
-async function getBuild() {
+async function getBuild(userID) {
   try {
-    const builds = await database.executar("SELECT idBuild, name FROM build");
+    const builds = await database.executar("SELECT idBuild, name FROM build WHERE buildOwner = ?;",
+      [userID]
+    );
     return builds;
   } catch (error) {
     console.error("Erro ao recuperar builds:", error);
     throw new Error("Não foi possível recuperar as builds");
   }
 }
-
 
 module.exports = {
   saveBuild,
