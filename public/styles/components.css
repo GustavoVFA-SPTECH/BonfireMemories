@@ -316,7 +316,7 @@ button:hover{
 
 .listModal{
     position: absolute;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     background-color: var(--blackTransparent);

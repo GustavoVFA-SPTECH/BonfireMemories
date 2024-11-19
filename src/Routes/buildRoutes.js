@@ -8,6 +8,6 @@ const buildRouter = Router();
 
 buildRouter.post("/saveBuild", buildController.createBuild);
 buildRouter.get('/builds/:buildId', buildController.getBuild);
-// buildRouter.get("/load", buildController);
+buildRouter.get("/load", buildController.getUserBuilds);
 
 module.exports = buildRouter;

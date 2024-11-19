@@ -91,9 +91,9 @@ async function load(buildID) {
   };
 }
 
-async function getBuild(userID) {
+async function getBuildByUserId(userID) {
   try {
-    const builds = await database.executar("SELECT idBuild, name FROM build WHERE buildOwner = ?;",
+    const builds = await database.executar("SELECT idBuild, level, name FROM build JOIN stats ON fkStats = idStats WHERE buildOwner = ?;",
       [userID]
     );
     return builds;
@@ -105,5 +105,6 @@ async function getBuild(userID) {
 
 module.exports = {
   saveBuild,
-  load
+  load,
+  getBuildByUserId
 };

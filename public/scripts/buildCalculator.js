@@ -1,4 +1,3 @@
-
 const classes = {
   Knight: {
     level: 9,
@@ -839,7 +838,6 @@ document.addEventListener("DOMContentLoaded", () => {
           .map(equip => ({ name: equip.name, type: equip.type }));
 
           try {
-
               fetch("/saveBuild",{
                 method: 'POST',
                 headers: {
@@ -848,7 +846,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 body: JSON.stringify({ stats, build, equipment })
               })
           
-              // await buildModel.saveBuild(stats, build, equipment);
+              
               console.log(stats, equipment, build);
               alert("Build saved successfully!");
           } catch (error) {
@@ -858,6 +856,67 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   } else {
       console.error("Save Stats Button not found in the DOM.");
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loadButton = document.getElementById("loadButton");
+  if (loadButton) {
+    loadButton.addEventListener("click", async () => {
+      openList()
+      try {
+        const userID = 1;
+     
+        const response = await fetch(`/load?userID=${userID}`, {
+          method: 'GET', 
+          headers: {
+            'Content-Type': 'application/json', 
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error("Erro ao carregar builds");
+        }
+
+        const builds = await response.json();
+        const buildListContainer = document.getElementById("buildList");
+
+        if (!buildListContainer) {
+          console.error("Elemento buildList não encontrado.");
+          return;
+        }
+
+        
+        buildListContainer.innerHTML = "";
+
+        
+        builds.forEach((build) => {
+          const buildDiv = document.createElement("div");
+          buildDiv.className = "listItem";
+          buildDiv.setAttribute("onclick", `carregarBuild(${build.idBuild})`);
+
+          const buildNameSpan = document.createElement("span");
+          buildNameSpan.className = "buildListName";
+          buildNameSpan.textContent = build.name;
+
+          const buildLevelSpan = document.createElement("span");
+          buildLevelSpan.className = "buildListLevel";
+          buildLevelSpan.textContent = build.level || "Nível desconhecido";
+
+          buildDiv.appendChild(buildNameSpan);
+          buildDiv.appendChild(buildLevelSpan);
+
+          buildListContainer.appendChild(buildDiv);
+        });
+
+        console.log("Builds carregadas com sucesso:", builds);
+      } catch (error) {
+        console.error("Erro ao carregar builds:", error);
+        alert("Falha ao carregar builds.");
+      }
+    });
+  } else {
+    console.error("Botão loadButton não encontrado no DOM.");
   }
 });
 

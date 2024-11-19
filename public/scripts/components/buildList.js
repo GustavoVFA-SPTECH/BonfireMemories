@@ -16,3 +16,7 @@ function buildList() {
 `);
 };
 buildList();
+
+function openList() {
+  document.querySelector(".listModal").style.display = "flex";
+}
