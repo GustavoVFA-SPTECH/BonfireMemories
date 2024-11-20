@@ -368,6 +368,15 @@ button:hover{
     border-radius: 10px;
 }
 
+.listItem{
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.listItem:hover{
+    box-shadow: white 2px 1px;
+}
+
 .buildListName{
     font-size: 30px;
     /* border: white 1px solid; */
