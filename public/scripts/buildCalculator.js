@@ -336,9 +336,7 @@ function adjustAttribute(attribute, change) {
   }
 }
 
-document
-  .getElementById("class")
-  .addEventListener("change", setInitialAttributes);
+document.getElementById("class").addEventListener("change", setInitialAttributes);
 
 document
   .getElementById("upVigor")
@@ -545,24 +543,12 @@ async function atualizarDanoArma(selectId) {
   }
 }
 
-document
-  .getElementById("R1Select")
-  .addEventListener("change", () => atualizarDanoArma("R1Select"));
-document
-  .getElementById("R2Select")
-  .addEventListener("change", () => atualizarDanoArma("R2Select"));
-document
-  .getElementById("R3Select")
-  .addEventListener("change", () => atualizarDanoArma("R3Select"));
-document
-  .getElementById("L1Select")
-  .addEventListener("change", () => atualizarDanoArma("L1Select"));
-document
-  .getElementById("L2Select")
-  .addEventListener("change", () => atualizarDanoArma("L2Select"));
-document
-  .getElementById("L3Select")
-  .addEventListener("change", () => atualizarDanoArma("L3Select"));
+document.getElementById("R1Select").addEventListener("change", () => atualizarDanoArma("R1Select"));
+document.getElementById("R2Select").addEventListener("change", () => atualizarDanoArma("R2Select"));
+document.getElementById("R3Select").addEventListener("change", () => atualizarDanoArma("R3Select"));
+document.getElementById("L1Select").addEventListener("change", () => atualizarDanoArma("L1Select"));
+document.getElementById("L2Select").addEventListener("change", () => atualizarDanoArma("L2Select"));
+document.getElementById("L3Select").addEventListener("change", () => atualizarDanoArma("L3Select"));
 
 document.addEventListener("DOMContentLoaded", preencherArmasNosSelects);
 
@@ -883,6 +869,10 @@ const loadBuildData = async (buildID) => {
     const data = await response.json();
     
     const { stats, build, equipment } = data;
+    document.getElementById("buildName").value = build.name || 0;
+    document.getElementById("class").value = build.class || 0;
+
+    setInitialAttributes();
 
     // Preencher os campos do formulário com os dados recebidos
     document.getElementById("finalLevel").value = Number(stats.level) || 0;
@@ -896,9 +886,7 @@ const loadBuildData = async (buildID) => {
     document.getElementById("finalFaith").value = Number(stats.faith) || 0;
     document.getElementById("finalLuck").value = Number(stats.luck) || 0;
 
-    document.getElementById("buildName").value = build.name || 0;
-    document.getElementById("class").value = build.class || 0;
-
+    calcularStatus();
     // Preencher os campos de equipamentos
     equipment.forEach((equip) => {
       if (equip.type === "weapon") {
@@ -949,7 +937,13 @@ const loadBuildData = async (buildID) => {
         }
       }
     });
-    
+
+    atualizarDanoArma("R1Select");
+    atualizarDanoArma("R2Select");
+    atualizarDanoArma("R3Select");
+    atualizarDanoArma("L1Select");
+    atualizarDanoArma("L2Select");
+    atualizarDanoArma("L3Select");
 
     console.log("Build carregada com sucesso:", data);
   } catch (error) {
@@ -1017,3 +1011,8 @@ if (loadButton) {
 } else {
   console.error("Botão loadButton não encontrado no DOM.");
 }
+
+    
+
+
+
