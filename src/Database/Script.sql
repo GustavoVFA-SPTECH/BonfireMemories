@@ -111,3 +111,11 @@ CREATE TABLE Likes(
 
 INSERT INTO User VALUES
 (DEFAULT, "Usuario Teste", "gustavo@teste.com", '12341234');
+
+SELECT COUNT(class), class FROM build GROUP BY class;
+
+SELECT name, COUNT(name), type as "total" FROM Equipament WHERE type = "ring" || type = 'weapon' GROUP BY type  ORDER BY total asc ;
+
+
+SELECT * FROM equipament WHERE name like "%Smough%";
+SELECT * FROM equipament WHERE name like "%Chlo%";
