@@ -859,66 +859,161 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const loadButton = document.getElementById("loadButton");
-  if (loadButton) {
-    loadButton.addEventListener("click", async () => {
-      openList()
-      try {
-        const userID = 1;
-     
-        const response = await fetch(`/load?userID=${userID}`, {
-          method: 'GET', 
-          headers: {
-            'Content-Type': 'application/json', 
-          },
-        });
+// Função global para carregar a build
+const loadBuildData = async (buildID) => {
+  try {
+    if (!buildID) {
+      alert("Build ID não fornecido.");
+      return;
+    }
 
-        if (!response.ok) {
-          throw new Error("Erro ao carregar builds");
+    closeList(); // Se necessário, adicione a lógica de fechamento da lista
+
+    const response = await fetch(`/builds/${buildID}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error("Erro ao carregar a build");
+    }
+
+    const data = await response.json();
+    
+    const { stats, build, equipment } = data;
+
+    // Preencher os campos do formulário com os dados recebidos
+    document.getElementById("finalLevel").value = Number(stats.level) || 0;
+    document.getElementById("finalVigor").value = Number(stats.vigor) || 0;
+    document.getElementById("finalAttunement").value = Number(stats.attunement) || 0;
+    document.getElementById("finalEndurance").value = Number(stats.endurence) || 0;
+    document.getElementById("finalVitality").value = Number(stats.vitality) || 0;
+    document.getElementById("finalStrength").value = Number(stats.strength) || 0;
+    document.getElementById("finalDexterity").value = Number(stats.dexterity) || 0;
+    document.getElementById("finalIntelligence").value = Number(stats.inteligence) || 0;
+    document.getElementById("finalFaith").value = Number(stats.faith) || 0;
+    document.getElementById("finalLuck").value = Number(stats.luck) || 0;
+
+    document.getElementById("buildName").value = build.name || 0;
+    document.getElementById("class").value = build.class || 0;
+
+    // Preencher os campos de equipamentos
+    equipment.forEach((equip) => {
+      if (equip.type === "weapon") {
+        // Verifica e preenche apenas se o valor do select for # ou ""
+        if (document.getElementById("R1Select").value === "#" || document.getElementById("R1Select").value === "") {
+          document.getElementById("R1Select").value = equip.name;
+        } else if (document.getElementById("R2Select").value === "#" || document.getElementById("R2Select").value === "") {
+          document.getElementById("R2Select").value = equip.name;
+        } else if (document.getElementById("R3Select").value === "#" || document.getElementById("R3Select").value === "") {
+          document.getElementById("R3Select").value = equip.name;
+        } else if (document.getElementById("L1Select").value === "#" || document.getElementById("L1Select").value === "") {
+          document.getElementById("L1Select").value = equip.name;
+        } else if (document.getElementById("L2Select").value === "#" || document.getElementById("L2Select").value === "") {
+          document.getElementById("L2Select").value = equip.name;
+        } else if (document.getElementById("L3Select").value === "#" || document.getElementById("L3Select").value === "") {
+          document.getElementById("L3Select").value = equip.name;
         }
-
-        const builds = await response.json();
-        const buildListContainer = document.getElementById("buildList");
-
-        if (!buildListContainer) {
-          console.error("Elemento buildList não encontrado.");
-          return;
+      } else if (equip.type === "ring") {
+        // Verifica e preenche apenas se o valor do select for # ou ""
+        if (document.getElementById("Ring1Select").value === "#" || document.getElementById("Ring1Select").value === "") {
+          document.getElementById("Ring1Select").value = equip.name;
+        } else if (document.getElementById("Ring2Select").value === "#" || document.getElementById("Ring2Select").value === "") {
+          document.getElementById("Ring2Select").value = equip.name;
+        } else if (document.getElementById("Ring3Select").value === "#" || document.getElementById("Ring3Select").value === "") {
+          document.getElementById("Ring3Select").value = equip.name;
+        } else if (document.getElementById("Ring4Select").value === "#" || document.getElementById("Ring4Select").value === "") {
+          document.getElementById("Ring4Select").value = equip.name;
         }
-
-        
-        buildListContainer.innerHTML = "";
-
-        
-        builds.forEach((build) => {
-          const buildDiv = document.createElement("div");
-          buildDiv.className = "listItem";
-          buildDiv.setAttribute("onclick", `carregarBuild(${build.idBuild})`);
-
-          const buildNameSpan = document.createElement("span");
-          buildNameSpan.className = "buildListName";
-          buildNameSpan.textContent = build.name;
-
-          const buildLevelSpan = document.createElement("span");
-          buildLevelSpan.className = "buildListLevel";
-          buildLevelSpan.textContent = build.level || "Nível desconhecido";
-
-          buildDiv.appendChild(buildNameSpan);
-          buildDiv.appendChild(buildLevelSpan);
-
-          buildListContainer.appendChild(buildDiv);
-        });
-
-        console.log("Builds carregadas com sucesso:", builds);
-      } catch (error) {
-        console.error("Erro ao carregar builds:", error);
-        alert("Falha ao carregar builds.");
+      } else if (equip.type === "helmet") {
+        // Verifica e preenche apenas se o valor do select for # ou ""
+        if (document.getElementById("helmetSelect").value === "#" || document.getElementById("helmetSelect").value === "") {
+          document.getElementById("helmetSelect").value = equip.name;
+        }
+      } else if (equip.type === "chest") {
+        // Verifica e preenche apenas se o valor do select for # ou ""
+        if (document.getElementById("chestSelect").value === "#" || document.getElementById("chestSelect").value === "") {
+          document.getElementById("chestSelect").value = equip.name;
+        }
+      } else if (equip.type === "hands") {
+        // Verifica e preenche apenas se o valor do select for # ou ""
+        if (document.getElementById("handsSelect").value === "#" || document.getElementById("handsSelect").value === "") {
+          document.getElementById("handsSelect").value = equip.name;
+        }
+      } else if (equip.type === "legs") {
+        // Verifica e preenche apenas se o valor do select for # ou ""
+        if (document.getElementById("legsSelect").value === "#" || document.getElementById("legsSelect").value === "") {
+          document.getElementById("legsSelect").value = equip.name;
+        }
       }
     });
-  } else {
-    console.error("Botão loadButton não encontrado no DOM.");
+    
+
+    console.log("Build carregada com sucesso:", data);
+  } catch (error) {
+    console.error("Erro ao carregar a build:", error);
+    alert("Falha ao carregar a build.");
   }
-});
+};
 
+// Função para carregar as builds e exibi-las na lista
+const loadButton = document.getElementById("loadButton");
+if (loadButton) {
+  loadButton.addEventListener("click", async () => {
+    openList(); // Lógica para abrir a lista (se necessário)
+    try {
+      const userID = 1; // Exemplo de ID do usuário
 
+      const response = await fetch(`/load?userID=${userID}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
 
+      if (!response.ok) {
+        throw new Error("Erro ao carregar builds");
+      }
+
+      const builds = await response.json();
+      const buildListContainer = document.getElementById("buildList");
+
+      if (!buildListContainer) {
+        console.error("Elemento buildList não encontrado.");
+        return;
+      }
+
+      buildListContainer.innerHTML = ""; // Limpa a lista antes de adicionar as novas builds
+
+      builds.forEach((build) => {
+        const buildDiv = document.createElement("div");
+        buildDiv.className = "listItem";
+
+        // Usar addEventListener para associar o evento de clique
+        buildDiv.addEventListener("click", () => loadBuildData(build.idBuild));
+
+        const buildNameSpan = document.createElement("span");
+        buildNameSpan.className = "buildListName";
+        buildNameSpan.textContent = build.name;
+
+        const buildLevelSpan = document.createElement("span");
+        buildLevelSpan.className = "buildListLevel";
+        buildLevelSpan.textContent = build.level || "Nível desconhecido";
+
+        buildDiv.appendChild(buildNameSpan);
+        buildDiv.appendChild(buildLevelSpan);
+
+        buildListContainer.appendChild(buildDiv);
+      });
+
+      console.log("Builds carregadas com sucesso:", builds);
+    } catch (error) {
+      console.error("Erro ao carregar builds:", error);
+      alert("Falha ao carregar builds.");
+    }
+  });
+} else {
+  console.error("Botão loadButton não encontrado no DOM.");
+}

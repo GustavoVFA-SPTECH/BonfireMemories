@@ -60,12 +60,15 @@ async function load(buildID) {
   }
 
   // Recuperar os equipamentos associados à Build
-  const [equipment] = await database.executar(
+  const equipment = await database.executar(
     `SELECT name, type FROM Equipament WHERE fkBuild = ?;`,
     [build.idBuild]
   );
 
-  // Retornar os dados no mesmo formato de 'saveBuild'
+  // Garantir que equipment seja uma lista, mesmo que tenha apenas um item
+  const equipmentList = Array.isArray(equipment) ? equipment : [equipment];
+
+  // Retornar os dados no formato esperado
   return {
     stats: {
       level: stats.level,
@@ -84,12 +87,13 @@ async function load(buildID) {
       class: build.class,
       buildOwner: build.buildOwner
     },
-    equipment: equipment.map(equip => ({
+    equipment: equipmentList.map(equip => ({
       name: equip.name,
       type: equip.type
     }))
   };
 }
+
 
 async function getBuildByUserId(userID) {
   try {

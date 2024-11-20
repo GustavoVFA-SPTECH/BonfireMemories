@@ -20,3 +20,6 @@ buildList();
 function openList() {
   document.querySelector(".listModal").style.display = "flex";
 }
+function closeList(){
+  document.querySelector(".listModal").style.display = "none";
+}
