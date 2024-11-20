@@ -1,4 +1,5 @@
 -- DROP DATABASE BonfireMemories;
+DROP DATABASE BonfireMemories;
 CREATE DATABASE BonfireMemories;
 USE BonfireMemories;
 
@@ -107,7 +108,3 @@ CREATE TABLE Likes(
 		REFERENCES User(idUser),
 	CONSTRAINT PRIMARY KEY (idLike, fkPost, postOwner)
 );
-
-
-
--- SELECT * FROM User;
