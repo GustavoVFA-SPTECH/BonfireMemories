@@ -42,7 +42,8 @@ button{
     flex-direction: column; /* Organiza os itens verticalmente */
     justify-content: flex-start; 
     align-items: center; 
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    padding-bottom: 20px;
 }
 
 
