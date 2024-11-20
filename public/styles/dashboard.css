@@ -1,0 +1,51 @@
+@import url(components.css);
+
+body{
+    background-image: url("../Assets/backgroundDash.jpg");
+}
+
+.main{
+    padding-top: 30px;
+    gap: 10px;
+}
+
+.KPIs{
+    width: 90%;
+    height: 25%;
+    gap: 20px;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+}
+
+.KPI{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--black);
+    border: var(--gold) 4px solid;
+}
+
+.KPITitle{
+    width: 70%;
+    font-size: 40px;
+    text-align: center;
+    border-bottom: var(--gold) solid 4px;
+}
+
+.KPIValue{
+    font-size: 40px;
+    border: var(--gold) 4px solid;
+    background-color: transparent;
+    text-align: center;
+    height: 30%;
+    width: 60%;
+}
+
+.graphic1{
+    
+}
