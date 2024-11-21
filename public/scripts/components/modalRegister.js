@@ -121,7 +121,6 @@ async function register() {
   }
 }
 
-
 registerButton.addEventListener("click", register);
 
 function backButton(){
