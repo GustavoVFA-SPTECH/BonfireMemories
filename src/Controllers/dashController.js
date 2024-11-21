@@ -5,7 +5,7 @@ const createGraphic1 = async (req, res) => {
     try {
         const weapons = await dashModel.get10Weapons();
 
-        // Verifica se encontrou dados
+        
         if (weapons && weapons.length > 0) {
             res.status(200).json({
                 success: true,
@@ -19,7 +19,7 @@ const createGraphic1 = async (req, res) => {
             });
         }
     } catch (error) {
-        // Trata o erro adequadamente
+        
         console.error("Error fetching weapons:", error);
         res.status(500).json({
             success: false,
@@ -32,10 +32,10 @@ const createGraphic1 = async (req, res) => {
 
 const createGraphic2 = async (req, res) => {
     try {
-        // Chama a função para buscar as classes
+        
         const classes = await dashModel.getClasses();
 
-        // Verifica se encontrou dados
+        
         if (classes && classes.length > 0) {
             res.status(200).json({
                 success: true,
@@ -49,7 +49,7 @@ const createGraphic2 = async (req, res) => {
             });
         }
     } catch (error) {
-        // Trata o erro adequadamente
+        
         console.error("Error fetching classes:", error);
         res.status(500).json({
             success: false,
@@ -59,8 +59,43 @@ const createGraphic2 = async (req, res) => {
     }
 };
 
+const createKPIs = async (req, res) => {
+    try {
+        
+        const { MostWeapon, MostRing, MostClass } = await dashModel.getKPIs();
+
+        
+        if (!MostWeapon || !MostRing || !MostClass) {
+            return res.status(404).json({
+                success: false,
+                message: 'Não foi possível recuperar os KPIs.'
+            });
+        }
+
+        
+        return res.status(200).json({
+            success: true,
+            data: {
+                mostUsedWeapon: MostWeapon,
+                mostUsedRing: MostRing,
+                mostUsedClass: MostClass
+            }
+        });
+    } catch (error) {
+        console.error('Erro ao obter KPIs:', error);
+
+        
+        return res.status(500).json({
+            success: false,
+            message: 'Ocorreu um erro ao buscar os KPIs.',
+            error: error.message
+        });
+    }
+};
+
 
 module.exports = {
     createGraphic1,
-    createGraphic2
+    createGraphic2,
+    createKPIs
 }
