@@ -32,7 +32,7 @@ function modalRegister() {
 
 modalRegister();
 
-function register() {
+async function register() {
   const userName = document.getElementById("registerUserName").value;
   const email = document.getElementById("registerEmail").value;
   const password = document.getElementById("registerPassword").value;
@@ -45,6 +45,7 @@ function register() {
     Confpassword: Confpassword,
   });
 
+  
   if (!userName) {
     alert("Username is required");
     return;
@@ -61,8 +62,15 @@ function register() {
     alert("Confirm password is required");
     return;
   }
-  if(password != Confpassword){
+  if (password !== Confpassword) {
     alert("Passwords do not match");
+    return;
+  }
+
+  
+  const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  if (!passwordRegex.test(password)) {
+    alert("Password must be at least 8 characters long, include at least one uppercase letter, one number, and one special character.");
     return;
   }
 
@@ -72,19 +80,38 @@ function register() {
     password: password,
   };
 
-  console.log(data)
+  console.log(data);
 
-  fetch("/register", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  });
+  try {
+    const response = await fetch("/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+   
+    if (response.ok) {
+      const result = await response.json(); 
+      
+      console.log(result);  
+
+      alert(`Usuário ${result.userName} registrado com sucesso!`);      
+      
+    } else {     
+      const errorData = await response.json();
+      alert(errorData.message || "An error occurred during registration.");
+    }
+  } catch (error) {
+    console.error("Error during registration:", error);
+    alert("Something went wrong. Please try again later.");
+  }
 }
+
 
 registerButton.addEventListener("click", register);
 
 function backButton(){
   document.querySelector(".registerModal").style.display = "none";
+  document.querySelector(".modalLogin").style.display = "flex";
 }

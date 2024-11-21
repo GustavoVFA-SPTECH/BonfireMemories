@@ -28,11 +28,25 @@ async function authenticate(login, loginPassword){
 };
 
 
-async function register(userName, email, password){
+async function register(userName, email, password) {
+    const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (!passwordRegex.test(password)) {
+      throw appError("Password must be at least 8 characters long, include at least one uppercase letter, one number, and one special character.", 400);
+    }
+  
+    const existingUser = await database.executar(`
+      SELECT idUser FROM User WHERE email = ? OR userName = ?;
+    `, [email, userName]);
+  
+    if (existingUser && existingUser.length > 0) {
+      throw appError("Email ou nome de usuário já estão em uso", 400);
+    }
+  
     const hashedPassword = await bcrypt.hash(password, 10);
-    database.executar(`INSERT INTO User (userName, email, password) VALUES (?, ?, ?);`,
-         [userName, email, hashedPassword])
-};
+    await database.executar(`
+      INSERT INTO User (userName, email, password) VALUES (?, ?, ?);
+    `, [userName, email, hashedPassword]);
+  }
 
 
 const getByID = async (idUser) => {

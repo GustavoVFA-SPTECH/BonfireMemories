@@ -1,9 +1,10 @@
 function modalLogin() {
-    const scriptParent = document.currentScript.parentElement;
-    const page = document.currentScript.getAttribute("data-page");
+  const scriptParent = document.currentScript.parentElement;
+  const page = document.currentScript.getAttribute("data-page");
 
-
-    scriptParent.insertAdjacentHTML("beforeend", `
+  scriptParent.insertAdjacentHTML(
+    "beforeend",
+    `
     <div class="modalLogin">
       <div class="mainLogin">
         <div class="loginContent">
@@ -18,55 +19,67 @@ function modalLogin() {
           </div>
           <span class="errorMessageLogin">User or password incorrect</span>
           <div class="buttonsLogin">
-            <button class="buttonLogin"  onclick="buttonBack()">Back</button>
             <button class="buttonLogin" id="loginButton">Login</button>
           </div>
             <span onclick="registerModal()">Register</span>
         </div>
       </div>
     </div>
-       `);
-};
+       `
+  );
+}
 modalLogin();
 
-function login(){
+function login() {
   const login = document.getElementById("login").value;
   const password = document.getElementById("loginPassword").value;
 
-  if(!login){
+  if (!login) {
     alert("Please enter your UserName");
     return;
   }
-  if(!password){
+  if (!password) {
     alert("Please enter your password");
     return;
   }
 
   sessionStorage.UserName = login;
-  sessionStorage.Password = password;
 
   const data = {
     login: login,
-    password: password
-  }
+    password: password,
+  };
 
-  fetch("/login",{
-    method: 'POST',
+  fetch("/login", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(data)
-  }).catch(document.querySelector(".errorMessageLogin").style.display = "flex")
-  .then( document.querySelector(".modalLogin").style.display = "none")
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json()) 
+    .then((data) => {
+      if (data.token) {     
+        sessionStorage.setItem("authToken", data.token);
+       
+        document.querySelector(".modalLogin").style.display = "none";
+      } else {
+        console.error("Token not received");
+        document.querySelector(".errorMessageLogin").style.display = "flex";
+      }
+    })
+    .catch((error) => {
+      console.error("Error during login:", error);
+    });
 }
 
-loginButton.addEventListener('click', login)
+loginButton.addEventListener("click", login);
 
-function buttonBack(){
+function buttonBack() {
   document.querySelector(".modalLogin").style.display = "none";
 }
 
-function registerModal(){
+function registerModal() {
   document.querySelector(".modalLogin").style.display = "none";
   document.querySelector(".registerModal").style.display = "flex";
 }

@@ -2,17 +2,21 @@ const userModel = require("../Models/userModel.js")
 const userDto = require("../dtos/userDto.js")
 const {appError} = require("../Middlewares/error.js")
 
-const createUser = async (req, res, next)=>{
+const createUser = async (req, res, next) => {
     const body = req.body;
 
-    try {
+    try {     
         const dto = userDto.createDto(body);
         if (dto.length > 0) {
-            throw appError(dto, 400);
+            throw appError(dto, 400);  
         }
-        const user = await userModel.register(body.userName, body.email, body.password);
-        res.json(user);
+        await userModel.register(body.userName, body.email, body.password);
+        
+        res.json({
+            message: 'Usuário registrado com sucesso',
+        });
     } catch (error) {
+        
         return next(error);
     }
 }
