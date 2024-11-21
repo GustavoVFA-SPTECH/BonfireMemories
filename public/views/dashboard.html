@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <script src="../scripts/components/navBar.js"></script>
@@ -31,9 +32,12 @@
             </div>
             <div class="graphicContainer">
                 <span class="graphicTitle">10 Most used weapons</span>
-                <div class="graphic"></div>
+                <div class="graphic">
+                    <canvas id="myChartCanvas1" width="400" height="200" class="canvas"></canvas>
+                </div>
             </div>
         </div>
     </div>
+    <script defer src="../scripts/dashboard.js"></script>
 </body>
 </html>
