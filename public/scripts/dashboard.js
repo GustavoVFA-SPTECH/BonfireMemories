@@ -77,10 +77,7 @@ function graphic1(resposta, idGrafico) {
             plugins: {
                 legend: {
                     labels: {
-                        color: '#FFF', // Cor branca para o texto da legenda
-                        font: {
-                            size: 14
-                        }
+                        color: '#FFF' // Cor branca para o texto da legenda
                     }
                 },
                 tooltip: {
@@ -91,8 +88,6 @@ function graphic1(resposta, idGrafico) {
             }
         }
     };
-    
-
     
     new Chart(
         document.getElementById(`myChartCanvas${idGrafico}`),

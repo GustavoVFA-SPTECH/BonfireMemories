@@ -54,6 +54,7 @@ body{
     display: flex;
     border: var(--gold) 4px solid;
     padding: 10px;
+    padding-bottom: 40px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
