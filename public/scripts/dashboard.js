@@ -199,3 +199,36 @@ function graphic2(resposta, idGrafico) {
 };
 
 getDataClasses(2);
+
+async function atualizarKPIs() {
+    try {
+        console.log('Buscando dados da rota de KPIs...');
+
+        const response = await fetch('/KPI');
+
+        if (!response.ok) {
+            throw new Error(`Erro na requisição: ${response.statusText}`);
+        }
+
+        const resultado = await response.json();
+
+        console.log('Dados recebidos da API de KPIs:', resultado);
+
+        if (resultado.success) {
+
+            document.getElementById('MostClass').value = resultado.data.mostUsedClass.class;
+            document.getElementById('MostRing').value = resultado.data.mostUsedRing.name;
+            document.getElementById('MostWeapon').value = resultado.data.mostUsedWeapon.name;
+        } else {
+            throw new Error('Erro ao obter os KPIs: resposta não foi bem-sucedida.');
+        }
+    } catch (error) {
+        console.error('Erro ao buscar ou atualizar os KPIs:', error);
+
+        document.getElementById('MostClass').value = 'Erro';
+        document.getElementById('MostRing').value = 'Erro';
+        document.getElementById('MostWeapon').value = 'Erro';
+    }
+}
+
+atualizarKPIs();
