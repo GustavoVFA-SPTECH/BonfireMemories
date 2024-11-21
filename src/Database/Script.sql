@@ -144,4 +144,9 @@ SELECT class FROM build;
 SELECT class, COUNT(class) as qtd FROM build GROUP BY class ORDER BY qtd DESC LIMIT 1;
 
 SELECT name, COUNT(name) as qtd FROM equipament WHERE type = 'weapon' GROUP BY name ORDER BY qtd DESC LIMIT 1;
+
+SELECT name, COUNT(name) as qtd FROM equipament WHERE type = 'weapon' GROUP BY name ORDER BY qtd DESC LIMIT 10;
+
 SELECT name, COUNT(name) as qtd FROM equipament WHERE type = 'ring' GROUP BY name ORDER BY qtd DESC LIMIT 1;
+
+SELECT class, COUNT(class) as qtd FROM Build GROUP BY class ORDER BY qtd DESC;
