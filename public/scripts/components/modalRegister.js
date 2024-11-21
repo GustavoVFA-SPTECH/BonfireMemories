@@ -18,6 +18,7 @@ function modalRegister() {
               <input class="inputRegister" type="text" placeholder="Email" id="registerEmail"/>
               <input class="inputRegister" type="text" placeholder="Password" id="registerPassword"/>
               <input class="inputRegister" type="text" placeholder="Confirm password" id="registerConfirmPassword"/>
+              <span class="errorMessageRegister"></span>
             </div>
             <div class="buttonsRegister">
               <button class="buttonRegister" onclick="backButton()">Back</button>
@@ -29,10 +30,13 @@ function modalRegister() {
        `
   );
 }
-
+document.querySelector(".errorMessageRegister")
 modalRegister();
 
 async function register() {
+  const erros = document.querySelector(".errorMessageRegister");
+  erros.innerHTML = "";
+  erros.style.display = "none";
   const userName = document.getElementById("registerUserName").value;
   const email = document.getElementById("registerEmail").value;
   const password = document.getElementById("registerPassword").value;
@@ -45,35 +49,44 @@ async function register() {
     Confpassword: Confpassword,
   });
 
-  
   if (!userName) {
-    alert("Username is required");
+    erros.innerHTML += "Username is required <br>"
+    erros.style.display = "flex";
     return;
   }
   if (!email) {
-    alert("Email is required");
+    erros.innerHTML += "Email is required <br>"
+    erros.style.display = "flex";
     return;
   }
   if (!password) {
-    alert("Password is required");
+    erros.innerHTML += "Passaword is required <br>"
+    erros.style.display = "flex";
     return;
   }
   if (!Confpassword) {
-    alert("Confirm password is required");
+    erros.innerHTML += "Confirm password is required <br>"
+    erros.style.display = "flex";
     return;
   }
   if (password !== Confpassword) {
-    alert("Passwords do not match");
+    erros.innerHTML += "Password do not match <br>"
+    erros.style.display = "flex";
+    return;
+  }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    erros.innerHTML += "the email must contain @ and .<br>"
+    erros.style.display = "flex";
     return;
   }
 
-  
   const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   if (!passwordRegex.test(password)) {
-    alert("Password must be at least 8 characters long, include at least one uppercase letter, one number, and one special character.");
+    erros.innerHTML += "Password must be at least 8 characters long, include at least one uppercase letter, one number, and one special character.<br>"
+    erros.style.display = "flex";
     return;
   }
-
   const data = {
     userName: userName,
     email: email,

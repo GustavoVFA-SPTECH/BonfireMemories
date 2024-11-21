@@ -27,7 +27,6 @@ async function authenticate(login, loginPassword){
     }
 };
 
-
 async function register(userName, email, password) {
     const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if (!passwordRegex.test(password)) {
@@ -47,7 +46,6 @@ async function register(userName, email, password) {
       INSERT INTO User (userName, email, password) VALUES (?, ?, ?);
     `, [userName, email, hashedPassword]);
   }
-
 
 const getByID = async (idUser) => {
     try {
