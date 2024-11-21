@@ -114,8 +114,34 @@ INSERT INTO User VALUES
 
 SELECT COUNT(class), class FROM build GROUP BY class;
 
-SELECT name, COUNT(name), type as "total" FROM Equipament WHERE type = "ring" || type = 'weapon' GROUP BY type  ORDER BY total asc ;
-
 
 SELECT * FROM equipament WHERE name like "%Smough%";
 SELECT * FROM equipament WHERE name like "%Chlo%";
+
+SELECT name, type, quantity
+FROM (
+    SELECT name, type, COUNT(*) AS quantity
+    FROM Equipament
+    WHERE type = 'weapon'
+    GROUP BY name, type
+    ORDER BY quantity DESC
+    LIMIT 1
+) AS top_weapon
+UNION ALL
+SELECT name, type, quantity
+FROM (
+    SELECT name, type, COUNT(*) AS quantity
+    FROM Equipament
+    WHERE type = 'ring'
+    GROUP BY name, type
+    ORDER BY quantity DESC
+    LIMIT 1
+) AS top_ring;
+
+SELECT * FROM equipament;
+
+SELECT class FROM build;
+SELECT class, COUNT(class) as qtd FROM build GROUP BY class ORDER BY qtd DESC LIMIT 1;
+
+SELECT name, COUNT(name) as qtd FROM equipament WHERE type = 'weapon' GROUP BY name ORDER BY qtd DESC LIMIT 1;
+SELECT name, COUNT(name) as qtd FROM equipament WHERE type = 'ring' GROUP BY name ORDER BY qtd DESC LIMIT 1;
