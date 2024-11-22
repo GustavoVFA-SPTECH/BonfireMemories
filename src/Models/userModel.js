@@ -22,7 +22,8 @@ async function authenticate(login, loginPassword){
         return {
             userName: dbResult.userName,
             email: dbResult.email,
-            token
+            token,
+            idUser: dbResult.idUser
         };
     }
 };

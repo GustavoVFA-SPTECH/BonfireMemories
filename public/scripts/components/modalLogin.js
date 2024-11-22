@@ -43,8 +43,6 @@ function login() {
     return;
   }
 
-  sessionStorage.UserName = login;
-
   const data = {
     login: login,
     password: password,
@@ -61,6 +59,9 @@ function login() {
     .then((data) => {
       if (data.token) {     
         sessionStorage.setItem("authToken", data.token);
+        sessionStorage.setItem("UserID", data.idUser);
+        sessionStorage.setItem("userName", data.userName);
+        sessionStorage.setItem("email", data.email);
        
         document.querySelector(".modalLogin").style.display = "none";
       } else {

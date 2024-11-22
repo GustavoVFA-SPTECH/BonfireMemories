@@ -11,13 +11,13 @@ function navBar() {
         </div>
         <input type="text" class="searchBar" maxlength="50">
         <div class="navButtons">
-            <button class="profButton" onclick="buttonLogin()"></button>
+            <button class="profButton" onclick="profButton()"></button>
         </div>
     </div>`);
 };
 
-function buttonLogin(){
-    document.querySelector(".modalLogin").style.display = "flex";
+function profButton(){
+    window.location = "/views/profile.html"
 }
 
 navBar()
