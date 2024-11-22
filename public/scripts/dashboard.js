@@ -1,3 +1,12 @@
+function checkTokenAndRedirect(redirectUrl) {
+    const token = sessionStorage.getItem('authToken');
+    if (!token) {
+        window.location.href = redirectUrl;
+    }
+  }
+  
+  checkTokenAndRedirect('/views/homePage.html');
+
 async function getDataWeapons(idGrafico) {
     try {
         console.log('Buscando dados da rota de armas...');

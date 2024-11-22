@@ -1,3 +1,12 @@
+function checkTokenAndRedirect(redirectUrl) {
+  const token = sessionStorage.getItem('authToken');
+  if (!token) {
+      window.location.href = redirectUrl;
+  }
+}
+
+checkTokenAndRedirect('/views/homePage.html');
+
 const classes = {
   Knight: {
     level: 9,
@@ -120,6 +129,7 @@ const classes = {
     luck: 8,
   },
 };
+
 
 function setInitialAttributes() {
   const selectedClass = document.getElementById("class").value;
@@ -798,9 +808,8 @@ document.addEventListener("DOMContentLoaded", () => {
           const build = {
               name: document.getElementById("buildName").value || "Default Build",
               class: document.getElementById("class").value || "Default Class", 
-              buildOwner: '1', 
+              buildOwner: sessionStorage.getItem('UserID'), 
           };
-
           
           const equipment = [
               { name: document.getElementById("R1Select").value, type: "weapon" },
@@ -958,7 +967,7 @@ if (loadButton) {
   loadButton.addEventListener("click", async () => {
     openList(); 
     try {
-      const userID = 1; 
+      const userID = sessionStorage.getItem('UserID'); 
 
       const response = await fetch(`/load?userID=${userID}`, {
         method: 'GET',

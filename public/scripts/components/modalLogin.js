@@ -74,6 +74,18 @@ function login() {
     });
 }
 
+function checkTokenAndRedirect(redirectUrl) {
+  const token = sessionStorage.getItem('authToken');
+  if (!token) {
+      window.location.href = redirectUrl;
+  }
+  else{
+    buttonBack();
+  }
+}
+
+checkTokenAndRedirect('/views/homePage.html');
+
 loginButton.addEventListener("click", login);
 
 function buttonBack() {
