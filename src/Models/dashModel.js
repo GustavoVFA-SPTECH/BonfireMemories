@@ -50,7 +50,6 @@ async function getKPIs() {
     }
 }
 
-
 async function getClasses(){
     try {
         const classes = database.executar("SELECT class, COUNT(class) as qtd FROM Build GROUP BY class ORDER BY qtd DESC")
@@ -61,8 +60,19 @@ async function getClasses(){
     }
 }
 
+async function getRings(){
+    try {
+        const Rings = database.executar("SELECT name, COUNT(name) as qtd FROM equipament WHERE type = 'ring' GROUP BY name ORDER BY qtd DESC")
+        
+        return Rings;
+    } catch (error) {
+        
+    }
+}
+
 module.exports = {
     get10Weapons,
     getKPIs,
+    getRings,
     getClasses
 }

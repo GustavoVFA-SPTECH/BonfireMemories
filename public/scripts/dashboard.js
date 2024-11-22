@@ -209,6 +209,103 @@ function graphic2(resposta, idGrafico) {
 
 getDataClasses(2);
 
+async function getDataRings(idGrafico) {
+    try {
+        console.log('Buscando dados da rota de anéis...');
+
+        // Fazendo a requisição para a rota de anéis
+        const response = await fetch('/Rings');
+
+        if (!response.ok) {
+            throw new Error(`Erro na requisição: ${response.statusText}`);
+        }
+
+        // Convertendo os dados recebidos para JSON
+        const resposta = await response.json();
+
+        console.log('Dados recebidos da API de anéis:');
+        console.log(resposta);
+
+        // Chama a função para plotar o gráfico com os dados recebidos
+        graphic3(resposta.data, idGrafico);
+
+    } catch (error) {
+        console.error('Erro ao buscar ou plotar os dados do gráfico de anéis:', error);
+    }
+}
+
+getDataRings(3);
+
+function graphic3(resposta, idGrafico) {
+
+    let labels = [];
+    
+    let dados = {
+        labels: labels,
+        datasets: [{
+            label: '',
+            data: [],
+            backgroundColor: '#406C94',
+            borderColor: '#406C94',
+            borderWidth: 1
+        }]
+    };
+
+    for (let i = 0; i < resposta.length; i++) {
+        const registro = resposta[i];
+        labels.push(registro.name); 
+        dados.datasets[0].data.push(registro.qtd); 
+    }
+    const config = {
+        type: 'bar',
+        data: dados,
+        options: {
+            indexAxis: 'y', // Orientação horizontal
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    ticks: {
+                        color: '#FFF' // Cor branca para os números no eixo X
+                    },
+                    grid: {
+                        color: 'rgba(255, 255, 255, 0.2)' // Grade do eixo X em branco translúcido
+                    }
+                },
+                y: {
+                    ticks: {
+                        color: '#FFF', // Cor branca para os rótulos no eixo Y
+                        font: {
+                            size: 14
+                        }
+                    },
+                    grid: {
+                        color: 'rgba(255, 255, 255, 0.2)' // Grade do eixo Y em branco translúcido
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#FFF' // Cor branca para o texto da legenda
+                    }
+                },
+                tooltip: {
+                    bodyColor: '#FFF', // Cor do texto no tooltip
+                    titleColor: '#FFF', // Cor do título no tooltip
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)' // Fundo do tooltip escuro
+                }
+            }
+        }
+    };
+    
+    new Chart(
+        document.getElementById(`myChartCanvas${idGrafico}`),
+        config
+    );
+
+    console.log('Gráfico plotado com sucesso!');
+}
+
 async function atualizarKPIs() {
     try {
         console.log('Buscando dados da rota de KPIs...');

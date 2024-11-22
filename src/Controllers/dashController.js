@@ -29,7 +29,6 @@ const createGraphic1 = async (req, res) => {
     }
 };
 
-
 const createGraphic2 = async (req, res) => {
     try {
         
@@ -54,6 +53,35 @@ const createGraphic2 = async (req, res) => {
         res.status(500).json({
             success: false,
             message: "An error occurred while retrieving class data",
+            error: error.message
+        });
+    }
+};
+
+const createGraphic3 = async (req, res) => {
+    try {
+        
+        const rings = await dashModel.getRings();
+
+        
+        if (rings && rings.length > 0) {
+            res.status(200).json({
+                success: true,
+                message: "rings data retrieved successfully",
+                data: rings
+            });
+        } else {
+            res.status(404).json({
+                success: false,
+                message: "No ring data found"
+            });
+        }
+    } catch (error) {
+        
+        console.error("Error fetching rings:", error);
+        res.status(500).json({
+            success: false,
+            message: "An error occurred while retrieving ring data",
             error: error.message
         });
     }
@@ -97,5 +125,6 @@ const createKPIs = async (req, res) => {
 module.exports = {
     createGraphic1,
     createGraphic2,
+    createGraphic3,
     createKPIs
 }

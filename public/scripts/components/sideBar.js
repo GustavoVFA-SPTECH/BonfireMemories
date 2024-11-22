@@ -8,6 +8,7 @@ function sideBar() {
                 <button class="sideButton"><a href="homepage.html">HomePage<a/></button>
                 <button class="sideButton"><a href="buildCalculator.html">BuildCaculator<a/></button>
                 <button class="sideButton"><a href="homepage.html">NewPost<a/></button>
+                <button class="sideButton"><a href="dashboard.html">Dashboard<a/></button>
             </div>
         </div>
        `);

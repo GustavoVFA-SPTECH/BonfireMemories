@@ -130,7 +130,6 @@ const classes = {
   },
 };
 
-
 function setInitialAttributes() {
   const selectedClass = document.getElementById("class").value;
   const classStats = classes[selectedClass];
