@@ -1,6 +1,5 @@
 function navBar() {
     const scriptParent = document.currentScript.parentElement;
-    // const page = document.currentScript.getAttribute("data-page");
 
 
     scriptParent.insertAdjacentHTML("beforeend", `

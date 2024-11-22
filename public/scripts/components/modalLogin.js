@@ -1,6 +1,5 @@
 function modalLogin() {
   const scriptParent = document.currentScript.parentElement;
-  const page = document.currentScript.getAttribute("data-page");
 
   scriptParent.insertAdjacentHTML(
     "beforeend",
@@ -77,7 +76,7 @@ function login() {
 function checkTokenAndRedirect(redirectUrl) {
   const token = sessionStorage.getItem('authToken');
   if (!token) {
-      window.location.href = redirectUrl;
+    document.querySelector(".modalLogin").style.display = "flex";  
   }
   else{
     buttonBack();

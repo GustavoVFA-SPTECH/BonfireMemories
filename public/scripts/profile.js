@@ -11,3 +11,7 @@ const userName = document.getElementById('userName')
 
 userName.innerHTML = sessionStorage.getItem('userName')
 
+function logout(){
+    sessionStorage.clear()
+    window.location.reload()
+}
