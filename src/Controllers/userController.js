@@ -51,8 +51,39 @@ const getBuildCountController = async (req, res) => {
     }
 };
 
+const getPostCountController = async (req, res) => {
+    try {
+        const { userId } = req.params;
+
+        if (!userId) {
+            return res.status(400).json({
+                success: false,
+                message: 'O userId é obrigatório.',
+            });
+        }
+
+        const postCount = await userModel.getPostCount(userId);
+
+        return res.status(200).json({
+            success: true,
+            data: {
+                postCount: postCount.count,
+            },
+        });
+    } catch (error) {
+        console.error('Erro ao obter a contagem de posts:', error);
+
+        return res.status(500).json({
+            success: false,
+            message: 'Ocorreu um erro ao buscar a contagem de posts.',
+            error: error.message,
+        });
+    }
+};
+
 
 module.exports = {
     createUser,
-    getBuildCountController
+    getBuildCountController,
+    getPostCountController
 }

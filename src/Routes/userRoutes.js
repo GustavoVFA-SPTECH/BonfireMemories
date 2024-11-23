@@ -9,6 +9,8 @@ const userRouter = Router();
 userRouter.post("/register", userController.createUser);
 userRouter.post("/login", authController.login);
 userRouter.get("/buildCount/:userId", userController.getBuildCountController);
+userRouter.get("/postCount/:userId", userController.getPostCountController);
+
 // userRouter.delete("/deleteUser");
 // userRouter.put("/updateUser");
 

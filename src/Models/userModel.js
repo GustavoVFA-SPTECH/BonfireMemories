@@ -91,11 +91,21 @@ const getBuildCount = async (userId) => {
     }
 }
 
+const getPostCount = async (userId) => {
+    try {
+        const [postCount] = await database.executar(`SELECT COUNT(*) as count FROM Post WHERE postOwner = ?;`, [userId]); 
+        return postCount;
+    } catch (error) {
+        return error;
+    }
+}
+
 module.exports = {
     authenticate,
     register,
     getByID,
     getByEmail,
     getByUserName,
-    getBuildCount
+    getBuildCount,
+    getPostCount
 };
