@@ -84,8 +84,7 @@ const getByUserName = async (userName) => {
 
 const getBuildCount = async (userId) => {
     try {
-        const [buildCount] = await database.executar(`SELECT COUNT(*) as count FROM Build WHERE buildOwner = ?;`, [userId]);
-        
+        const [buildCount] = await database.executar(`SELECT COUNT(*) as count FROM Build WHERE buildOwner = ?;`, [userId]); 
         return buildCount;
     } catch (error) {
         return error;
