@@ -52,4 +52,4 @@ const displayProfilePicture = (base64String) => {
     });
 };
 
-fetchProfilePicture(sessionStorage.getItem('UserID')); 
+fetchProfilePicture(sessionStorage.getItem('UserID'));

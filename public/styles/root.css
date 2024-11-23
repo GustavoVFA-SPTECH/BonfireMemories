@@ -7,7 +7,7 @@
     --darkGray:#151515;
     --darkOrange:#8C3C08;
     --black:#111111;
-    --blackTransparent:#111111ab;
+    --blackTransparent:#1111117e;
     --textColor: #FAFAFA;
 }
 
@@ -24,7 +24,6 @@
   font-weight: 600;
   font-style: normal;
 }
-
 
 *{
   padding: 0;

@@ -7,7 +7,7 @@ function sideBar() {
             <div class="sideButtons">
                 <button class="sideButton"><a href="homepage.html">HomePage<a/></button>
                 <button class="sideButton"><a href="buildCalculator.html">BuildCaculator<a/></button>
-                <button class="sideButton"><a href="homepage.html">NewPost<a/></button>
+                <button class="sideButton" onclick="openPost()">NewPost</button>
                 <button class="sideButton"><a href="dashboard.html">Dashboard<a/></button>
             </div>
         </div>
@@ -15,3 +15,8 @@ function sideBar() {
 };
 
 sideBar()
+
+function openPost() {
+    const modalNewPost = document.querySelector(".modalNewPost");
+    modalNewPost.style.display = "flex";
+}
