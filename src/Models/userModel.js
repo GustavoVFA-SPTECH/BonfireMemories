@@ -99,18 +99,26 @@ const getPostCount = async (userId) => {
     }
 }
 
-async function getUserPicture(idUser){
+async function getUserPicture(idUser) {
     try {
-        const [userPicture] = await database.executar(`SELECT profilePicture FROM User WHERE idUser = ?;`, [idUser]);
-        return userPicture;
+        const results = await database.executar(`SELECT profilePicture FROM User WHERE idUser = ?;`, [idUser]);
+
+        // Se não houver resultados ou o campo profilePicture for null, retorna null
+        if (!results || results.length === 0 || !results[0].profilePicture) {
+            return null; // Retorna null se não houver imagem
+        }
+
+        return results[0].profilePicture; // Retorna a imagem de perfil encontrada
     } catch (error) {
-        return error;
+        console.error('Erro ao buscar imagem de perfil:', error);
+        throw error; // Lança o erro para ser tratado na controller
     }
 }
 
+
 async function updatePicture(idUser, profilePicture) {
     try {
-        await database.executar(`UPDATE User SET profilePicture = '?' WHERE idUser =?;`, [profilePicture, idUser]);
+        await database.executar(`UPDATE User SET profilePicture = ? WHERE idUser = ?;`, [profilePicture, idUser]);
     } catch (error) {
         return error;
     }
@@ -118,7 +126,7 @@ async function updatePicture(idUser, profilePicture) {
 
 async function updateEmail(idUser, email){
     try {
-        await database.executar(`UPDATE User SET email = '?' WHERE idUser = ?;`, [email, idUser])
+        await database.executar(`UPDATE User SET email = ? WHERE idUser = ?;`, [email, idUser])
     } catch (error) {
         return error
     }

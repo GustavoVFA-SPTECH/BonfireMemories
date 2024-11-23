@@ -14,7 +14,6 @@ userName.innerHTML = sessionStorage.getItem('userName');
 atualizarBuildCount(userId);
 atualizarPostCount(userId);
 
-
 function logout(){
     sessionStorage.clear()
     window.location.reload()

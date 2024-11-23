@@ -85,20 +85,23 @@ const getUserPictureController = async (req, res) => {
     const { idUser } = req.params;
 
     try {
-        const userPicture = await getUserPicture(idUser);
+        const userPicture = await userModel.getUserPicture(idUser);
 
-        if (userPicture && userPicture.profilePicture) {
-            res.status(200).json({
-                success: true,
-                profilePicture: userPicture.profilePicture,
-            });
-        } else {
-            res.status(404).json({
+        // Se a imagem de perfil não for encontrada
+        if (!userPicture) {
+            return res.status(404).json({
                 success: false,
                 message: 'Imagem de perfil não encontrada para este usuário.',
             });
         }
+
+        // Caso a imagem seja encontrada
+        res.status(200).json({
+            success: true,
+            profilePicture: userPicture,
+        });
     } catch (error) {
+        console.error('Erro ao buscar imagem de perfil:', error);
         res.status(500).json({
             success: false,
             message: 'Ocorreu um erro ao buscar a imagem de perfil.',
@@ -107,12 +110,15 @@ const getUserPictureController = async (req, res) => {
     }
 };
 
+
+
+
 const updateUserData = async (req, res) => {
     const { idUser, profilePicture, email, password, newPassword } = req.body;
 
     try {
         if (profilePicture !== null && profilePicture !== undefined) {
-            const pictureResult = await updatePicture(idUser, profilePicture);
+            const pictureResult = await userModel.updatePicture(idUser, profilePicture);
             if (pictureResult instanceof Error) {
                 return res.status(500).json({
                     success: false,
@@ -123,7 +129,7 @@ const updateUserData = async (req, res) => {
         }
 
         if (email !== null && email !== undefined) {
-            const emailResult = await updateEmail(idUser, email);
+            const emailResult = await userModel.updateEmail(idUser, email);
             if (emailResult instanceof Error) {
                 return res.status(500).json({
                     success: false,
@@ -134,7 +140,7 @@ const updateUserData = async (req, res) => {
         }
 
         if (password !== null && password !== undefined && newPassword !== null && newPassword !== undefined) {
-            const passwordResult = await updatePassword(idUser, password, newPassword);
+            const passwordResult = await userModel.updatePassword(idUser, password, newPassword);
             if (passwordResult instanceof Error) {
                 return res.status(500).json({
                     success: false,

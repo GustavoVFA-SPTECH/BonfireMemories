@@ -59,6 +59,101 @@ document.getElementById('iptProfilePicture').addEventListener('change', function
     }
 });
 
+const convertToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result.split(',')[1]); 
+        reader.onerror = (error) => reject(error);
+        reader.readAsDataURL(file); 
+    });
+};
+
+const saveChanges = async () => {
+    const userId = sessionStorage.getItem('UserID'); 
+
+    if (!userId) {
+        console.error('User ID não encontrado na sessionStorage.');
+        return;
+    }
+
+    const profilePictureFile = document.getElementById('iptProfilePicture').files[0];
+    const email = document.getElementById('editEmail').value;
+    const currentPassword = document.getElementById('currentPassword').value;
+    const newPassword = document.getElementById('newPassword').value;
+
+    let profilePictureBase64 = null;
+
+    if (profilePictureFile) {
+        profilePictureBase64 = await convertToBase64(profilePictureFile);
+    }
+
+    const payload = {
+        idUser: userId,
+        profilePicture: profilePictureBase64 || null,
+        email: email || null,
+        password: currentPassword || null,
+        newPassword: newPassword || null,
+    };
+
+    console.log(payload);
+
+    try {       
+        const response = await fetch('/updateUser', {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            console.log('Dados atualizados com sucesso:', result.message);
+            alert('Dados atualizados com sucesso!');
+        } else {
+            console.error('Erro ao atualizar dados:', result.message);
+            alert(`Erro: ${result.message}`);
+        }
+    } catch (error) {
+        console.error('Erro ao realizar a requisição:', error);
+        alert(`Erro inesperado: ${error.message}`);
+    }
+};
+
 const email = document.getElementById('editEmail');
 email.value = sessionStorage.getItem('email');
+
+const fetchProfilePicture = async (userId) => {
+    try {
+        const response = await fetch(`/user/${userId}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        const result = await response.json();
+        console.log(result);  
+
+        if (response.ok && result.success && result.profilePicture) {
+            displayProfilePicture(result.profilePicture);  
+        } else {
+            console.log('Imagem de perfil não encontrada:', result.message);
+        }
+    } catch (error) {
+        console.error('Erro ao buscar imagem de perfil:', error);
+    }
+};
+
+const displayProfilePicture = (base64String) => {
+    const previewDiv = document.querySelector('.previewProfilePicture');
+    
+    previewDiv.style.backgroundImage = `url('data:image/jpeg;base64,${base64String}')`;
+    previewDiv.style.backgroundSize = '100% 100%';  
+    previewDiv.style.backgroundPosition = 'center'; 
+
+};
+
+fetchProfilePicture(sessionStorage.getItem('UserID')); 
 
