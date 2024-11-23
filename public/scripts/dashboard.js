@@ -322,18 +322,18 @@ async function atualizarKPIs() {
 
         if (resultado.success) {
 
-            document.getElementById('MostClass').value = resultado.data.mostUsedClass.class;
-            document.getElementById('MostRing').value = resultado.data.mostUsedRing.name;
-            document.getElementById('MostWeapon').value = resultado.data.mostUsedWeapon.name;
+            document.getElementById('MostClass').innerHTML = resultado.data.mostUsedClass.class;
+            document.getElementById('MostRing').innerHTML = resultado.data.mostUsedRing.name;
+            document.getElementById('MostWeapon').innerHTML = resultado.data.mostUsedWeapon.name;
         } else {
             throw new Error('Erro ao obter os KPIs: resposta não foi bem-sucedida.');
         }
     } catch (error) {
         console.error('Erro ao buscar ou atualizar os KPIs:', error);
 
-        document.getElementById('MostClass').value = 'Erro';
-        document.getElementById('MostRing').value = 'Erro';
-        document.getElementById('MostWeapon').value = 'Erro';
+        document.getElementById('MostClass').innerHTML = 'Erro';
+        document.getElementById('MostRing').innerHTML = 'Erro';
+        document.getElementById('MostWeapon').innerHTML = 'Erro';
     }
 }
 
