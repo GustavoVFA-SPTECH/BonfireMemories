@@ -107,10 +107,66 @@ const getUserPictureController = async (req, res) => {
     }
 };
 
+const updateUserData = async (req, res) => {
+    const { idUser, profilePicture, email, password, newPassword } = req.body;
+
+    try {
+        if (profilePicture !== null && profilePicture !== undefined) {
+            const pictureResult = await updatePicture(idUser, profilePicture);
+            if (pictureResult instanceof Error) {
+                return res.status(500).json({
+                    success: false,
+                    message: 'Erro ao atualizar a imagem de perfil.',
+                    error: pictureResult.message
+                });
+            }
+        }
+
+        if (email !== null && email !== undefined) {
+            const emailResult = await updateEmail(idUser, email);
+            if (emailResult instanceof Error) {
+                return res.status(500).json({
+                    success: false,
+                    message: 'Erro ao atualizar o email.',
+                    error: emailResult.message
+                });
+            }
+        }
+
+        if (password !== null && password !== undefined && newPassword !== null && newPassword !== undefined) {
+            const passwordResult = await updatePassword(idUser, password, newPassword);
+            if (passwordResult instanceof Error) {
+                return res.status(500).json({
+                    success: false,
+                    message: 'Erro ao atualizar a senha.',
+                    error: passwordResult.message
+                });
+            } else if (passwordResult === false) {
+                return res.status(400).json({
+                    success: false,
+                    message: 'Senha atual inválida.'
+                });
+            }
+        }
+
+        res.status(200).json({
+            success: true,
+            message: 'Dados do usuário atualizados com sucesso.'
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: 'Ocorreu um erro ao atualizar os dados do usuário.',
+            error: error.message
+        });
+    }
+};
+
 
 module.exports = {
     createUser,
     getBuildCountController,
     getPostCountController,
-    getUserPictureController
+    getUserPictureController,
+    updateUserData
 }
