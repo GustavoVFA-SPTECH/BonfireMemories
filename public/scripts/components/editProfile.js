@@ -61,3 +61,4 @@ document.getElementById('iptProfilePicture').addEventListener('change', function
 
 const email = document.getElementById('editEmail');
 email.value = sessionStorage.getItem('email');
+

@@ -108,6 +108,40 @@ async function getUserPicture(idUser){
     }
 }
 
+async function updatePicture(idUser, profilePicture) {
+    try {
+        await database.executar(`UPDATE User SET profilePicture = '?' WHERE idUser =?;`, [profilePicture, idUser]);
+    } catch (error) {
+        return error;
+    }
+}
+
+async function updateEmail(idUser, email){
+    try {
+        await database.executar(`UPDATE User SET email = '?' WHERE idUser = ?;`, [email, idUser])
+    } catch (error) {
+        return error
+    }
+}
+
+async function updatePassword(idUser, password, newPassword){
+    try {
+        const [dbResult] = await database.executar(`SELECT password FROM User WHERE idUser = ?;`,[idUser]);
+
+        const passwordCompare = await bcrypt.compare(password, dbResult.password)
+
+        if(!passwordCompare){
+            return false;
+        }else{
+            const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+            await database.executar(`UPDATE User SET password = ? WHERE idUser = ?`, [hashedPassword, idUser]);
+        }
+    } catch (error) {
+        return error;
+    }
+}
+
 module.exports = {
     authenticate,
     register,
@@ -116,5 +150,8 @@ module.exports = {
     getByUserName,
     getBuildCount,
     getPostCount,
-    getUserPicture
+    getUserPicture,
+    updateEmail,
+    updatePassword,
+    updatePicture
 };
