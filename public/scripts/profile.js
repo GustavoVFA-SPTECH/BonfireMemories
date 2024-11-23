@@ -14,6 +14,7 @@ userName.innerHTML = sessionStorage.getItem('userName');
 atualizarBuildCount(userId);
 atualizarPostCount(userId);
 
+
 function logout(){
     sessionStorage.clear()
     window.location.reload()
@@ -58,3 +59,4 @@ async function atualizarPostCount(userId) {
         document.getElementById('postCount').innerHTML = 'Erro';
     }
 }
+

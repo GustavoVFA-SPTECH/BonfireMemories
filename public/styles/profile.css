@@ -190,6 +190,7 @@
     border: none;
     border: var(--gold) 3px solid;
     font-size: 20px;
+    text-align: center;
     padding: 10px;
 }
 
@@ -201,6 +202,7 @@
     border: var(--gold) 3px solid;
     font-size: 20px;
     padding: 10px;
+    text-align: center;
 }
 
 #newPassword{
@@ -211,6 +213,7 @@
     border: var(--gold) 3px solid;
     font-size: 20px;
     padding: 10px;
+    text-align: center;
 }
 
 .labelPicture{

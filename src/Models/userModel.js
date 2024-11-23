@@ -70,7 +70,6 @@ const getByEmail = async (email) => {
     }
 }
 
-
 const getByUserName = async (userName) => {
     try {
         const [user] = await database.executar(`SELECT * FROM User WHERE userName =?;`,
@@ -100,6 +99,15 @@ const getPostCount = async (userId) => {
     }
 }
 
+async function getUserPicture(idUser){
+    try {
+        const [userPicture] = await database.executar(`SELECT profilePicture FROM User WHERE idUser = ?;`, [idUser]);
+        return userPicture;
+    } catch (error) {
+        return error;
+    }
+}
+
 module.exports = {
     authenticate,
     register,
@@ -107,5 +115,6 @@ module.exports = {
     getByEmail,
     getByUserName,
     getBuildCount,
-    getPostCount
+    getPostCount,
+    getUserPicture
 };

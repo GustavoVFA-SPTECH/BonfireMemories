@@ -7,6 +7,7 @@ CREATE TABLE User(
 	idUser INT PRIMARY KEY AUTO_INCREMENT,
   userName VARCHAR(45) UNIQUE NOT NULL,
   email VARCHAR(60) UNIQUE NOT NULL,
+  profilePicture TEXT,
   password TEXT NOT NULL
 );
 
@@ -69,6 +70,7 @@ CREATE TABLE Post(
 	idPost INT AUTO_INCREMENT,
     title VARCHAR(45),
     caption VARCHAR(255),
+    postImage TEXT,
     image CHAR(36),
     dateTime DATETIME DEFAULT CURRENT_TIMESTAMP,
     postOwner INT,

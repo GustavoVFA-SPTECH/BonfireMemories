@@ -81,9 +81,36 @@ const getPostCountController = async (req, res) => {
     }
 };
 
+const getUserPictureController = async (req, res) => {
+    const { idUser } = req.params;
+
+    try {
+        const userPicture = await getUserPicture(idUser);
+
+        if (userPicture && userPicture.profilePicture) {
+            res.status(200).json({
+                success: true,
+                profilePicture: userPicture.profilePicture,
+            });
+        } else {
+            res.status(404).json({
+                success: false,
+                message: 'Imagem de perfil não encontrada para este usuário.',
+            });
+        }
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: 'Ocorreu um erro ao buscar a imagem de perfil.',
+            error: error.message,
+        });
+    }
+};
+
 
 module.exports = {
     createUser,
     getBuildCountController,
-    getPostCountController
+    getPostCountController,
+    getUserPictureController
 }
