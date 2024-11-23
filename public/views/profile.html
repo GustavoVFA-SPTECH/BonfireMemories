@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles/profile.css" />
   </head>
   <body>
+    <script src="../scripts/components/editProfile.js"></script>
     <script src="../scripts/components/navBar.js"></script>
     <div class="container">
       <script src="../scripts/components/sideBar.js"></script>
@@ -20,7 +21,7 @@
             />
             <span class="userNameLabel" id="userName">UserName</span>
             <div class="profileButtons">
-              <button class="profileButton">Edit Profile</button>
+              <button class="profileButton" onclick="openEdit()">Edit Profile</button>
               <button class="profileButton" onclick="logout()">Log Out</button>
             </div>
             <div class="profileInfo">

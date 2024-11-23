@@ -145,3 +145,105 @@
 .likeIcon{
     width: 40px;
 }
+
+.editModal{
+    position: absolute;
+    background-color: var(--blackTransparent);
+    /* border: white 2px solid; */
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editMain{
+    width: 30%;
+    height: 80%;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    border: var(--gold) 4px solid;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.previewProfilePicture{
+    width: 250px;
+    height: 250px;
+    border: var(--darkOrange) 4px solid;
+    border-radius: 50%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+#iptProfilePicture{
+    display: none;
+}
+
+#editEmail{
+    width: 60%;
+    height: 5%;
+    background-color: var(--darkGreen);
+    border: none;
+    border: var(--gold) 3px solid;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#currentPassword{
+    width: 60%;
+    height: 5%;
+    background-color: var(--darkGreen);
+    border: none;
+    border: var(--gold) 3px solid;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#newPassword{
+    width: 60%;
+    height: 5%;
+    background-color: var(--darkGreen);
+    border: none;
+    border: var(--gold) 3px solid;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.labelPicture{
+    background-image: url('../Assets/icons/icons-edit.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    left: 54%;
+    position: absolute;
+}
+
+.buttonsDiv{
+    width: 80%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    /* border: white 1px solid; */
+}
+
+.buttonEdit{
+    width: 50%;
+    font-size: 20px;
+    height: 50%;
+}
+
+.editTitle{
+    justify-self: start;
+    font-size: 40px;
+    text-align: center;
+    border-bottom: var(--gold) 3px solid;
+    width: 50%;
+}
