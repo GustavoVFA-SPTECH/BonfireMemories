@@ -46,7 +46,6 @@ button{
     padding-bottom: 20px;
 }
 
-
 .container{
     display: flex;
 }
@@ -76,7 +75,6 @@ button{
     height: 40px;
     font-size: 15px;
 }
-
 
 .profButton{
     border-radius: 50%;
@@ -184,6 +182,7 @@ button:hover{
 .inputLogin{
     border: 0px transparent;
 }
+
 .inputLogin{
     height: 50px;
     width: 100%;
