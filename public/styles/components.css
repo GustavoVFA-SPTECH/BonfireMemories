@@ -82,7 +82,7 @@ button{
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    background-image: url('../Assets/icons/icon-user.png');
+    /* background-image: url('../Assets/icons/icon-user.png'); */
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }

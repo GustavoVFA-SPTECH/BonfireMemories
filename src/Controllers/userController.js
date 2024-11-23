@@ -110,9 +110,6 @@ const getUserPictureController = async (req, res) => {
     }
 };
 
-
-
-
 const updateUserData = async (req, res) => {
     const { idUser, profilePicture, email, password, newPassword } = req.body;
 
@@ -167,7 +164,6 @@ const updateUserData = async (req, res) => {
         });
     }
 };
-
 
 module.exports = {
     createUser,

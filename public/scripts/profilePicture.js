@@ -1,26 +1,3 @@
-function navBar() {
-    const scriptParent = document.currentScript.parentElement;
-
-
-    scriptParent.insertAdjacentHTML("beforeend", `
-        <div class="navBar">
-        <div class="divLogo">
-            <img src="../Assets/logo.png" alt="" class="logo">
-            <span>Bonfire Memories</span>
-        </div>
-        <input type="text" class="searchBar" maxlength="50">
-        <div class="navButtons">
-            <button class="profButton userPicture" onclick="profButton()"></button>
-        </div>
-    </div>`);
-};
-
-function profButton(){
-    window.location = "/views/profile.html"
-}
-
-navBar()
-
 const fetchProfilePicture = async (userId) => {
     try {
         const response = await fetch(`/user/${userId}`, {
@@ -51,5 +28,3 @@ const displayProfilePicture = (base64String) => {
         previewDiv.style.backgroundPosition = 'center';
     });
 };
-
-fetchProfilePicture(sessionStorage.getItem('UserID')); 

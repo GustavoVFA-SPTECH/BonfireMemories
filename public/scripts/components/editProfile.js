@@ -7,7 +7,7 @@ function editModal() {
       <div class="editModal">
         <div class="editMain">
             <span class="editTitle">Edit Profile</span>
-            <div class="previewProfilePicture"></div>
+            <div class="previewProfilePicture userPicture"></div>
                 <label for="iptProfilePicture" class="labelPicture"></label>
                 <input type="file" id="iptProfilePicture">
                 <input type="text" id="editEmail">
@@ -95,8 +95,6 @@ const saveChanges = async () => {
         newPassword: newPassword || null,
     };
 
-    console.log(payload);
-
     try {       
         const response = await fetch('/updateUser', {
             method: 'PUT',
@@ -124,36 +122,4 @@ const saveChanges = async () => {
 const email = document.getElementById('editEmail');
 email.value = sessionStorage.getItem('email');
 
-const fetchProfilePicture = async (userId) => {
-    try {
-        const response = await fetch(`/user/${userId}`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-
-        const result = await response.json();
-        console.log(result);  
-
-        if (response.ok && result.success && result.profilePicture) {
-            displayProfilePicture(result.profilePicture);  
-        } else {
-            console.log('Imagem de perfil não encontrada:', result.message);
-        }
-    } catch (error) {
-        console.error('Erro ao buscar imagem de perfil:', error);
-    }
-};
-
-const displayProfilePicture = (base64String) => {
-    const previewDiv = document.querySelector('.previewProfilePicture');
-    
-    previewDiv.style.backgroundImage = `url('data:image/jpeg;base64,${base64String}')`;
-    previewDiv.style.backgroundSize = '100% 100%';  
-    previewDiv.style.backgroundPosition = 'center'; 
-
-};
-
-fetchProfilePicture(sessionStorage.getItem('UserID')); 
 
