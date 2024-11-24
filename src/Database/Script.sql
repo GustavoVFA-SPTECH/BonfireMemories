@@ -7,7 +7,7 @@ CREATE TABLE User(
 	idUser INT PRIMARY KEY AUTO_INCREMENT,
   userName VARCHAR(45) UNIQUE NOT NULL,
   email VARCHAR(60) UNIQUE NOT NULL,
-  profilePicture TEXT,
+  profilePicture LONGTEXT,
   password TEXT NOT NULL
 );
 
@@ -70,9 +70,8 @@ CREATE TABLE Post(
 	idPost INT AUTO_INCREMENT,
     title VARCHAR(45),
     caption VARCHAR(255),
-    postImage TEXT,
+    postImage LONGTEXT,
     type varchar(10),
-    image CHAR(36),
     dateTime DATETIME DEFAULT CURRENT_TIMESTAMP,
     postOwner INT,
     fkBuild INT,
@@ -153,3 +152,4 @@ SELECT name, COUNT(name) as qtd FROM equipament WHERE type = 'weapon' GROUP BY n
 SELECT name, COUNT(name) as qtd FROM equipament WHERE type = 'ring' GROUP BY name ORDER BY qtd DESC LIMIT 1;
 
 SELECT class, COUNT(class) as qtd FROM Build GROUP BY class ORDER BY qtd DESC;
+

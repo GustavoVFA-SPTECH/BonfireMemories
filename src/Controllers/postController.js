@@ -11,7 +11,7 @@ const createPost = async (req, res) => {
     }
 
     try {
-        await postModel.newPost(title, caption, image, fkBuild || null, postOwner, type);
+        await postModel.newPost(title, caption, image, fkBuild, postOwner, type);
 
         res.status(201).json({
             success: true,

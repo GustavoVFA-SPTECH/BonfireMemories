@@ -1,12 +1,15 @@
 const database = require("../Database/config");
 
 const newPost = async (title, caption, image, fkBuild, postOwner, type) =>{
-    const dateTime = 'default';
     if(type == 'build'){
-        database.executar(`INSERT INTO post VALUES(title, caption, image, dateTime, postOwner, fkBuild, type);`,
-            [title, caption, image, dateTime, postOwner, fkBuild, type]);
+        database.executar(`INSERT INTO post (title, caption, postImage, postOwner, fkBuild, type) VALUES (?,?,?,?,?,?);`,
+            [title, caption, image, postOwner, fkBuild, type]);
     }else{
-        database.executar(`INSERT INTO post VALUES(title, caption, image, dateTime, postOwner, type);`,
-            [title, caption, image, dateTime, postOwner, type]);
+        database.executar(`INSERT INTO post (title, caption, postImage, postOwner, type) VALUES (?,?,?,?,?);`,
+            [title, caption, image, postOwner, type]);
     }
+}
+
+module.exports = {
+    newPost
 }
