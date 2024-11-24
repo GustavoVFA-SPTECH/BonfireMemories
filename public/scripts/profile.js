@@ -3,7 +3,7 @@ function checkTokenAndRedirect(redirectUrl) {
     if (!token) {
         window.location.href = redirectUrl;
     }
-  }
+}
   
   checkTokenAndRedirect('/views/homePage.html');
 
@@ -58,4 +58,77 @@ async function atualizarPostCount(userId) {
         document.getElementById('postCount').innerHTML = 'Erro';
     }
 }
+
+// Função para carregar e renderizar os posts do usuário
+async function loadUserPosts() {
+    try {
+        const userID = sessionStorage.getItem('UserID'); // Obtém o ID do usuário da sessão
+
+        if (!userID) {
+            console.error('ID do usuário não encontrado no sessionStorage.');
+            return;
+        }
+
+        // Faz a requisição GET para a rota /userPosts/:idUser
+        const response = await fetch(`/userPosts/${userID}`, { // Certifique-se de que a URL está correta
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if (!response.ok) {
+            throw new Error('Erro ao carregar os posts do usuário.');
+        }
+
+        const data = await response.json();
+
+        if (!data.success || !data.posts) {
+            console.error('Nenhum post encontrado para este usuário.');
+            return;
+        }
+
+        // Aqui você pode continuar a renderizar os posts
+        const posts = data.posts;
+        const postsContainer = document.querySelector('.profilePost');
+        postsContainer.innerHTML = '';
+
+        posts.forEach((post) => {
+            const postDiv = document.createElement('div');
+            postDiv.classList.add('profilePost');
+
+            const postPreviewDiv = document.createElement('div');
+            postPreviewDiv.classList.add('postPreview');
+
+            const postContentDiv = document.createElement('div');
+            postContentDiv.classList.add('postContent');
+
+            const postTitleSpan = document.createElement('span');
+            postTitleSpan.classList.add('postTitle');
+            postTitleSpan.textContent = post.title;
+
+            const postImage = document.createElement('img');
+            postImage.classList.add('postImage');
+            postImage.src = post.postImage ? `data:image/jpeg;base64,${post.postImage}` : '/Assets/defaultImage.jpg';
+            postImage.alt = 'Post Image';
+
+            postContentDiv.appendChild(postTitleSpan);
+            postPreviewDiv.appendChild(postContentDiv);
+            postPreviewDiv.appendChild(postImage);
+            postDiv.appendChild(postPreviewDiv);
+
+            postsContainer.appendChild(postDiv);
+        });
+    } catch (error) {
+        console.error('Erro ao carregar os posts do usuário:', error);
+    }
+}
+
+
+// Chama a função assim que a página for carregada
+document.addEventListener('DOMContentLoaded', loadUserPosts);
+
+
+
+
 

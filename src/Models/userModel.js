@@ -101,12 +101,15 @@ const getPostCount = async (userId) => {
 
 const getUserPosts = async (userId) => {
     try {
-        const posts = await database.executar(`SELECT idPost, title, caption, type, fkBuild, postImage`, [userId])
+        const query = "SELECT idPost, title, caption, type, fkBuild, postImage FROM post WHERE postOwner = ?";
+        const posts = await database.executar(query, [userId]); // Consulta SQL para buscar posts do usuário
         return posts;
-    }catch(error){
-        return error;
+    } catch (error) {
+        console.error('Erro ao buscar posts do usuário:', error);
+        throw error;
     }
-}
+};
+
 
 async function getUserPicture(idUser) {
     try {
