@@ -464,10 +464,11 @@ button:hover{
     gap: 10px;
     justify-content: center;
 }
+
 .postInput{
     border: none;
     border-bottom: var(--gold) 3px solid;
-    background-color: transparent;
+    background-color: var(--black);
     height: 20%;
     font-size: 30px;
     outline: none;

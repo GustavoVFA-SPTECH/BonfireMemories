@@ -71,6 +71,7 @@ CREATE TABLE Post(
     title VARCHAR(45),
     caption VARCHAR(255),
     postImage TEXT,
+    type varchar(10),
     image CHAR(36),
     dateTime DATETIME DEFAULT CURRENT_TIMESTAMP,
     postOwner INT,

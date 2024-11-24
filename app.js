@@ -15,7 +15,8 @@ var PORTA_APP = process.env.APP_PORT;
 var HOST_APP = process.env.APP_HOST;
 const userRoutes = require("./src/Routes/userRoutes.js");
 const buildRoutes = require("./src/Routes/buildRoutes.js");
-const dashRoutes = require("./src/Routes/dashRoutes.js")
+const dashRoutes = require("./src/Routes/dashRoutes.js");
+const postRoutes = require("./src/Routes/postRoutes.js");
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use(cors());
 app.use(userRoutes);
 app.use(buildRoutes);
 app.use(dashRoutes);
+app.use(postRoutes);
 
 
 

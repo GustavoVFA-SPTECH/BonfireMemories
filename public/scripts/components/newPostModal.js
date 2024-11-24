@@ -11,10 +11,12 @@ function modalNewPost() {
                 <div class="postInputs">
                     <input placeholder="Title" class="postInput"/>
                     <select class="postInput">
-                        <option disable value="#">Post type</option>
+                        <option disabled selected value="#">Post type</option>
+                        <option value="build">Build</option>
+                        <option value="curiosity">Curiosity</option>
                     </select>
                     <select class="postInput">
-                        <option disable value="#">Select a build</option>
+                        <option disabled selected value="#">Select a build</option>
                     </select>
                 </div>
                 <textarea placeholder="Post content" maxlength="255" id="" class="textAreaPost"></textarea>
