@@ -165,10 +165,39 @@ const updateUserData = async (req, res) => {
     }
 };
 
+const userPosts = async (req, res) => {
+    const { userId } = req.params; // Obtém o ID do usuário a partir dos parâmetros da rota
+
+    try {
+        // Chama a model para buscar os posts do usuário
+        const posts = await getUserPosts(userId);
+
+        if (posts && posts.length > 0) {
+            res.status(200).json({
+                success: true,
+                posts: posts,
+            });
+        } else {
+            res.status(404).json({
+                success: false,
+                message: 'Nenhum post encontrado para este usuário.',
+            });
+        }
+    } catch (error) {
+        console.error('Erro ao buscar posts do usuário:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Ocorreu um erro ao buscar os posts do usuário.',
+            error: error.message,
+        });
+    }
+};
+
 module.exports = {
     createUser,
     getBuildCountController,
     getPostCountController,
     getUserPictureController,
-    updateUserData
-}
+    updateUserData,
+    userPosts
+};

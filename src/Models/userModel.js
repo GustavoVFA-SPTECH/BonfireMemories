@@ -46,7 +46,7 @@ async function register(userName, email, password) {
     await database.executar(`
       INSERT INTO User (userName, email, password) VALUES (?, ?, ?);
     `, [userName, email, hashedPassword]);
-  }
+};
 
 const getByID = async (idUser) => {
     try {
@@ -57,7 +57,7 @@ const getByID = async (idUser) => {
     } catch (error) {
         return error;
     }
-}
+};
 
 const getByEmail = async (email) => {
     try {
@@ -68,7 +68,7 @@ const getByEmail = async (email) => {
     } catch (error) {
         return error;
     }
-}
+};
 
 const getByUserName = async (userName) => {
     try {
@@ -79,7 +79,7 @@ const getByUserName = async (userName) => {
     } catch (error) {
         return error;
     }
-}
+};
 
 const getBuildCount = async (userId) => {
     try {
@@ -88,13 +88,22 @@ const getBuildCount = async (userId) => {
     } catch (error) {
         return error;
     }
-}
+};
 
 const getPostCount = async (userId) => {
     try {
         const [postCount] = await database.executar(`SELECT COUNT(*) as count FROM Post WHERE postOwner = ?;`, [userId]); 
         return postCount;
     } catch (error) {
+        return error;
+    }
+};
+
+const getUserPosts = async (userId) => {
+    try {
+        const posts = await database.executar(`SELECT idPost, title, caption, type, fkBuild, postImage`, [userId])
+        return posts;
+    }catch(error){
         return error;
     }
 }
@@ -113,8 +122,7 @@ async function getUserPicture(idUser) {
         console.error('Erro ao buscar imagem de perfil:', error);
         throw error; // Lança o erro para ser tratado na controller
     }
-}
-
+};
 
 async function updatePicture(idUser, profilePicture) {
     try {
@@ -122,7 +130,7 @@ async function updatePicture(idUser, profilePicture) {
     } catch (error) {
         return error;
     }
-}
+};
 
 async function updateEmail(idUser, email){
     try {
@@ -148,7 +156,7 @@ async function updatePassword(idUser, password, newPassword){
     } catch (error) {
         return error;
     }
-}
+};
 
 module.exports = {
     authenticate,
@@ -161,5 +169,6 @@ module.exports = {
     getUserPicture,
     updateEmail,
     updatePassword,
-    updatePicture
+    updatePicture,
+    getUserPosts
 };
