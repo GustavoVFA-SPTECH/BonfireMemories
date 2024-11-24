@@ -134,3 +134,43 @@ function toBase64(file) {
 
 
 document.getElementById('postButton').addEventListener('click', createPost);
+
+
+async function loadUserBuilds() {
+    try {
+        const userID = sessionStorage.getItem('UserID');
+        if (!userID) {
+            console.error('ID do usuário não encontrado no sessionStorage.');
+            return;
+        }
+
+        const response = await fetch(`/load?userID=${userID}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if (!response.ok) {
+            throw new Error('Erro ao carregar builds do usuário.');
+        }
+
+        const builds = await response.json();
+
+        const buildSelect = document.getElementById('postBuild');
+        buildSelect.innerHTML = '<option disabled selected value="#">Select a build</option>'; 
+
+        builds.forEach((build) => {
+            const option = document.createElement('option');
+            option.value = build.id;
+            option.textContent = build.name;
+            buildSelect.appendChild(option);
+        });
+    } catch (error) {
+        console.error('Erro ao carregar builds do usuário:', error);
+        alert('Ocorreu um erro ao carregar as builds do usuário.');
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', loadUserBuilds);
