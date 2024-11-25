@@ -73,7 +73,7 @@ async function renderAllPosts() {
         for (const post of posts) {
             const postDiv = document.createElement('div');
             postDiv.classList.add('post');
-            postDiv.setAttribute('onclick', `funcao(${post.idPost})`);
+            postDiv.setAttribute('onclick', `openPost(${post.idPost})`);
             
             const postBarDiv = document.createElement('div');
             postBarDiv.classList.add('postBar');
@@ -87,8 +87,8 @@ async function renderAllPosts() {
             
             const profilePicture = await fetchUserProfilePicture(post.postOwner);
             profileImageDiv.style.backgroundImage = `url('${profilePicture}')`;
-            profileImageDiv.style.backgroundSize = 'cover';
-            profileImageDiv.style.backgroundPosition = 'center';
+            // profileImageDiv.style.backgroundSize = 'cover';
+            // profileImageDiv.style.backgroundPosition = 'center';
             
             const postOwnerName = await fetchUserName(post.postOwner);
             const postOwnerNameSpan = document.createElement('span');
@@ -123,8 +123,8 @@ async function renderAllPosts() {
             postImageDiv.style.backgroundImage = post.postImage
                 ? `url('data:image/jpeg;base64,${post.postImage}')`
                 : `url('/Assets/defaultImage.jpg')`;
-            postImageDiv.style.backgroundSize = 'cover';
-            postImageDiv.style.backgroundPosition = 'center';
+            // postImageDiv.style.backgroundSize = 'cover';
+            // postImageDiv.style.backgroundPosition = 'center';
 
             postContentDiv.appendChild(postTextSpan);
             postContentDiv.appendChild(postImageDiv);
@@ -142,11 +142,8 @@ async function renderAllPosts() {
     }
 }
 
-
 document.addEventListener('DOMContentLoaded', renderAllPosts);
 
-
-
-function funcao(idPost) {
-    console.log("Clique captado",idPost)
+function openPost(idPost) {
+    console.log(idPost)
 }

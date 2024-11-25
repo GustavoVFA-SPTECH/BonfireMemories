@@ -60,21 +60,24 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 10px;
     /* border: red 1px solid; */
 }
 
 .profilePost span{
     color: var(--blue);
+    font-size: 26px;
 }
 
 .profileImage{
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
+    border: var(--darkOrange) 2px solid;
     /* border: red 1px solid; */
     border-radius: 50%;
     background-position: center;
     /* background-image: url('../Assets/icons/icon-user.png'); */
-    background-size: 100% 100%;
+    background-size: 90% 90%;
     background-repeat: no-repeat;
 }
 
@@ -96,7 +99,10 @@ body {
 
 .postTitle{
     font-size: 30px;
+    /* border: white 1px solid; */
     color: var(--ice);
+    text-align: center;
+    width: 60%;
 }
 
 .postText{

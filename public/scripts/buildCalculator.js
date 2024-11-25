@@ -1,9 +1,13 @@
+
 function checkTokenAndRedirect(redirectUrl) {
   const token = sessionStorage.getItem('authToken');
   if (!token) {
       window.location.href = redirectUrl;
   }
 }
+
+const urlParams = new URLSearchParams(location.search);
+console.log(urlParams.get('buildId'))
 
 checkTokenAndRedirect('/views/homePage.html');
 
