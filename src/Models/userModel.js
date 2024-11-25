@@ -70,10 +70,10 @@ const getByEmail = async (email) => {
     }
 };
 
-const getByUserName = async (userName) => {
+const getUserNameById = async (idUser) => {
     try {
-        const [user] = await database.executar(`SELECT * FROM User WHERE userName =?;`,
-            [userName]);
+        const [user] = await database.executar(`SELECT userName FROM User WHERE idUser =?;`,
+            [idUser]);
             
         return user;
     } catch (error) {
@@ -109,7 +109,6 @@ const getUserPosts = async (userId) => {
         throw error;
     }
 };
-
 
 async function getUserPicture(idUser) {
     try {
@@ -166,7 +165,7 @@ module.exports = {
     register,
     getByID,
     getByEmail,
-    getByUserName,
+    getUserNameById,
     getBuildCount,
     getPostCount,
     getUserPicture,

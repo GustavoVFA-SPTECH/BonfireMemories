@@ -71,11 +71,9 @@ async function renderAllPosts() {
             const profileImageDiv = document.createElement('div');
             profileImageDiv.classList.add('profileImage');
             profileImageDiv.id = 'postOwnerPicture';
-
             
             const profilePicture = await fetchUserProfilePicture(post.postOwner);
-
-            
+  
             profileImageDiv.style.backgroundImage = `url('${profilePicture}')`;
             profileImageDiv.style.backgroundSize = 'cover';
             profileImageDiv.style.backgroundPosition = 'center';

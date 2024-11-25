@@ -108,6 +108,34 @@ const getUserPictureController = async (req, res) => {
     }
 };
 
+// Controller para buscar o nome de usuário pelo idUser
+const getUserNameByIdController = async (req, res) => {
+    const { idUser } = req.params; // Pega o idUser da URL
+
+    try {
+        const user = await userModel.getUserNameById(idUser); // Chama a model para buscar o nome de usuário
+
+        if (!user) {
+            return res.status(404).json({
+                success: false,
+                message: 'Usuário não encontrado.',
+            });
+        }
+
+        // Retorna o nome de usuário encontrado
+        res.status(200).json({
+            success: true,
+            userName: user.userName, // Envia o nome de usuário
+        });
+    } catch (error) {
+        console.error('Erro ao buscar nome de usuário:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Erro ao buscar nome de usuário.',
+            error: error.message,
+        });
+    }
+};
 
 const updateUserData = async (req, res) => {
     const { idUser, profilePicture, email, password, newPassword } = req.body;
@@ -194,14 +222,12 @@ const userPosts = async (req, res) => {
 };
 
 
-module.exports = { userPosts };
-
-
 module.exports = {
     createUser,
     getBuildCountController,
     getPostCountController,
     getUserPictureController,
     updateUserData,
-    userPosts
+    userPosts,
+    getUserNameByIdController
 };
