@@ -1,6 +1,5 @@
 async function renderAllPosts() {
     try {
-        
         const response = await fetch('/feed', {
             method: 'GET',
             headers: {
@@ -27,40 +26,54 @@ async function renderAllPosts() {
             return;
         }
 
-        
         mainContainer.innerHTML = '';
-
         
         const fetchUserProfilePicture = async (userId) => {
             try {
                 const response = await fetch(`/user/${userId}`);
                 
                 if (!response.ok) {
-                    
                     return '/Assets/icons/icon-user.png';
                 }
-        
+
                 const data = await response.json();
                 
                 if (!data.success || !data.profilePicture) {
-                    
                     return '/Assets/icons/icon-user.png';
                 }
-        
-                
+
                 return `data:image/jpeg;base64,${data.profilePicture}`;
             } catch (error) {
                 console.error(`Erro ao buscar imagem de perfil para o usuário ${userId}:`, error);
-                
                 return '/Assets/icons/icon-user.png';
             }
         };
- 
+        
+        const fetchUserName = async (userId) => {
+            try {
+                const response = await fetch(`/userName/${userId}`);
+                
+                if (!response.ok) {
+                    return '@Anônimo';
+                }
+                const data = await response.json();
+                
+                if (!data.success || !data.userName) {
+                    return '@Anônimo';
+                }
+
+                return `@${data.userName}`;  
+            } catch (error) {
+                console.error(`Erro ao buscar nome de usuário para o id ${userId}:`, error);
+                return '@Anônimo';
+            }
+        };
+
+        
         for (const post of posts) {
             const postDiv = document.createElement('div');
             postDiv.classList.add('post');
             postDiv.setAttribute('onclick', `funcao(${post.idPost})`);
-
             
             const postBarDiv = document.createElement('div');
             postBarDiv.classList.add('postBar');
@@ -70,17 +83,17 @@ async function renderAllPosts() {
 
             const profileImageDiv = document.createElement('div');
             profileImageDiv.classList.add('profileImage');
-            profileImageDiv.id = 'postOwnerPicture';
+            profileImageDiv.id = 'postOwnerPicture';         
             
             const profilePicture = await fetchUserProfilePicture(post.postOwner);
-  
             profileImageDiv.style.backgroundImage = `url('${profilePicture}')`;
             profileImageDiv.style.backgroundSize = 'cover';
             profileImageDiv.style.backgroundPosition = 'center';
-
+            
+            const postOwnerName = await fetchUserName(post.postOwner);
             const postOwnerNameSpan = document.createElement('span');
             postOwnerNameSpan.id = 'postOwnerName';
-            postOwnerNameSpan.textContent = post.userName || '@Anônimo';
+            postOwnerNameSpan.textContent = postOwnerName;
 
             profilePostDiv.appendChild(profileImageDiv);
             profilePostDiv.appendChild(postOwnerNameSpan);
@@ -92,7 +105,6 @@ async function renderAllPosts() {
 
             postBarDiv.appendChild(profilePostDiv);
             postBarDiv.appendChild(postTitleSpan);
-
             
             const postBoxDiv = document.createElement('div');
             postBoxDiv.classList.add('postBox');
@@ -118,12 +130,10 @@ async function renderAllPosts() {
             postContentDiv.appendChild(postImageDiv);
 
             postBoxDiv.appendChild(postContentDiv);
-
-            
+   
             postDiv.appendChild(postBarDiv);
             postDiv.appendChild(postBoxDiv);
 
-            
             mainContainer.appendChild(postDiv);
         }
     } catch (error) {
@@ -134,6 +144,8 @@ async function renderAllPosts() {
 
 
 document.addEventListener('DOMContentLoaded', renderAllPosts);
+
+
 
 function funcao(idPost) {
     console.log("Clique captado",idPost)
