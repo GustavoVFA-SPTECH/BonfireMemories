@@ -4,12 +4,16 @@ function checkTokenAndRedirect(redirectUrl) {
   if (!token) {
       window.location.href = redirectUrl;
   }
+};
+checkTokenAndRedirect('/views/homePage.html');
+
+const buildIdUrl = new URLSearchParams(location.search).get('buildId');
+
+
+if(buildIdUrl){
+  loadBuildData(buildIdUrl)
 }
 
-const urlParams = new URLSearchParams(location.search);
-console.log(urlParams.get('buildId'))
-
-checkTokenAndRedirect('/views/homePage.html');
 
 const classes = {
   Knight: {
@@ -858,7 +862,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const loadBuildData = async (buildID) => {
+async function loadBuildData  (buildID){
   try {
     if (!buildID) {
       alert("Build ID não fornecido.");
@@ -963,7 +967,6 @@ const loadBuildData = async (buildID) => {
     alert("Falha ao carregar a build.");
   }
 };
-
 
 const loadButton = document.getElementById("loadButton");
 if (loadButton) {
