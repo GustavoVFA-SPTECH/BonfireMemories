@@ -72,7 +72,8 @@ body {
     height: 50px;
     /* border: red 1px solid; */
     border-radius: 50%;
-    background-image: url('../Assets/icons/icon-user.png');
+    background-position: center;
+    /* background-image: url('../Assets/icons/icon-user.png'); */
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }

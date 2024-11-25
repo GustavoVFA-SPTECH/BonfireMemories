@@ -83,19 +83,18 @@ const getPostCountController = async (req, res) => {
 
 const getUserPictureController = async (req, res) => {
     const { idUser } = req.params;
-
     try {
         const userPicture = await userModel.getUserPicture(idUser);
 
-        // Se a imagem de perfil não for encontrada
+        // Se não houver imagem, retorna o ícone padrão
         if (!userPicture) {
             return res.status(404).json({
-                success: false,
-                message: 'Imagem de perfil não encontrada para este usuário.',
+                success: true,
+                profilePicture: '/Assets/icons/icon-user.png',  // Aqui retornamos o ícone default
             });
         }
 
-        // Caso a imagem seja encontrada
+        // Caso tenha imagem, retorna a imagem de perfil
         res.status(200).json({
             success: true,
             profilePicture: userPicture,
@@ -104,11 +103,11 @@ const getUserPictureController = async (req, res) => {
         console.error('Erro ao buscar imagem de perfil:', error);
         res.status(500).json({
             success: false,
-            message: 'Ocorreu um erro ao buscar a imagem de perfil.',
-            error: error.message,
+            message: 'Erro ao buscar imagem de perfil.',
         });
     }
 };
+
 
 const updateUserData = async (req, res) => {
     const { idUser, profilePicture, email, password, newPassword } = req.body;

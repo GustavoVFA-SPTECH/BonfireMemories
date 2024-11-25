@@ -27,6 +27,61 @@ const createPost = async (req, res) => {
     }
 };
 
+const getPostById = async (req, res) => {
+    const { idPost } = req.params; // Obtém o ID do post a partir dos parâmetros da rota
+
+    try {
+        // Chama a model para buscar o post pelo ID
+        const post = await postModel.getPostById(idPost);
+
+        if (post && post.length > 0) {
+            res.status(200).json({
+                success: true,
+                post: post[0], // Retorna o primeiro item da lista, já que o ID é único
+            });
+        } else {
+            res.status(404).json({
+                success: false,
+                message: 'Post não encontrado.',
+            });
+        }
+    } catch (error) {
+        console.error('Erro ao buscar o post:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Erro ao buscar o post.',
+            error: error.message,
+        });
+    }
+};
+
+const getAllPosts = async (req, res) => {
+    try {
+        const posts = await postModel.getPosts(); // Chamada à model para buscar os posts
+
+        if (Array.isArray(posts) && posts.length > 0) {
+            res.status(200).json({
+                success: true,
+                posts,
+            });
+        } else {
+            res.status(404).json({
+                success: false,
+                message: 'Nenhum post encontrado.',
+            });
+        }
+    } catch (error) {
+        console.error('Erro ao buscar posts:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Ocorreu um erro ao buscar os posts.',
+            error: error.message,
+        });
+    }
+};
+
 module.exports = {
     createPost,
+    getPostById,
+    getAllPosts,
 }
