@@ -52,12 +52,14 @@ async function createPost() {
         const buildSelect = document.getElementById('postBuild');
         const captionTextarea = document.getElementById('postCaption');
         const imageInput = document.getElementById('iptPostImage');
+
         
         const title = titleInput.value.trim();
         const type = typeSelect.value;
         const fkBuild = buildSelect.value === '#' ? null : buildSelect.value;
         const caption = captionTextarea.value.trim();
-
+        
+        console.log(fkBuild);
         
         if (!title || !type || type === '#' || !caption) {
             alert('Por favor, preencha todos os campos obrigatórios.');
@@ -162,7 +164,7 @@ async function loadUserBuilds() {
 
         builds.forEach((build) => {
             const option = document.createElement('option');
-            option.value = build.id;
+            option.value = build.idBuild;
             option.textContent = build.name;
             buildSelect.appendChild(option);
         });

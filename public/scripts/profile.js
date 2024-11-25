@@ -124,7 +124,6 @@ async function loadUserPosts() {
     }
 }
 
-
 // Chama a função assim que a página for carregada
 document.addEventListener('DOMContentLoaded', loadUserPosts);
 
