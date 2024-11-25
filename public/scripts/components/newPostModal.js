@@ -52,8 +52,7 @@ async function createPost() {
         const buildSelect = document.getElementById('postBuild');
         const captionTextarea = document.getElementById('postCaption');
         const imageInput = document.getElementById('iptPostImage');
-
-        
+       
         const title = titleInput.value.trim();
         const type = typeSelect.value;
         const fkBuild = buildSelect.value === '#' ? null : buildSelect.value;
@@ -91,7 +90,6 @@ async function createPost() {
 
         const data = await response.json();
 
-        
         if (response.ok) {
             alert('Post criado com sucesso!');
             
@@ -120,8 +118,8 @@ function previewImage() {
         };
 
         reader.readAsDataURL(file);
-    }
-}
+    };
+};
 
 document.getElementById('iptPostImage').addEventListener('change', previewImage);
 
@@ -132,8 +130,7 @@ function toBase64(file) {
         reader.onerror = (error) => reject(error);
         reader.readAsDataURL(file);
     });
-}
-
+};
 
 document.getElementById('postButton').addEventListener('click', createPost);
 
