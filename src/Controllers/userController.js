@@ -86,15 +86,14 @@ const getUserPictureController = async (req, res) => {
     try {
         const userPicture = await userModel.getUserPicture(idUser);
 
-        // Se não houver imagem, retorna o ícone padrão
+        
         if (!userPicture) {
             return res.status(404).json({
                 success: true,
-                profilePicture: '/Assets/icons/icon-user.png',  // Aqui retornamos o ícone default
+                profilePicture: '/Assets/icons/icon-user.png',  
             });
         }
-
-        // Caso tenha imagem, retorna a imagem de perfil
+ 
         res.status(200).json({
             success: true,
             profilePicture: userPicture,
@@ -108,12 +107,12 @@ const getUserPictureController = async (req, res) => {
     }
 };
 
-// Controller para buscar o nome de usuário pelo idUser
+
 const getUserNameByIdController = async (req, res) => {
-    const { idUser } = req.params; // Pega o idUser da URL
+    const { idUser } = req.params; 
 
     try {
-        const user = await userModel.getUserNameById(idUser); // Chama a model para buscar o nome de usuário
+        const user = await userModel.getUserNameById(idUser); 
 
         if (!user) {
             return res.status(404).json({
@@ -121,11 +120,10 @@ const getUserNameByIdController = async (req, res) => {
                 message: 'Usuário não encontrado.',
             });
         }
-
-        // Retorna o nome de usuário encontrado
+        
         res.status(200).json({
             success: true,
-            userName: user.userName, // Envia o nome de usuário
+            userName: user.userName, 
         });
     } catch (error) {
         console.error('Erro ao buscar nome de usuário:', error);
@@ -192,18 +190,18 @@ const updateUserData = async (req, res) => {
     }
 };
 
-// Refatoração da controller para buscar posts do usuário
+
 const userPosts = async (req, res) => {
-    const { idUser } = req.params; // Obtendo o ID do usuário a partir da URL
+    const { idUser } = req.params; 
 
     try {
-        // Chama a função que retorna os posts do usuário
+        
         const posts = await userModel.getUserPosts(idUser);
 
         if (Array.isArray(posts) && posts.length > 0) {
             res.status(200).json({
                 success: true,
-                posts,  // Retorna os posts encontrados
+                posts,  
             });
         } else {
             res.status(404).json({

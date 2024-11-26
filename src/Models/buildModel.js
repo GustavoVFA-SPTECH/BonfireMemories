@@ -38,7 +38,7 @@ async function saveBuild(stats, build, equipment) {
 }
 
 async function load(buildID) {
-  // Recuperar os dados da Build
+
   const [build] = await database.executar(
     `SELECT idBuild, name, class, buildOwner, fkStats FROM Build WHERE idBuild = ?;`,
     [buildID]
@@ -48,7 +48,7 @@ async function load(buildID) {
     throw new Error('Build não encontrada');
   }
 
-  // Recuperar os dados de Stats associados à Build
+
   const [stats] = await database.executar(
     `SELECT level, vigor, attunement, endurence, vitality, strength, dexterity, inteligence, faith, luck 
      FROM Stats WHERE idStats = ?;`,
@@ -59,16 +59,16 @@ async function load(buildID) {
     throw new Error('Stats não encontrados');
   }
 
-  // Recuperar os equipamentos associados à Build
+
   const equipment = await database.executar(
     `SELECT name, type FROM Equipament WHERE fkBuild = ?;`,
     [build.idBuild]
   );
 
-  // Garantir que equipment seja uma lista, mesmo que tenha apenas um item
+
   const equipmentList = Array.isArray(equipment) ? equipment : [equipment];
 
-  // Retornar os dados no formato esperado
+
   return {
     stats: {
       level: stats.level,

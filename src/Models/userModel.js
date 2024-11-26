@@ -102,7 +102,7 @@ const getPostCount = async (userId) => {
 const getUserPosts = async (userId) => {
     try {
         const query = "SELECT idPost, title, caption, type, fkBuild, postImage FROM post WHERE postOwner = ?";
-        const posts = await database.executar(query, [userId]); // Consulta SQL para buscar posts do usuário
+        const posts = await database.executar(query, [userId]); 
         return posts;
     } catch (error) {
         console.error('Erro ao buscar posts do usuário:', error);
@@ -114,15 +114,15 @@ async function getUserPicture(idUser) {
     try {
         const results = await database.executar(`SELECT profilePicture FROM User WHERE idUser = ?;`, [idUser]);
 
-        // Se não houver resultados ou o campo profilePicture for null, retorna null
+        
         if (!results || results.length === 0 || !results[0].profilePicture) {
-            return null; // Retorna null se não houver imagem
+            return null; 
         }
 
-        return results[0].profilePicture; // Retorna a imagem de perfil encontrada
+        return results[0].profilePicture; 
     } catch (error) {
         console.error('Erro ao buscar imagem de perfil:', error);
-        throw error; // Lança o erro para ser tratado na controller
+        throw error; 
     }
 };
 

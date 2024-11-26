@@ -28,16 +28,16 @@ const createPost = async (req, res) => {
 };
 
 const getPostById = async (req, res) => {
-    const { idPost } = req.params; // Obtém o ID do post a partir dos parâmetros da rota
+    const { idPost } = req.params; 
 
     try {
-        // Chama a model para buscar o post pelo ID
+        
         const post = await postModel.getPostById(idPost);
 
         if (post && post.length > 0) {
             res.status(200).json({
                 success: true,
-                post: post[0], // Retorna o primeiro item da lista, já que o ID é único
+                post: post[0], 
             });
         } else {
             res.status(404).json({
@@ -57,7 +57,7 @@ const getPostById = async (req, res) => {
 
 const getAllPosts = async (req, res) => {
     try {
-        const posts = await postModel.getPosts(); // Chamada à model para buscar os posts
+        const posts = await postModel.getPosts(); 
 
         if (Array.isArray(posts) && posts.length > 0) {
             res.status(200).json({

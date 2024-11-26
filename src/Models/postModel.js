@@ -12,7 +12,7 @@ const newPost = async (title, caption, image, fkBuild, postOwner, type) =>{
 
 const getPosts = async() => {
     try {
-        const posts = await database.executar("SELECT * FROM post ORDER BY dateTime DESC"); // Consulta SQL para buscar posts
+        const posts = await database.executar("SELECT * FROM post ORDER BY dateTime DESC");
         return posts;
     } catch (error) {
         console.error('Erro ao buscar posts:', error);

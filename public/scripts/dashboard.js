@@ -132,11 +132,8 @@ async function getDataClasses(idGrafico) {
 
 function graphic2(resposta, idGrafico) {
     
-
-    // Criando estrutura para plotar gráfico - labels
     let labels = [];
 
-    // Criando estrutura para plotar gráfico - dados
     let dados = {
         labels: labels,
         datasets: [{
@@ -148,11 +145,10 @@ function graphic2(resposta, idGrafico) {
         }]
     };
 
-    // Inserindo valores recebidos em estrutura para plotar o gráfico
     for (let i = 0; i < resposta.length; i++) {
         const registro = resposta[i];
-        labels.push(registro.class); // Nome da classe
-        dados.datasets[0].data.push(registro.qtd); // Quantidade de builds
+        labels.push(registro.class); 
+        dados.datasets[0].data.push(registro.qtd); 
     }
 
     // Criando estrutura para plotar gráfico - config
@@ -212,21 +208,12 @@ getDataClasses(2);
 async function getDataRings(idGrafico) {
     try {
         
-
-        // Fazendo a requisição para a rota de anéis
         const response = await fetch('/Rings');
 
         if (!response.ok) {
             throw new Error(`Erro na requisição: ${response.statusText}`);
         }
-
-        // Convertendo os dados recebidos para JSON
         const resposta = await response.json();
-
-        
-        
-
-        // Chama a função para plotar o gráfico com os dados recebidos
         graphic3(resposta.data, idGrafico);
 
     } catch (error) {

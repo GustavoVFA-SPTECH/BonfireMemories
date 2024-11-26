@@ -59,18 +59,17 @@ async function atualizarPostCount(userId) {
     }
 }
 
-// Função para carregar e renderizar os posts do usuário
+
 async function loadUserPosts() {
     try {
-        const userID = sessionStorage.getItem('UserID'); // Obtém o ID do usuário da sessão
+        const userID = sessionStorage.getItem('UserID'); 
 
         if (!userID) {
             console.error('ID do usuário não encontrado no sessionStorage.');
             return;
         }
-
-        // Faz a requisição GET para a rota /userPosts/:idUser
-        const response = await fetch(`/userPosts/${userID}`, { // Certifique-se de que a URL está correta
+      
+        const response = await fetch(`/userPosts/${userID}`, { 
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -87,8 +86,7 @@ async function loadUserPosts() {
             console.error('Nenhum post encontrado para este usuário.');
             return;
         }
-
-        // Aqui você pode continuar a renderizar os posts
+       
         const posts = data.posts;
         const postsContainer = document.querySelector('.profilePost');
         postsContainer.innerHTML = '';
@@ -124,7 +122,6 @@ async function loadUserPosts() {
     }
 }
 
-// Chama a função assim que a página for carregada
 document.addEventListener('DOMContentLoaded', loadUserPosts);
 
 

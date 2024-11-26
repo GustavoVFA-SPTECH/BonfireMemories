@@ -32,16 +32,14 @@ const fetchProfilePicture = async (userId) => {
 
         const result = await response.json();
 
-        // Verifica se a resposta foi bem-sucedida e se a imagem de perfil está disponível
         if (response.ok && result.success && result.profilePicture) {
             displayProfilePicture(result.profilePicture);
         } else {
             console.log('Imagem de perfil não encontrada, usando ícone padrão.');
-            displayProfilePicture('/Assets/icons/icon-user.png'); // Exibe o ícone padrão
+            displayProfilePicture('/Assets/icons/icon-user.png'); 
         }
     } catch (error) {
-        console.error('Erro ao buscar imagem de perfil:', error);
-        // Em caso de erro, exibe o ícone padrão
+        console.error('Erro ao buscar imagem de perfil:', error);        
         displayProfilePicture('/Assets/icons/icon-user.png');
     }
 };

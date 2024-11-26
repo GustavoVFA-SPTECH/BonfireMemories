@@ -14,6 +14,4 @@ userRouter.put("/updateUser", userController.updateUserData);
 userRouter.get("/userPosts/:idUser", userController.userPosts)
 userRouter.get('/userName/:idUser', userController.getUserNameByIdController);
 
-// userRouter.delete("/deleteUser");
-
 module.exports = userRouter;
