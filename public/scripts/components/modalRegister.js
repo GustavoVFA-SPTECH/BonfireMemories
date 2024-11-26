@@ -108,7 +108,7 @@ async function register() {
       
       console.log(result);  
 
-      alert(`Usuário ${result.userName} registrado com sucesso!`);      
+      window.location.reload();
       
     } else {     
       const errorData = await response.json();
