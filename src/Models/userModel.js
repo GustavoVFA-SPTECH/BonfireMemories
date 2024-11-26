@@ -101,7 +101,7 @@ const getPostCount = async (userId) => {
 
 const getUserPosts = async (userId) => {
     try {
-        const query = "SELECT idPost, title, caption, type, fkBuild, postImage FROM post WHERE postOwner = ?";
+        const query = "SELECT idPost, title, caption, type, fkBuild, postImage FROM Post WHERE postOwner = ?";
         const posts = await database.executar(query, [userId]); 
         return posts;
     } catch (error) {

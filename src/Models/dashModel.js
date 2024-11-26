@@ -3,7 +3,7 @@ const database = require("../Database/config.js");
 
 async function get10Weapons(){
     try {
-        const Weapons = database.executar("SELECT name, COUNT(name) as qtd FROM equipament WHERE type = 'weapon' GROUP BY name ORDER BY qtd DESC LIMIT 10;")
+        const Weapons = database.executar("SELECT name, COUNT(name) as qtd FROM Equipament WHERE type = 'weapon' GROUP BY name ORDER BY qtd DESC LIMIT 10;")
         
         return Weapons;
     } catch (error) {
@@ -15,7 +15,7 @@ async function getKPIs() {
     try {
         const mostWeaponResult = await database.executar(`
             SELECT name, COUNT(name) as qtd 
-            FROM equipament 
+            FROM Equipament 
             WHERE type = 'weapon' 
             GROUP BY name 
             ORDER BY qtd DESC 
@@ -24,7 +24,7 @@ async function getKPIs() {
 
         const mostRingResult = await database.executar(`
             SELECT name, COUNT(name) as qtd 
-            FROM equipament 
+            FROM Equipament 
             WHERE type = 'ring' 
             GROUP BY name 
             ORDER BY qtd DESC 
@@ -33,7 +33,7 @@ async function getKPIs() {
 
         const mostClassResult = await database.executar(`
             SELECT class, COUNT(class) as qtd 
-            FROM build 
+            FROM Build 
             GROUP BY class 
             ORDER BY qtd DESC 
             LIMIT 1;
@@ -62,7 +62,7 @@ async function getClasses(){
 
 async function getRings(){
     try {
-        const Rings = database.executar("SELECT name, COUNT(name) as qtd FROM equipament WHERE type = 'ring' GROUP BY name ORDER BY qtd DESC")
+        const Rings = database.executar("SELECT name, COUNT(name) as qtd FROM Equipament WHERE type = 'ring' GROUP BY name ORDER BY qtd DESC")
         
         return Rings;
     } catch (error) {

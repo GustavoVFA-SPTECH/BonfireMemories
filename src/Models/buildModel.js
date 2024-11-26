@@ -94,10 +94,9 @@ async function load(buildID) {
   };
 }
 
-
 async function getBuildByUserId(userID) {
   try {
-    const builds = await database.executar("SELECT idBuild, level, name FROM build JOIN stats ON fkStats = idStats WHERE buildOwner = ?;",
+    const builds = await database.executar("SELECT idBuild, level, name FROM Build JOIN Stats ON fkStats = idStats WHERE buildOwner = ?;",
       [userID]
     );
     return builds;
@@ -109,7 +108,7 @@ async function getBuildByUserId(userID) {
 
 async function getBuildNameById(buildId) {
   try {
-    const build = await database.executar("SELECT name FROM build WHERE idBuild =?;", [buildId]);
+    const build = await database.executar("SELECT name FROM Build WHERE idBuild =?;", [buildId]);
     return build[0].name;
   } catch (error) {
     console.error("Erro ao recuperar nome da build:", error);

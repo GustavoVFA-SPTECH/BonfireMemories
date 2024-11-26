@@ -38,7 +38,7 @@ document.getElementById('iptProfilePicture').addEventListener('change', function
     const fileInput = event.target;
     const previewDiv = document.querySelector('.previewProfilePicture');
 
-    previewDiv.style.backgroundImage = '';
+    previewDiv.style.backgroundImage = "";
 
     if (fileInput.files && fileInput.files[0]) {
         const file = fileInput.files[0];

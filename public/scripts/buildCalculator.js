@@ -14,7 +14,6 @@ if(buildIdUrl){
   loadBuildData(buildIdUrl)
 }
 
-
 const classes = {
   Knight: {
     level: 9,
