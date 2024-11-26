@@ -9,7 +9,7 @@ function checkTokenAndRedirect(redirectUrl) {
 
 async function getDataWeapons(idGrafico) {
     try {
-        console.log('Buscando dados da rota de armas...');
+        
 
         
         const response = await fetch('/weapons');
@@ -21,8 +21,8 @@ async function getDataWeapons(idGrafico) {
         
         const resposta = await response.json();
 
-        console.log('Dados recebidos da API de armas:');
-        console.log(resposta);
+        
+        
 
         
         graphic1(resposta.data, idGrafico);
@@ -33,7 +33,7 @@ async function getDataWeapons(idGrafico) {
 }
 
 function graphic1(resposta, idGrafico) {
-    console.log('Iniciando plotagem do gráfico de armas...');
+    
 
     
     let labels = [];
@@ -103,14 +103,14 @@ function graphic1(resposta, idGrafico) {
         config
     );
 
-    console.log('Gráfico plotado com sucesso!');
+    
 }
 
 getDataWeapons(1);
 
 async function getDataClasses(idGrafico) {
     try {
-        console.log('Buscando dados da rota de classes...');
+        
 
         const response = await fetch('/classes');
 
@@ -120,8 +120,8 @@ async function getDataClasses(idGrafico) {
 
         const resposta = await response.json();
 
-        console.log('Dados recebidos da API de classes:');
-        console.log(resposta);
+        
+        
 
         graphic2(resposta.data, idGrafico);
 
@@ -131,7 +131,7 @@ async function getDataClasses(idGrafico) {
 };
 
 function graphic2(resposta, idGrafico) {
-    console.log('Iniciando plotagem do gráfico de classes...');
+    
 
     // Criando estrutura para plotar gráfico - labels
     let labels = [];
@@ -204,14 +204,14 @@ function graphic2(resposta, idGrafico) {
         config
     );
 
-    console.log('Gráfico de classes plotado com sucesso!');
+    
 };
 
 getDataClasses(2);
 
 async function getDataRings(idGrafico) {
     try {
-        console.log('Buscando dados da rota de anéis...');
+        
 
         // Fazendo a requisição para a rota de anéis
         const response = await fetch('/Rings');
@@ -223,8 +223,8 @@ async function getDataRings(idGrafico) {
         // Convertendo os dados recebidos para JSON
         const resposta = await response.json();
 
-        console.log('Dados recebidos da API de anéis:');
-        console.log(resposta);
+        
+        
 
         // Chama a função para plotar o gráfico com os dados recebidos
         graphic3(resposta.data, idGrafico);
@@ -302,14 +302,11 @@ function graphic3(resposta, idGrafico) {
         document.getElementById(`myChartCanvas${idGrafico}`),
         config
     );
-
-    console.log('Gráfico plotado com sucesso!');
 }
 
 async function atualizarKPIs() {
     try {
-        console.log('Buscando dados da rota de KPIs...');
-
+        
         const response = await fetch('/KPI');
 
         if (!response.ok) {
@@ -318,7 +315,7 @@ async function atualizarKPIs() {
 
         const resultado = await response.json();
 
-        console.log('Dados recebidos da API de KPIs:', resultado);
+        
 
         if (resultado.success) {
 
