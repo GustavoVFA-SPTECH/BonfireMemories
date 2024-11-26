@@ -109,6 +109,7 @@ const saveChanges = async () => {
         if (response.ok) {
             console.log('Dados atualizados com sucesso:', result.message);
             alert('Dados atualizados com sucesso!');
+            window.location.reload();
         } else {
             console.error('Erro ao atualizar dados:', result.message);
             alert(`Erro: ${result.message}`);

@@ -92,7 +92,7 @@ async function createPost() {
 
         if (response.ok) {
             alert('Post criado com sucesso!');
-            
+            window.location.reload();
         } else {
             console.error('Erro ao criar post:', data.message);
             alert(`Erro ao criar post: ${data.message}`);

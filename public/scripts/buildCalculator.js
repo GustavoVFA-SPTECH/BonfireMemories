@@ -850,6 +850,7 @@ document.addEventListener("DOMContentLoaded", () => {
               
               console.log(stats, equipment, build);
               alert("Build saved successfully!");
+              window.location.reload();
           } catch (error) {
               console.error("Error saving build:", error);
               alert("Failed to save build.");
