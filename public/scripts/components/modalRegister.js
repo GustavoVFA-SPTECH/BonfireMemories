@@ -15,8 +15,8 @@ function modalRegister() {
             <div class="inputsRegister">
               <input class="inputRegister" type="text" placeholder="Username" id="registerUserName"/>
               <input class="inputRegister" type="text" placeholder="Email" id="registerEmail"/>
-              <input class="inputRegister" type="text" placeholder="Password" id="registerPassword"/>
-              <input class="inputRegister" type="text" placeholder="Confirm password" id="registerConfirmPassword"/>
+              <input class="inputRegister" type="password" placeholder="Password" id="registerPassword"/>
+              <input class="inputRegister" type="password" placeholder="Confirm password" id="registerConfirmPassword"/>
               <span class="errorMessageRegister"></span>
             </div>
             <div class="buttonsRegister">

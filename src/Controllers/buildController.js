@@ -51,9 +51,33 @@ const getUserBuilds = async (req, res) => {
   }
 };
 
+const getBuildByID = async (req, res, next) => {
+  const { buildId } = req.params;
+
+  try {
+    
+    const build = await buildModel.getBuildNameById(buildId);
+    
+    if (!build) {
+      const error = new Error('Build não encontrada');
+      error.status = 404;
+      throw error;
+    }
+
+    res.json({
+      success: true,
+      build: build,
+    });
+  } catch (error) {    
+    console.error(error);  
+    next(error);
+  }
+};
+
 
 module.exports = {
   createBuild,
   getBuild,
-  getUserBuilds
+  getUserBuilds,
+  getBuildByID
 }

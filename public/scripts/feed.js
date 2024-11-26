@@ -87,8 +87,8 @@ async function renderAllPosts() {
             
             const profilePicture = await fetchUserProfilePicture(post.postOwner);
             profileImageDiv.style.backgroundImage = `url('${profilePicture}')`;
-            // profileImageDiv.style.backgroundSize = 'cover';
-            // profileImageDiv.style.backgroundPosition = 'center';
+            
+            
             
             const postOwnerName = await fetchUserName(post.postOwner);
             const postOwnerNameSpan = document.createElement('span');
@@ -123,8 +123,8 @@ async function renderAllPosts() {
             postImageDiv.style.backgroundImage = post.postImage
                 ? `url('data:image/jpeg;base64,${post.postImage}')`
                 : `url('/Assets/defaultImage.jpg')`;
-            // postImageDiv.style.backgroundSize = 'cover';
-            // postImageDiv.style.backgroundPosition = 'center';
+            
+            
 
             postContentDiv.appendChild(postTextSpan);
             postContentDiv.appendChild(postImageDiv);
@@ -144,6 +144,58 @@ async function renderAllPosts() {
 
 document.addEventListener('DOMContentLoaded', renderAllPosts);
 
-function openPost(idPost) {
-    console.log(idPost)
+async function openPost(idPost) {
+    const OpenmodalPost = document.querySelector(".OpenmodalPost");
+    OpenmodalPost.style.display = "flex";
+
+    try {      
+        const response = await fetch(`/post/${idPost}`);
+
+        if (!response.ok) {
+            throw new Error('Erro ao carregar os dados do post.');
+        }
+
+        const data = await response.json();
+
+        if (data.success && data.post) {
+            const post = data.post;
+
+            console.log(post.caption)
+  
+            document.getElementById('OpenPostTitle').textContent = post.title || 'Título não disponível';
+            document.getElementById('OpenPostCaption').value = post.caption || 'Sem descrição';
+
+            const previewOpenPostImage = document.getElementById('OpenPostImage');
+            if (post.postImage) {
+                previewOpenPostImage.style.backgroundImage = `url('data:image/jpeg;base64,${post.postImage}')`;
+            } else {
+                previewOpenPostImage.style.backgroundImage = `url('/Assets/defaultImage.jpg')`;
+            }
+            const buildCase = document.querySelector('.BuildCase')
+            const buildLink = document.querySelector('.OpenPostBuildName');
+            buildCase.style.display = "none";
+            if (post.fkBuild) {
+                const buildResponse = await fetch(`/buildName/${post.fkBuild}`);
+                if (!buildResponse.ok) {
+                    throw new Error('Erro ao carregar os dados da build.');
+                }
+
+                const buildData = await buildResponse.json();
+                if (buildData.success && buildData.build) {
+                    buildCase.style.display = "block";
+                    buildLink.innerHTML = buildData.build.name || 'Default Build';
+                    buildLink.href = `buildCalculator.html?buildId=${post.fkBuild}`;
+                } else {
+                    buildLink.innerHTML = 'Build não encontrada';
+                }
+            }
+                
+
+        } else {
+            console.error('Post não encontrado.');
+        }
+    } catch (error) {
+        console.error('Erro ao carregar o post:', error);
+    }
 }
+

@@ -14,7 +14,7 @@ function modalLogin() {
           <span class="loginText">Login</span>
           <div class="inputsLogin">
             <input class="inputLogin" type="text" placeholder="Username/Email" id="login"/>
-            <input class="inputLogin" type="text" placeholder="Password" id="loginPassword"/>
+            <input class="inputLogin" type="password" placeholder="Password" id="loginPassword"/>
           </div>
           <span class="errorMessageLogin">User or password incorrect</span>
           <div class="buttonsLogin">

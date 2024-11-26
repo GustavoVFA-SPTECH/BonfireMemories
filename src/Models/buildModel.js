@@ -107,8 +107,19 @@ async function getBuildByUserId(userID) {
   }
 }
 
+async function getBuildNameById(buildId) {
+  try {
+    const build = await database.executar("SELECT name FROM build WHERE idBuild =?;", [buildId]);
+    return build[0].name;
+  } catch (error) {
+    console.error("Erro ao recuperar nome da build:", error);
+    throw new Error("Não foi possível recuperar o nome da build");
+  }
+}
+
 module.exports = {
   saveBuild,
   load,
-  getBuildByUserId
+  getBuildByUserId,
+  getBuildNameById
 };

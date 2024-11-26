@@ -6,5 +6,6 @@ const postRouter = Router();
 
 postRouter.post("/createPost", postController.createPost);
 postRouter.get('/feed', postController.getAllPosts);
+postRouter.get('/post/:idPost', postController.getPostById);
 
 module.exports = postRouter;
